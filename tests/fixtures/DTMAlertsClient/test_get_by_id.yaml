@@ -1,0 +1,97 @@
+# Copyright 2023 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Cookie:
+      - __cf_bm=MZgH.SyKJOVsFg8oVW6lscv3oYNWS68UE1DNUkUSn5U-1685739323-0-AVxOqiHPX1MoNV2kqz8bWdfXIlKcIa5VBoSkCAvJTJTO3EnpOk7wDx1LEW4K7Usfnlyde63V86LRY5rCi+ocrvo=
+      User-Agent:
+      - python-requests/2.28.2
+      X-App-Name:
+      - MA-TI-Python-Lib-v0.1
+    method: GET
+    uri: https://api.intelligence.mandiant.com/v4/dtm/alerts/cht33rmiq259s5f6q4l0
+  response:
+    body:
+      string: "{\"id\":\"cht33rmiq259s5f6q4l0\",\"monitor_id\":\"cev61meltqaa5d2mml9g\",\"doc\":{\"__id\":\"cc6a31e9-90e6-45b0-aeae-e08c37e1b9fd\",\"__type\":\"forum_post\",\"source\":\"blackbeard\",\"timestamp\":\"2023-06-02T17:38:14Z\",\"author\":{\"identity\":{\"name\":\"ACE
+        Veen\"}},\"board\":\"/Yard\u0131m Merkezi/THT Yard\u0131m Merkezi\",\"body\":\"\\n\\u003cdiv
+        class=\\\"message-userContent lbContainer js-lbContainer \\\" data-lb-id=\\\"post-9797855\\\"
+        data-lb-caption-desc=\\\"ACE Veen \xB7 2 Haz 2023 18:38'de\\\"\\u003e\\n\\u003carticle
+        class=\\\"message-body js-selectToQuote\\\"\\u003e\\n\\u003cdiv class=\\\"bbWrapper\\\"\\u003e\\u003cblockquote
+        data-attributes=\\\"member: 999336\\\" data-quote=\\\"rootibo\\\" data-source=\\\"post:
+        9797444\\\" class=\\\"bbCodeBlock bbCodeBlock--expandable bbCodeBlock--quote
+        js-expandWatch\\\"\\u003e\\n\\u003cdiv class=\\\"bbCodeBlock-title\\\"\\u003e\\n\\u003ca
+        href=\\\"/goto/post?id=9797444\\\" class=\\\"bbCodeBlock-sourceJump\\\" rel=\\\"nofollow\\\"
+        data-xf-click=\\\"attribution\\\" data-content-selector=\\\"#post-9797444\\\"\\u003erootibo'
+        Al\u0131nt\u0131:\\u003c/a\\u003e\\n\\u003c/div\\u003e\\n\\u003cdiv class=\\\"bbCodeBlock-content\\\"\\u003e\\n\\u003cdiv
+        class=\\\"bbCodeBlock-expandContent js-expandContent \\\"\\u003e\\n\\u003cb\\u003e\\u003ci\\u003e\\u003cspan
+        style=\\\"font-size: 15px\\\"\\u003eMerhaba ismimi degismek isdiyorumda ama
+        bilmiyorum nasil yapicam galiba yetkililere soylemek lazim herhangi bi yektili
+        varmidir benimle dmden konusan \\u003c/span\\u003e\\u003c/i\\u003e\\u003c/b\\u003e\\n\\u003c/div\\u003e\\n\\u003cdiv
+        class=\\\"bbCodeBlock-expandLink js-expandLink\\\"\\u003e\\u003ca role=\\\"button\\\"
+        tabindex=\\\"0\\\"\\u003eGeni\u015Fletmek i\xE7in t\u0131kla ...\\u003c/a\\u003e\\u003c/div\\u003e\\n\\u003c/div\\u003e\\n\\u003c/blockquote\\u003eV.I.P.
+        \xFCyelik alman gerekiyor\\u003c/div\\u003e\\n\\u003cdiv class=\\\"js-selectToQuoteEnd\\\"\\u003e\\u0026nbsp;\\u003c/div\\u003e\\n\\u003c/article\\u003e\\n\\u003c/div\\u003e\\n\\u003caside
+        class=\\\"message-signature\\\"\\u003e\\n\\u003cdiv class=\\\"bbWrapper\\\"\\u003e\\u003cb\\u003e\\u003ci\\u003e\\u003cspan
+        style=\\\"color: rgb(255, 255, 255)\\\"\\u003e\\u003cspan style=\\\"font-size:
+        15px\\\"\\u003e01000001 01010100 01000001 01010100 11000011 10011100 01010010
+        01001011\\u003c/span\\u003e\\u003c/span\\u003e\\u003c/i\\u003e\\u003c/b\\u003e\\u003c/div\\u003e\\n\\u003c/aside\\u003e\\n\",\"forum\":{\"id\":\"turkhackteam_org\",\"name\":\"turkhackteam.org\"},\"ingested\":\"2023-06-02T18:16:12Z\",\"message_id\":\"turkhackteam_org-forum_post-9797855\",\"original_id\":\"9797855\",\"post_date\":\"2023-06-02T17:38:14Z\",\"subject\":\"Nas\u0131l
+        kullan\u0131c\u0131 ad\u0131m\u0131 de\u011Fi\u015Ftirebilirim?\",\"topic_id\":\"turkhackteam_org-forum_post-t2040629\"},\"labels\":[{\"id\":\"307af2a2-9db4-4b7c-b4f5-41e23e8ecc4e\",\"classifier\":\"classifier-content\",\"version\":\"2-0-0\",\"label\":\"prose\",\"confidence\":100,\"element_path\":\"subject\"},{\"id\":\"7bb24008-7606-44ef-b60f-f2bd20d9b006\",\"classifier\":\"classifier-content\",\"version\":\"2-0-0\",\"label\":\"prose\",\"confidence\":100,\"element_path\":\"body\"},{\"id\":\"6fe72136-f5ee-4e30-bb3a-f4445eb737a4\",\"classifier\":\"classifier-type\",\"version\":\"2-0-0\",\"label\":\"text/plain\",\"confidence\":100,\"element_path\":\"body\"},{\"id\":\"3a60ab1a-8999-4e32-bb19-44fcc3da64e2\",\"classifier\":\"classifier-language\",\"version\":\"1-0-0\",\"label\":\"tr\",\"confidence\":100,\"element_path\":\"subject\"},{\"id\":\"e2089d1e-720e-487b-9687-b6bc1a19dadb\",\"classifier\":\"classifier-language\",\"version\":\"1-0-0\",\"label\":\"tr\",\"confidence\":64,\"element_path\":\"body\"}],\"topics\":[{\"id\":\"f4b11d38-597a-41c0-9f17-7eccd894cd25\",\"type\":\"path\",\"value\":\"/Yard\u0131m
+        Merkezi/THT Yard\u0131m Merkezi\",\"extractor\":\"dtm-ma\",\"extractor_version\":\"0.1.239\",\"entity_locations\":[{\"element_path\":\"board\",\"offsets\":[0,34]}]},{\"id\":\"2ee11544-0b74-4ae5-83ff-4205a72992d0\",\"type\":\"service_name\",\"value\":\"turkhackteam.org\",\"extractor\":\"dtm-ma\",\"extractor_version\":\"0.1.239\",\"entity_locations\":[{\"element_path\":\"forum.name\",\"offsets\":[0,16]}]},{\"id\":\"6986da8a-e792-4166-b1df-39dccef3b75d\",\"type\":\"identity_name\",\"value\":\"ACE
+        Veen\",\"extractor\":\"dtm-ma\",\"extractor_version\":\"0.1.239\",\"entity_locations\":[{\"element_path\":\"author.identity.name\",\"offsets\":[0,8]}]}],\"topic_matches\":[],\"label_matches\":[],\"doc_matches\":[{\"match_path\":\"body\",\"locations\":[{\"offsets\":[776,783],\"value\":\"apic\"}]}],\"tags\":[],\"created_at\":\"2023-06-02T18:16:14.651Z\",\"updated_at\":\"2023-06-02T18:16:14.651Z\",\"labels_url\":\"https://api.intelligence.mandiant.com/v4/dtm/docs/forum_post/cc6a31e9-90e6-45b0-aeae-e08c37e1b9fd/labels\",\"topics_url\":\"https://api.intelligence.mandiant.com/v4/dtm/docs/forum_post/cc6a31e9-90e6-45b0-aeae-e08c37e1b9fd/topics\",\"doc_url\":\"https://api.intelligence.mandiant.com/v4/dtm/docs/forum_post/cc6a31e9-90e6-45b0-aeae-e08c37e1b9fd\",\"status\":\"new\",\"alert_type\":\"Forum
+        Post\",\"alert_summary\":\"rootibo 39 Al\u0131nt\u0131 Merhaba ismimi degismek
+        isdiyorumda ama bilmiyorum nasil yapicam galiba yetkililere soylemek lazim
+        herhangi bi yektili varmidir benimle dmden konusan Geni\u015Fletmek i\xE7in
+        t\u0131kla V.I.P \xFCyelik alman gerekiyor 01000001 01010100 01000001 01010100\u2026\",\"title\":\"Found
+        keyword \\\"apic\\\" posted by actor \\\"ACE Veen\\\" on turkhackteam.org
+        forum \\\"/Yard\u0131m Merkezi/THT Yard\u0131m Merkezi\\\"\",\"email_sent_at\":\"\",\"severity\":\"low\",\"confidence\":0.5107142018918567,\"monitor_version\":4}\n"
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 7d1298d6b9f56fd3-IAD
+      Connection:
+      - keep-alive
+      Content-Security-Policy:
+      - img-src https://mandiant-dtm-email-assets.s3.amazonaws.com/; style-src-attr
+        'unsafe-inline'; default-src 'none'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Fri, 02 Jun 2023 20:55:24 GMT
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin
+      X-Amzn-Trace-Id:
+      - 263f7781bfc81150dbfef4c8a04025d0
+      X-Api-Proxy:
+      - '1'
+      content-length:
+      - '5015'
+    status:
+      code: 200
+      message: OK
+version: 1

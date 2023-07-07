@@ -1,0 +1,856 @@
+# Copyright 2023 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+interactions:
+- request:
+    body: grant_type=client_credentials
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '29'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Cookie:
+      - __cf_bm=q7Tuv6b4oor3NYdDwd.9dWZNd8qV_WqkQGxk1rEGxKg-1674843001-0-AWPy4HeOe/owlnyeY8BieVOChHIaB3KhXOPnwcf5ra5swHif2H9YdXZPVDRbPe7B/qXfYh3xpIQAuaqRs61fags=
+      User-Agent:
+      - python-requests/2.28.1
+    method: POST
+    uri: https://api.intelligence.mandiant.com/token
+  response:
+    body:
+      string: '{"access_token": "FAKE_TOKEN","token_type":"Bearer","expires_in":24178}
+
+        '
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 79037154def0064d-IAD
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Fri, 27 Jan 2023 18:10:01 GMT
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin
+      content-length:
+      - '125'
+      x-amzn-trace-id:
+      - 570c03c3c6d1208dfbdbe388b771f899
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate      Connection:
+      - keep-alive
+      Cookie:
+      - __cf_bm=q7Tuv6b4oor3NYdDwd.9dWZNd8qV_WqkQGxk1rEGxKg-1674843001-0-AWPy4HeOe/owlnyeY8BieVOChHIaB3KhXOPnwcf5ra5swHif2H9YdXZPVDRbPe7B/qXfYh3xpIQAuaqRs61fags=
+      User-Agent:
+      - python-requests/2.28.1
+      X-App-Name:
+      - MA-TI-Python-Lib-v0.1
+    method: GET
+    uri: https://api.intelligence.mandiant.com/v4/indicator/fqdn--7baea406-cc1b-53f9-b1b2-ea4ad2f56dc1?include_campaigns=True&include_reports=True
+  response:
+    body:
+      string: '{"id":"fqdn--7baea406-cc1b-53f9-b1b2-ea4ad2f56dc1","mscore":0,"type":"fqdn","value":"google.com","is_publishable":true,"sources":[{"first_seen":"2021-09-23T23:02:11.244+0000","last_seen":"2021-10-10T22:40:25.469+0000","osint":false,"category":[],"source_name":"Mandiant"},{"first_seen":"2021-12-14T04:32:32.348+0000","last_seen":"2023-01-27T00:21:31.178+0000","osint":true,"category":[],"source_name":"dtm.blackbeard"},{"first_seen":"2020-01-30T15:49:31.326+0000","last_seen":"2020-01-30T15:49:31.326+0000","osint":false,"category":[],"source_name":"Mandiant"},{"first_seen":"2021-07-02T15:17:26.283+0000","last_seen":"2021-08-06T19:18:00.231+0000","osint":false,"category":["control-server","botnet"],"source_name":"Mandiant"},{"first_seen":"2020-08-30T15:42:25.470+0000","last_seen":"2020-08-30T15:42:25.470+0000","osint":false,"category":[],"source_name":"Mandiant"},{"first_seen":"2021-12-13T23:51:44.068+0000","last_seen":"2021-12-16T20:38:38.965+0000","osint":false,"category":[],"source_name":"Mandiant"},{"first_seen":"2021-06-18T04:31:40.390+0000","last_seen":"2022-12-30T12:32:57.800+0000","osint":false,"category":["infostealer","control-server","banker"],"source_name":"Mandiant"},{"first_seen":"2021-09-23T23:00:39.636+0000","last_seen":"2021-09-24T23:01:22.370+0000","osint":false,"category":[],"source_name":"Mandiant"},{"first_seen":"2020-02-16T16:12:57.000+0000","last_seen":"2021-12-04T00:12:41.000+0000","osint":false,"category":[],"source_name":"Mandiant"},{"first_seen":"2021-06-24T23:25:00.803+0000","last_seen":"2021-06-24T23:25:00.803+0000","osint":true,"category":[],"source_name":"futex.re"},{"first_seen":"2021-12-14T00:19:22.164+0000","last_seen":"2021-12-16T18:37:17.664+0000","osint":false,"category":[],"source_name":"Mandiant"},{"first_seen":"2021-09-22T17:49:34.000+0000","last_seen":"2021-09-22T17:49:34.000+0000","osint":false,"category":[],"source_name":"Mandiant"},{"first_seen":"2020-02-29T04:38:11.915+0000","last_seen":"2020-04-16T10:17:05.796+0000","osint":false,"category":[],"source_name":"Mandiant"},{"first_seen":"2014-09-01T21:39:23.000+0000","last_seen":"2018-09-05T14:26:02.000+0000","osint":false,"category":[],"source_name":"Mandiant"},{"first_seen":"2021-12-14T21:07:25.784+0000","last_seen":"2023-01-27T00:07:05.414+0000","osint":true,"category":[],"source_name":"dtm.vanellope"}],"misp":{"akamai":false,"alexa":true,"alexa_1M":true,"amazon-aws":false,"apple":false,"automated-malware-analysis":false,"bank-website":false,"cisco_1M":true,"cisco_top1000":true,"cisco_top10k":true,"cisco_top20k":true,"cisco_top5k":true,"cloudflare":false,"common-contact-emails":false,"common-ioc-false-positive":false,"covid":false,"covid-19-cyber-threat-coalition-whitelist":false,"covid-19-krassi-whitelist":false,"crl-hostname":false,"crl-ip":false,"dax30":false,"disposable-email":false,"dynamic-dns":false,"eicar.com":false,"empty-hashes":false,"fastly":false,"google":true,"google-chrome-crux-1million":true,"google-gcp":false,"google-gmail-sending-ips":false,"googlebot":false,"ipv6-linklocal":false,"majestic_million":true,"majestic_million_1M":true,"microsoft":false,"microsoft-attack-simulator":false,"microsoft-azure":false,"microsoft-azure-appid":false,"microsoft-azure-china":false,"microsoft-azure-germany":false,"microsoft-azure-us-gov":false,"microsoft-office365":false,"microsoft-office365-cn":false,"microsoft-office365-ip":false,"microsoft-win10-connection-endpoints":false,"moz-top500":false,"mozilla-CA":false,"mozilla-IntermediateCA":false,"multicast":false,"nioc-filehash":false,"ovh-cluster":false,"parking-domain":false,"parking-domain-ns":false,"phone_numbers":false,"public-dns-hostname":false,"public-dns-v4":false,"public-dns-v6":false,"public-ipfs-gateways":false,"rfc1918":false,"rfc3849":false,"rfc5735":false,"rfc6598":false,"rfc6761":false,"second-level-tlds":true,"security-provider-blogpost":false,"sinkholes":false,"smtp-receiving-ips":false,"smtp-sending-ips":false,"stackpath":false,"tenable-cloud-ipv4":false,"tenable-cloud-ipv6":false,"ti-falsepositives":false,"tlds":true,"tranco":true,"tranco10k":true,"university_domains":false,"url-shortener":false,"vpn-ipv4":false,"vpn-ipv6":false,"whats-my-ip":false,"wikimedia":false},"last_updated":"2023-01-27T00:26:00.155Z","first_seen":"2014-09-01T21:39:23.000Z","last_seen":"2023-01-27T00:21:31.000Z","campaigns":[],"reports":[]}
+
+        '
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 790371550f27064d-IAD
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Fri, 27 Jan 2023 18:10:01 GMT
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      - Origin
+      content-length:
+      - '4339'
+      x-amzn-trace-id:
+      - 5689b8e14852ab3e39f5b47bd4173f12
+    status:
+      code: 200
+      message: OK
+- request:
+    body: grant_type=client_credentials
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '29'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Cookie:
+      - __cf_bm=q7Tuv6b4oor3NYdDwd.9dWZNd8qV_WqkQGxk1rEGxKg-1674843001-0-AWPy4HeOe/owlnyeY8BieVOChHIaB3KhXOPnwcf5ra5swHif2H9YdXZPVDRbPe7B/qXfYh3xpIQAuaqRs61fags=
+      User-Agent:
+      - python-requests/2.28.1
+    method: POST
+    uri: https://api.intelligence.mandiant.com/token
+  response:
+    body:
+      string: '{"access_token": "FAKE_TOKEN","token_type":"Bearer","expires_in":36168}
+
+        '
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 790371553f62064d-IAD
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Fri, 27 Jan 2023 18:10:01 GMT
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin
+      content-length:
+      - '125'
+      x-amzn-trace-id:
+      - 29212fee470e40e46556397f9f1bdb43
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate      Connection:
+      - keep-alive
+      Cookie:
+      - __cf_bm=q7Tuv6b4oor3NYdDwd.9dWZNd8qV_WqkQGxk1rEGxKg-1674843001-0-AWPy4HeOe/owlnyeY8BieVOChHIaB3KhXOPnwcf5ra5swHif2H9YdXZPVDRbPe7B/qXfYh3xpIQAuaqRs61fags=
+      User-Agent:
+      - python-requests/2.28.1
+      X-App-Name:
+      - MA-TI-Python-Lib-v0.1
+    method: GET
+    uri: https://api.intelligence.mandiant.com/v4/indicator/fqdn--7baea406-cc1b-53f9-b1b2-ea4ad2f56dc1/reports
+  response:
+    body:
+      string: '{"id":"fqdn--7baea406-cc1b-53f9-b1b2-ea4ad2f56dc1","mscore":0,"type":"fqdn","value":"google.com","is_publishable":true,"first_seen":"2014-09-01T21:39:23Z","last_seen":"2023-01-27T00:21:31Z","is_customer_releasable":true,"reports":[]}
+
+        '
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 790371557fbc064d-IAD
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Fri, 27 Jan 2023 18:10:01 GMT
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin
+      content-length:
+      - '234'
+      x-amzn-trace-id:
+      - 936a156471931e434c137142b1d7f6aa
+    status:
+      code: 200
+      message: OK
+- request:
+    body: grant_type=client_credentials
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '29'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Cookie:
+      - __cf_bm=q7Tuv6b4oor3NYdDwd.9dWZNd8qV_WqkQGxk1rEGxKg-1674843001-0-AWPy4HeOe/owlnyeY8BieVOChHIaB3KhXOPnwcf5ra5swHif2H9YdXZPVDRbPe7B/qXfYh3xpIQAuaqRs61fags=
+      User-Agent:
+      - python-requests/2.28.1
+    method: POST
+    uri: https://api.intelligence.mandiant.com/token
+  response:
+    body:
+      string: '{"access_token": "FAKE_TOKEN","token_type":"Bearer","expires_in":35783}
+
+        '
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 79037155c830064d-IAD
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Fri, 27 Jan 2023 18:10:01 GMT
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin
+      content-length:
+      - '125'
+      x-amzn-trace-id:
+      - 4a906b5cb3e23b184e39be5fc25a1617
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate      Connection:
+      - keep-alive
+      Cookie:
+      - __cf_bm=q7Tuv6b4oor3NYdDwd.9dWZNd8qV_WqkQGxk1rEGxKg-1674843001-0-AWPy4HeOe/owlnyeY8BieVOChHIaB3KhXOPnwcf5ra5swHif2H9YdXZPVDRbPe7B/qXfYh3xpIQAuaqRs61fags=
+      User-Agent:
+      - python-requests/2.28.1
+      X-App-Name:
+      - MA-TI-Python-Lib-v0.1
+    method: GET
+    uri: https://api.intelligence.mandiant.com/v4/indicator/md5--734cb023-91b0-504c-b10e-3756eb3cd9b3?include_campaigns=True&include_reports=True
+  response:
+    body:
+      string: '{"id":"md5--734cb023-91b0-504c-b10e-3756eb3cd9b3","mscore":100,"type":"md5","value":"27ef45406179b144f5fabf4b2a2f4e82","is_publishable":true,"sources":[{"first_seen":"2022-05-11T14:05:29.000+0000","last_seen":"2022-05-11T14:05:29.000+0000","osint":false,"category":[],"source_name":"Mandiant"},{"first_seen":"2022-08-16T20:04:55.000+0000","last_seen":"2022-08-16T20:04:55.000+0000","osint":false,"category":[],"source_name":"Mandiant"},{"first_seen":"2022-04-21T19:33:56.000+0000","last_seen":"2022-05-04T20:30:58.000+0000","osint":false,"category":[],"source_name":"Mandiant"}],"associated_hashes":[{"id":"md5--734cb023-91b0-504c-b10e-3756eb3cd9b3","type":"md5","value":"27ef45406179b144f5fabf4b2a2f4e82"},{"id":"sha1--66d75fca-71fa-5b02-8bcd-0fc3275091ea","type":"sha1","value":"0d1e930b706a9591ab3bb3c8dea1490856c02d77"},{"id":"sha256--97331c82-80b8-50f0-bcff-91c506700fb9","type":"sha256","value":"5723060de0b77c00fadddf73711ff221d83ad915a13e93b3dedf9be8f0ad80eb"}],"attributed_associations":[{"id":"threat-actor--7a39953e-0dae-569a-9d49-d52a4a8865b1","name":"APT29","type":"threat-actor"},{"id":"malware--81b6c216-1690-5733-a063-ff074e641709","name":"BEATDROP","type":"malware"}],"misp":{"akamai":false,"alexa":false,"alexa_1M":false,"amazon-aws":false,"apple":false,"automated-malware-analysis":false,"bank-website":false,"cisco_1M":false,"cisco_top1000":false,"cisco_top10k":false,"cisco_top20k":false,"cisco_top5k":false,"cloudflare":false,"common-contact-emails":false,"common-ioc-false-positive":false,"covid":false,"covid-19-cyber-threat-coalition-whitelist":false,"covid-19-krassi-whitelist":false,"crl-hostname":false,"crl-ip":false,"dax30":false,"disposable-email":false,"dynamic-dns":false,"eicar.com":false,"empty-hashes":false,"fastly":false,"google":false,"google-gcp":false,"google-gmail-sending-ips":false,"googlebot":false,"ipv6-linklocal":false,"majestic_million":false,"majestic_million_1M":false,"microsoft":false,"microsoft-attack-simulator":false,"microsoft-azure":false,"microsoft-azure-china":false,"microsoft-azure-germany":false,"microsoft-azure-us-gov":false,"microsoft-office365":false,"microsoft-office365-cn":false,"microsoft-office365-ip":false,"microsoft-win10-connection-endpoints":false,"moz-top500":false,"mozilla-CA":false,"mozilla-IntermediateCA":false,"multicast":false,"nioc-filehash":false,"ovh-cluster":false,"phone_numbers":false,"public-dns-hostname":false,"public-dns-v4":false,"public-dns-v6":false,"rfc1918":false,"rfc3849":false,"rfc5735":false,"rfc6598":false,"rfc6761":false,"second-level-tlds":false,"security-provider-blogpost":false,"sinkholes":false,"smtp-receiving-ips":false,"smtp-sending-ips":false,"stackpath":false,"tenable-cloud-ipv4":false,"tenable-cloud-ipv6":false,"ti-falsepositives":false,"tlds":false,"tranco":false,"tranco10k":false,"university_domains":false,"url-shortener":false,"vpn-ipv4":false,"vpn-ipv6":false,"whats-my-ip":false,"wikimedia":false},"last_updated":"2022-10-11T08:41:14.683Z","first_seen":"2022-04-21T19:33:56.000Z","last_seen":"2022-08-16T20:04:55.000Z","campaigns":[{"id":"campaign--8d6e7115-c792-5ded-b0a9-81d10027a943","name":"CAMP.22.005","title":"APT29
+        Conducts Phishing Campaign Targeting Multiple Federal Government Global/International
+        Affairs Offices"}],"reports":[]}
+
+        '
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 79037155f86e064d-IAD
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Fri, 27 Jan 2023 18:10:01 GMT
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      - Origin
+      content-length:
+      - '3256'
+      x-amzn-trace-id:
+      - 3af779112742cd9748e75e0b97ca3088
+    status:
+      code: 200
+      message: OK
+- request:
+    body: grant_type=client_credentials
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '29'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Cookie:
+      - __cf_bm=q7Tuv6b4oor3NYdDwd.9dWZNd8qV_WqkQGxk1rEGxKg-1674843001-0-AWPy4HeOe/owlnyeY8BieVOChHIaB3KhXOPnwcf5ra5swHif2H9YdXZPVDRbPe7B/qXfYh3xpIQAuaqRs61fags=
+      User-Agent:
+      - python-requests/2.28.1
+    method: POST
+    uri: https://api.intelligence.mandiant.com/token
+  response:
+    body:
+      string: '{"access_token": "FAKE_TOKEN","token_type":"Bearer","expires_in":24178}
+
+        '
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 7903715628d2064d-IAD
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Fri, 27 Jan 2023 18:10:01 GMT
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin
+      content-length:
+      - '125'
+      x-amzn-trace-id:
+      - e9ee0f4b439ace7876f7037edee3ec46
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate      Connection:
+      - keep-alive
+      Cookie:
+      - __cf_bm=q7Tuv6b4oor3NYdDwd.9dWZNd8qV_WqkQGxk1rEGxKg-1674843001-0-AWPy4HeOe/owlnyeY8BieVOChHIaB3KhXOPnwcf5ra5swHif2H9YdXZPVDRbPe7B/qXfYh3xpIQAuaqRs61fags=
+      User-Agent:
+      - python-requests/2.28.1
+      X-App-Name:
+      - MA-TI-Python-Lib-v0.1
+    method: GET
+    uri: https://api.intelligence.mandiant.com/v4/indicator/md5--734cb023-91b0-504c-b10e-3756eb3cd9b3/reports
+  response:
+    body:
+      string: '{"id":"md5--734cb023-91b0-504c-b10e-3756eb3cd9b3","mscore":100,"type":"md5","value":"27ef45406179b144f5fabf4b2a2f4e82","is_publishable":true,"first_seen":"2022-04-21T19:33:56Z","last_seen":"2022-08-16T20:04:55Z","is_customer_releasable":true,"reports":[{"id":"report--2781217d-3b75-5e22-b3f7-8db3e09d2b70","report_id":"22-00011950","type":"Event
+        Coverage/Implication","title":"APT29 Targets European Diplomatic Entities
+        with ROOTSAW Dropper and New BEATDROP Variants Using Dropbox and Slack for
+        C\u0026C","published_date":"2022-05-11T19:53:16.583Z","audience":["cyber espionage","fusion"]}]}
+
+        '
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 79037156590f064d-IAD
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Fri, 27 Jan 2023 18:10:01 GMT
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      - Origin
+      content-length:
+      - '592'
+      x-amzn-trace-id:
+      - 1a853b572d6ebd56225cb2d610874adb
+    status:
+      code: 200
+      message: OK
+- request:
+    body: grant_type=client_credentials
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '29'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Cookie:
+      - __cf_bm=q7Tuv6b4oor3NYdDwd.9dWZNd8qV_WqkQGxk1rEGxKg-1674843001-0-AWPy4HeOe/owlnyeY8BieVOChHIaB3KhXOPnwcf5ra5swHif2H9YdXZPVDRbPe7B/qXfYh3xpIQAuaqRs61fags=
+      User-Agent:
+      - python-requests/2.28.1
+    method: POST
+    uri: https://api.intelligence.mandiant.com/token
+  response:
+    body:
+      string: '{"access_token": "FAKE_TOKEN","token_type":"Bearer","expires_in":9719}
+
+        '
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 79037156a98f064d-IAD
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Fri, 27 Jan 2023 18:10:01 GMT
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin
+      content-length:
+      - '124'
+      x-amzn-trace-id:
+      - 92fb428ddf1dcf62485012e9717f38ed
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate      Connection:
+      - keep-alive
+      Cookie:
+      - __cf_bm=q7Tuv6b4oor3NYdDwd.9dWZNd8qV_WqkQGxk1rEGxKg-1674843001-0-AWPy4HeOe/owlnyeY8BieVOChHIaB3KhXOPnwcf5ra5swHif2H9YdXZPVDRbPe7B/qXfYh3xpIQAuaqRs61fags=
+      User-Agent:
+      - python-requests/2.28.1
+      X-App-Name:
+      - MA-TI-Python-Lib-v0.1
+    method: GET
+    uri: https://api.intelligence.mandiant.com/v4/indicator/url--431bfcd3-a8a5-5103-9ad7-ac7f05891875?include_campaigns=True&include_reports=True
+  response:
+    body:
+      string: '{"id":"url--431bfcd3-a8a5-5103-9ad7-ac7f05891875","mscore":0,"type":"url","value":"https://google.com","is_publishable":true,"sources":[{"first_seen":"2022-06-04T12:59:02.280+0000","last_seen":"2023-01-19T13:32:26.077+0000","osint":true,"category":[],"source_name":"dtm.vanellope"},{"first_seen":"2022-05-15T03:06:18.295+0000","last_seen":"2023-01-27T07:33:56.207+0000","osint":true,"category":[],"source_name":"dtm.blackbeard"},{"first_seen":"2021-12-14T01:45:13.505+0000","last_seen":"2021-12-16T19:37:16.127+0000","osint":false,"category":[],"source_name":"Mandiant"},{"first_seen":"2021-09-02T18:26:26.000+0000","last_seen":"2022-11-08T23:20:48.000+0000","osint":false,"category":[],"source_name":"Mandiant"},{"first_seen":"2021-07-02T15:17:26.283+0000","last_seen":"2021-08-06T19:18:00.231+0000","osint":false,"category":["control-server","botnet"],"source_name":"Mandiant"}],"misp":{"akamai":false,"alexa":true,"alexa_1M":true,"amazon-aws":false,"apple":false,"automated-malware-analysis":false,"bank-website":false,"cisco_1M":true,"cisco_top1000":true,"cisco_top10k":true,"cisco_top20k":true,"cisco_top5k":true,"cloudflare":false,"common-contact-emails":false,"common-ioc-false-positive":false,"covid":false,"covid-19-cyber-threat-coalition-whitelist":false,"covid-19-krassi-whitelist":false,"crl-hostname":false,"crl-ip":false,"dax30":false,"disposable-email":false,"dynamic-dns":false,"eicar.com":false,"empty-hashes":false,"fastly":false,"google":true,"google-chrome-crux-1million":true,"google-gcp":false,"google-gmail-sending-ips":false,"googlebot":false,"ipv6-linklocal":false,"majestic_million":true,"majestic_million_1M":true,"microsoft":false,"microsoft-attack-simulator":false,"microsoft-azure":false,"microsoft-azure-appid":false,"microsoft-azure-china":false,"microsoft-azure-germany":false,"microsoft-azure-us-gov":false,"microsoft-office365":false,"microsoft-office365-cn":false,"microsoft-office365-ip":false,"microsoft-win10-connection-endpoints":false,"moz-top500":false,"mozilla-CA":false,"mozilla-IntermediateCA":false,"multicast":false,"nioc-filehash":false,"ovh-cluster":false,"parking-domain":false,"parking-domain-ns":false,"phone_numbers":false,"public-dns-hostname":false,"public-dns-v4":false,"public-dns-v6":false,"public-ipfs-gateways":false,"rfc1918":false,"rfc3849":false,"rfc5735":false,"rfc6598":false,"rfc6761":false,"second-level-tlds":true,"security-provider-blogpost":false,"sinkholes":false,"smtp-receiving-ips":false,"smtp-sending-ips":false,"stackpath":false,"tenable-cloud-ipv4":false,"tenable-cloud-ipv6":false,"ti-falsepositives":false,"tlds":true,"tranco":true,"tranco10k":true,"university_domains":false,"url-shortener":false,"vpn-ipv4":false,"vpn-ipv6":false,"whats-my-ip":false,"wikimedia":false},"last_updated":"2023-01-27T08:02:22.985Z","first_seen":"2021-06-19T09:13:28.000Z","last_seen":"2023-01-27T07:33:56.000Z","campaigns":[],"reports":[]}
+
+        '
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 79037156d9d1064d-IAD
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Fri, 27 Jan 2023 18:10:01 GMT
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      - Origin
+      content-length:
+      - '2887'
+      x-amzn-trace-id:
+      - ef94e653b4cca9c63096d5ca14eda586
+    status:
+      code: 200
+      message: OK
+- request:
+    body: grant_type=client_credentials
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '29'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Cookie:
+      - __cf_bm=q7Tuv6b4oor3NYdDwd.9dWZNd8qV_WqkQGxk1rEGxKg-1674843001-0-AWPy4HeOe/owlnyeY8BieVOChHIaB3KhXOPnwcf5ra5swHif2H9YdXZPVDRbPe7B/qXfYh3xpIQAuaqRs61fags=
+      User-Agent:
+      - python-requests/2.28.1
+    method: POST
+    uri: https://api.intelligence.mandiant.com/token
+  response:
+    body:
+      string: '{"access_token": "FAKE_TOKEN","token_type":"Bearer","expires_in":24178}
+
+        '
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 790371570a1a064d-IAD
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Fri, 27 Jan 2023 18:10:01 GMT
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin
+      content-length:
+      - '125'
+      x-amzn-trace-id:
+      - 8b72ec5b4a4aa2a0277551cfb729f1f4
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate      Connection:
+      - keep-alive
+      Cookie:
+      - __cf_bm=q7Tuv6b4oor3NYdDwd.9dWZNd8qV_WqkQGxk1rEGxKg-1674843001-0-AWPy4HeOe/owlnyeY8BieVOChHIaB3KhXOPnwcf5ra5swHif2H9YdXZPVDRbPe7B/qXfYh3xpIQAuaqRs61fags=
+      User-Agent:
+      - python-requests/2.28.1
+      X-App-Name:
+      - MA-TI-Python-Lib-v0.1
+    method: GET
+    uri: https://api.intelligence.mandiant.com/v4/indicator/url--431bfcd3-a8a5-5103-9ad7-ac7f05891875/reports
+  response:
+    body:
+      string: '{"id":"url--431bfcd3-a8a5-5103-9ad7-ac7f05891875","mscore":0,"type":"url","value":"https://google.com","is_publishable":true,"first_seen":"2021-06-19T09:13:28Z","last_seen":"2023-01-27T07:33:56Z","is_customer_releasable":true,"reports":[]}
+
+        '
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 790371572a4b064d-IAD
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Fri, 27 Jan 2023 18:10:01 GMT
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin
+      content-length:
+      - '240'
+      x-amzn-trace-id:
+      - f3b535228ff41d29f96a884cdd312623
+    status:
+      code: 200
+      message: OK
+- request:
+    body: grant_type=client_credentials
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '29'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Cookie:
+      - __cf_bm=q7Tuv6b4oor3NYdDwd.9dWZNd8qV_WqkQGxk1rEGxKg-1674843001-0-AWPy4HeOe/owlnyeY8BieVOChHIaB3KhXOPnwcf5ra5swHif2H9YdXZPVDRbPe7B/qXfYh3xpIQAuaqRs61fags=
+      User-Agent:
+      - python-requests/2.28.1
+    method: POST
+    uri: https://api.intelligence.mandiant.com/token
+  response:
+    body:
+      string: '{"access_token": "FAKE_TOKEN","token_type":"Bearer","expires_in":35783}
+
+        '
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 790371574a8e064d-IAD
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Fri, 27 Jan 2023 18:10:01 GMT
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin
+      content-length:
+      - '125'
+      x-amzn-trace-id:
+      - 4758896d4b48bab25b6aad47731d7804
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate      Connection:
+      - keep-alive
+      Cookie:
+      - __cf_bm=q7Tuv6b4oor3NYdDwd.9dWZNd8qV_WqkQGxk1rEGxKg-1674843001-0-AWPy4HeOe/owlnyeY8BieVOChHIaB3KhXOPnwcf5ra5swHif2H9YdXZPVDRbPe7B/qXfYh3xpIQAuaqRs61fags=
+      User-Agent:
+      - python-requests/2.28.1
+      X-App-Name:
+      - MA-TI-Python-Lib-v0.1
+    method: GET
+    uri: https://api.intelligence.mandiant.com/v4/indicator/ipv4--ae71927b-78e2-5659-8576-af0dc232b3e9?include_campaigns=True&include_reports=True
+  response:
+    body:
+      string: '{"id":"ipv4--ae71927b-78e2-5659-8576-af0dc232b3e9","mscore":0,"type":"ipv4","value":"8.8.8.8","is_publishable":true,"sources":[{"first_seen":"2022-09-06T15:17:26.914+0000","last_seen":"2023-01-24T15:00:42.921+0000","osint":true,"category":[],"source_name":"dtm.vanellope"},{"first_seen":"2020-11-26T23:00:17.199+0000","last_seen":"2020-11-27T23:00:19.242+0000","osint":true,"category":["phishing"],"source_name":"phishtank"},{"first_seen":"2014-09-01T21:39:51.000+0000","last_seen":"2021-11-23T16:52:56.000+0000","osint":false,"category":[],"source_name":"Mandiant"},{"first_seen":"2022-11-10T22:14:27.098+0000","last_seen":"2023-01-27T14:20:31.536+0000","osint":false,"category":["infostealer","control-server"],"source_name":"Mandiant"},{"first_seen":"2020-11-08T22:00:57.000+0000","last_seen":"2021-05-26T08:45:36.000+0000","osint":false,"category":[],"source_name":"Mandiant"},{"first_seen":"2021-01-08T22:10:01.519+0000","last_seen":"2022-08-24T00:10:02.631+0000","osint":true,"category":["phishing","malware"],"source_name":"phishstats"},{"first_seen":"2022-10-25T23:18:00.829+0000","last_seen":"2022-10-25T23:18:00.829+0000","osint":true,"category":[],"source_name":"myip_blacklist"},{"first_seen":"2020-11-27T23:01:13.253+0000","last_seen":"2021-05-17T10:30:08.060+0000","osint":false,"category":[],"source_name":"Mandiant"},{"first_seen":"2020-11-09T10:43:27.120+0000","last_seen":"2023-01-27T00:21:06.125+0000","osint":false,"category":[],"source_name":"Mandiant"},{"first_seen":"2021-03-24T23:00:56.877+0000","last_seen":"2021-03-26T23:09:31.740+0000","osint":false,"category":[],"source_name":"Mandiant"},{"first_seen":"2016-06-09T05:49:30.000+0000","last_seen":"2022-05-23T12:21:48.000+0000","osint":false,"category":[],"source_name":"Mandiant"},{"first_seen":"2022-08-14T03:51:28.491+0000","last_seen":"2023-01-27T05:56:14.833+0000","osint":true,"category":[],"source_name":"dtm.blackbeard"},{"first_seen":"2021-05-16T00:25:00.172+0000","last_seen":"2021-06-06T10:57:02.904+0000","osint":false,"category":[],"source_name":"Mandiant"}],"misp":{"akamai":false,"alexa":false,"alexa_1M":false,"amazon-aws":false,"apple":false,"automated-malware-analysis":false,"bank-website":false,"cisco_1M":false,"cisco_top1000":false,"cisco_top10k":false,"cisco_top20k":false,"cisco_top5k":false,"cloudflare":false,"common-contact-emails":false,"common-ioc-false-positive":false,"covid":false,"covid-19-cyber-threat-coalition-whitelist":false,"covid-19-krassi-whitelist":false,"crl-hostname":false,"crl-ip":false,"dax30":false,"disposable-email":false,"dynamic-dns":false,"eicar.com":false,"empty-hashes":false,"fastly":false,"google":false,"google-chrome-crux-1million":false,"google-gcp":false,"google-gmail-sending-ips":false,"googlebot":false,"ipv6-linklocal":false,"majestic_million":false,"majestic_million_1M":false,"microsoft":false,"microsoft-attack-simulator":false,"microsoft-azure":false,"microsoft-azure-appid":false,"microsoft-azure-china":false,"microsoft-azure-germany":false,"microsoft-azure-us-gov":false,"microsoft-office365":false,"microsoft-office365-cn":false,"microsoft-office365-ip":false,"microsoft-win10-connection-endpoints":false,"moz-top500":false,"mozilla-CA":false,"mozilla-IntermediateCA":false,"multicast":false,"nioc-filehash":false,"ovh-cluster":false,"parking-domain":false,"parking-domain-ns":false,"phone_numbers":false,"public-dns-hostname":false,"public-dns-v4":true,"public-dns-v6":false,"public-ipfs-gateways":false,"rfc1918":false,"rfc3849":false,"rfc5735":false,"rfc6598":false,"rfc6761":false,"second-level-tlds":false,"security-provider-blogpost":false,"sinkholes":false,"smtp-receiving-ips":false,"smtp-sending-ips":false,"stackpath":false,"tenable-cloud-ipv4":false,"tenable-cloud-ipv6":false,"ti-falsepositives":false,"tlds":false,"tranco":false,"tranco10k":false,"university_domains":false,"url-shortener":false,"vpn-ipv4":true,"vpn-ipv6":false,"whats-my-ip":false,"wikimedia":false},"last_updated":"2023-01-27T15:02:01.519Z","first_seen":"2014-09-01T21:39:51.000Z","last_seen":"2023-01-27T15:01:54.000Z","campaigns":[],"reports":[]}
+
+        '
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 790371578ae4064d-IAD
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Fri, 27 Jan 2023 18:10:01 GMT
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      - Origin
+      content-length:
+      - '4068'
+      x-amzn-trace-id:
+      - a07e5cd04760e640dca07ac9dfd5691c
+    status:
+      code: 200
+      message: OK
+- request:
+    body: grant_type=client_credentials
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '29'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Cookie:
+      - __cf_bm=q7Tuv6b4oor3NYdDwd.9dWZNd8qV_WqkQGxk1rEGxKg-1674843001-0-AWPy4HeOe/owlnyeY8BieVOChHIaB3KhXOPnwcf5ra5swHif2H9YdXZPVDRbPe7B/qXfYh3xpIQAuaqRs61fags=
+      User-Agent:
+      - python-requests/2.28.1
+    method: POST
+    uri: https://api.intelligence.mandiant.com/token
+  response:
+    body:
+      string: '{"access_token": "FAKE_TOKEN","token_type":"Bearer","expires_in":9719}
+
+        '
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 79037157db5d064d-IAD
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Fri, 27 Jan 2023 18:10:01 GMT
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin
+      content-length:
+      - '124'
+      x-amzn-trace-id:
+      - 6850c5c78cc76de2cd34a6f964de5361
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate      Connection:
+      - keep-alive
+      Cookie:
+      - __cf_bm=q7Tuv6b4oor3NYdDwd.9dWZNd8qV_WqkQGxk1rEGxKg-1674843001-0-AWPy4HeOe/owlnyeY8BieVOChHIaB3KhXOPnwcf5ra5swHif2H9YdXZPVDRbPe7B/qXfYh3xpIQAuaqRs61fags=
+      User-Agent:
+      - python-requests/2.28.1
+      X-App-Name:
+      - MA-TI-Python-Lib-v0.1
+    method: GET
+    uri: https://api.intelligence.mandiant.com/v4/indicator/ipv4--ae71927b-78e2-5659-8576-af0dc232b3e9/reports
+  response:
+    body:
+      string: "{\"id\":\"ipv4--ae71927b-78e2-5659-8576-af0dc232b3e9\",\"mscore\":0,\"type\":\"ipv4\",\"value\":\"8.8.8.8\",\"is_publishable\":true,\"first_seen\":\"2014-09-01T21:39:51Z\",\"last_seen\":\"2023-01-27T15:01:54Z\",\"is_customer_releasable\":true,\"reports\":[{\"id\":\"report--b6e5bea2-cd04-5f68-9aec-7a6bb65d5b75\",\"report_id\":\"22-00012249\",\"type\":\"Network
+        Activity Reports\",\"title\":\"ICS Network Activity Report: May 16\u201322,
+        2022\",\"published_date\":\"2022-05-24T14:55:15.472Z\",\"audience\":[\"critical
+        infrastructure\",\"cyber physical\",\"fusion\"]},{\"id\":\"report--bd221b41-f970-5e20-83d8-8e0db3514094\",\"report_id\":\"22-00010204\",\"type\":\"Network
+        Activity Reports\",\"title\":\"ICS Network Activity Report: April 18\u201324,
+        2022\",\"published_date\":\"2022-04-25T16:42:05.802Z\",\"audience\":[\"critical
+        infrastructure\",\"cyber physical\",\"fusion\"]},{\"id\":\"report--a2fcadcd-3826-5fef-b612-e16e08a28594\",\"report_id\":\"22-00004673\",\"type\":\"Event
+        Coverage/Implication\",\"title\":\"Czech Government Targeted with Russia-Ukraine
+        Conflict Lure from Suspected Chinese Threat Group\",\"published_date\":\"2022-03-07T21:20:38.838Z\",\"audience\":[\"cyber
+        espionage\",\"freemium\",\"fusion\",\"operational\"]},{\"id\":\"report--765753bf-1724-52ef-bc9d-55795d01efdd\",\"report_id\":\"21-00025712\",\"type\":\"Network
+        Activity Reports\",\"title\":\"ICS Network Activity Report: Nov. 29 \u2013
+        Dec. 5, 2021\",\"published_date\":\"2021-12-06T19:01:12.409Z\",\"audience\":[\"critical
+        infrastructure\",\"cyber physical\",\"fusion\"]},{\"id\":\"report--8fd81d19-3469-50b8-ad7e-6ce21ec027a2\",\"report_id\":\"21-00025023\",\"type\":\"Network
+        Activity Reports\",\"title\":\"ICS Network Activity Report: Nov. 15\u201321,
+        2021\",\"published_date\":\"2021-11-22T18:52:20.974Z\",\"audience\":[\"critical
+        infrastructure\",\"cyber physical\",\"fusion\"]},{\"id\":\"report--a88ac193-51b5-5aab-be50-afd9568b5469\",\"report_id\":\"21-00021155\",\"type\":\"Network
+        Activity Reports\",\"title\":\"ICS Network Activity Report: Sept. 20\u201326,
+        2021\",\"published_date\":\"2021-09-27T20:31:28.739Z\",\"audience\":[\"critical
+        infrastructure\",\"cyber physical\",\"fusion\"]},{\"id\":\"report--e2827d15-bd3f-5ead-9b42-631c465be8c0\",\"report_id\":\"21-00018662\",\"type\":\"Network
+        Activity Reports\",\"title\":\"ICS Network Activity Report: Aug. 16\u201322,
+        2021\",\"published_date\":\"2021-08-23T16:25:52.287Z\",\"audience\":[\"critical
+        infrastructure\",\"cyber physical\",\"fusion\"]},{\"id\":\"report--c6274ace-ce0f-587a-b071-a57dc382994a\",\"report_id\":\"21-00015655\",\"type\":\"Network
+        Activity Reports\",\"title\":\"ICS Network Activity Report: July 5\u201311,
+        2021\",\"published_date\":\"2021-07-14T23:17:24.675Z\",\"audience\":[\"critical
+        infrastructure\",\"cyber physical\",\"fusion\"]},{\"id\":\"report--8bcf95a2-2b98-58f5-a161-525e82a65147\",\"report_id\":\"21-00014853\",\"type\":\"Network
+        Activity Reports\",\"title\":\"ICS Network Activity Report: June 28 \u2013
+        July 4, 2021\",\"published_date\":\"2021-07-06T16:22:58.464Z\",\"audience\":[\"critical
+        infrastructure\",\"cyber physical\",\"fusion\"]},{\"id\":\"report--4d0ab9ff-30f6-5cbd-b0aa-fe7db560176f\",\"report_id\":\"21-00014047\",\"type\":\"Network
+        Activity Reports\",\"title\":\"ICS Network Activity Report: June 14\u201320,
+        2021\",\"published_date\":\"2021-06-21T15:25:33.598Z\",\"audience\":[\"critical
+        infrastructure\",\"cyber physical\",\"fusion\"]},{\"id\":\"report--bd92e212-2611-5b68-bf6c-6f8d6861863e\",\"report_id\":\"21-00013561\",\"type\":\"Network
+        Activity Reports\",\"title\":\"ICS Network Activity Report: June 7\u201313,
+        2021\",\"published_date\":\"2021-06-15T14:24:16.882Z\",\"audience\":[\"critical
+        infrastructure\",\"cyber physical\",\"fusion\"]},{\"id\":\"report--68ab08ba-b6b1-53f0-a692-263dff5aa2aa\",\"report_id\":\"21-00011570\",\"type\":\"Network
+        Activity Reports\",\"title\":\"ICS Network Activity Report: May 17\u201323,
+        2021\",\"published_date\":\"2021-05-25T21:50:07.841Z\",\"audience\":[\"critical
+        infrastructure\",\"cyber physical\",\"fusion\"]},{\"id\":\"report--4a291661-965b-5452-b503-ac0335c38abd\",\"report_id\":\"21-00009891\",\"type\":\"Network
+        Activity Reports\",\"title\":\"ICS Network Activity Report: April 26 \u2013
+        May 2, 2021\",\"published_date\":\"2021-05-03T19:25:01.342Z\",\"audience\":[\"critical
+        infrastructure\",\"cyber physical\",\"fusion\"]},{\"id\":\"report--b9e419a9-fa18-5f1d-adde-1d5be024a266\",\"report_id\":\"21-00009361\",\"type\":\"Network
+        Activity Reports\",\"title\":\"ICS Network Activity Report: April 19\u201325,
+        2021\",\"published_date\":\"2021-04-26T19:07:34.487Z\",\"audience\":[\"critical
+        infrastructure\",\"cyber physical\",\"fusion\"]},{\"id\":\"report--b5f28875-512d-5cd9-bf5c-ffe0f402f587\",\"report_id\":\"21-00008611\",\"type\":\"Network
+        Activity Reports\",\"title\":\"ICS Network Activity Report: April 12\u201318,
+        2021\",\"published_date\":\"2021-04-19T17:05:16.863Z\",\"audience\":[\"critical
+        infrastructure\",\"cyber physical\",\"fusion\"]},{\"id\":\"report--eab6b2a4-b7b6-5a5e-9afd-b0f612d738c6\",\"report_id\":\"21-00006507\",\"type\":\"Network
+        Activity Reports\",\"title\":\"ICS Network Activity Report: March 15\u201321,
+        2021\",\"published_date\":\"2021-03-22T18:15:53.272Z\",\"audience\":[\"critical
+        infrastructure\",\"cyber physical\",\"fusion\"]},{\"id\":\"report--c9ed6d3f-e9b9-579b-aaf9-63596f950bfb\",\"report_id\":\"21-00005331\",\"type\":\"Network
+        Activity Reports\",\"title\":\"ICS Network Activity Report: March 1\u20137,
+        2021\",\"published_date\":\"2021-03-08T17:46:53.893Z\",\"audience\":[\"critical
+        infrastructure\",\"cyber physical\",\"fusion\"]},{\"id\":\"report--79a49d96-f8ba-5c09-8351-b84ea1aede41\",\"report_id\":\"15-00009422\",\"type\":\"Network
+        Activity Reports\",\"title\":\"ICS Network Activity Report\",\"published_date\":\"2015-09-16T19:31:36.9Z\",\"audience\":[\"critical
+        infrastructure\",\"cyber physical\",\"operational\"]},{\"id\":\"report--08c38c03-338f-53b9-97cd-67e7cb881e14\",\"report_id\":\"15-00009424\",\"type\":\"Event
+        Coverage/Implication\",\"title\":\"Intrusion Detection System Rules\",\"published_date\":\"2015-09-11T17:12:32.38Z\",\"audience\":[\"critical
+        infrastructure\",\"cyber physical\",\"fusion\"]}]}\n"
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 790371581bab064d-IAD
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Fri, 27 Jan 2023 18:10:01 GMT
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      - Origin
+      content-length:
+      - '5606'
+      x-amzn-trace-id:
+      - 1a6697645d4f614950475812164fe632
+    status:
+      code: 200
+      message: OK
+version: 1

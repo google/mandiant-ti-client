@@ -1,0 +1,135 @@
+# Copyright 2023 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Cookie:
+      - __cf_bm=5Cql2CPvYycsXpEJUS9X_CgC4_i0pqixUQRyMQDVUk0-1686093471-0-AQjnzgqrHWvKqGNGqisKw/WZGcb0GTS363mbRZXzCMpr27b36ayX6Cm1GY6sI1DHrXqH3KdUWwq8hsL2C02RwT4=
+      User-Agent:
+      - python-requests/2.28.2
+      X-App-Name:
+      - MA-TI-Python-Lib-v0.1
+    method: GET
+    uri: https://api.intelligence.mandiant.com/v4/dtm/monitors?sort=created_at&order=desc&size=1
+  response:
+    body:
+      string: '{"monitors":[{"id":"chvgf4gl24d39uevvpeg","name":"abboptical-Credential
+        Monitoring (AK-2023)","description":"Monitor for mentions of credential leaks
+        across the deep, dark, web","enabled":true,"doc_condition":{"operator":"all","topic":"match_conditions","match":[{"operator":"must_equal","topic":"doc_type","match":["forum_post","message","shop_listing"]},{"operator":"must_equal","topic":"label_threat","match":["information-security/information-leak/credentials"]},{"operator":"any","topic":"match_conditions","match":[{"operator":"must_contain","topic":"group_network","match":["abboptical.com"]},{"operator":"must_contain","topic":"group_brand","match":["abboptical","abbopticalgroup"]}]}]},"created_at":"2023-06-06T10:16:50.17Z","updated_at":"2023-06-06T10:16:50.17Z","email_notify_enabled":true,"email_notify_immediate":true,"template_id":"a0be277f-6223-4b55-b758-7a52c22fb669","created_by_user_id":"1c257b6a-d588-1039-8a99-3fe90527663d","last_updated_by_user_id":"1c257b6a-d588-1039-8a99-3fe90527663d","created_by_user_email":"Mandiant
+        User","last_updated_user_email":"Mandiant User"}]}
+
+        '
+    headers:
+      Access-Control-Expose-Headers:
+      - Link
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 7d345f05bd913b3e-IAD
+      Connection:
+      - keep-alive
+      Content-Security-Policy:
+      - img-src https://mandiant-dtm-email-assets.s3.amazonaws.com/; style-src-attr
+        'unsafe-inline'; default-src 'none'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Tue, 06 Jun 2023 23:17:51 GMT
+      Link:
+      - <https://api.intelligence.mandiant.com/v4/dtm/monitors?page=chvrt7ol24d39uf07j60>;
+        rel="next"
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin
+      X-Amzn-Trace-Id:
+      - a4e72ede451ea44110e7b22e2a5e25a6
+      X-Api-Proxy:
+      - '1'
+      content-length:
+      - '1094'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Cookie:
+      - __cf_bm=5Cql2CPvYycsXpEJUS9X_CgC4_i0pqixUQRyMQDVUk0-1686093471-0-AQjnzgqrHWvKqGNGqisKw/WZGcb0GTS363mbRZXzCMpr27b36ayX6Cm1GY6sI1DHrXqH3KdUWwq8hsL2C02RwT4=
+      User-Agent:
+      - python-requests/2.28.2
+      X-App-Name:
+      - MA-TI-Python-Lib-v0.1
+    method: GET
+    uri: https://api.intelligence.mandiant.com/v4/dtm/monitors?page=chvrt7ol24d39uf07j60
+  response:
+    body:
+      string: '{"monitors":[]}
+
+        '
+    headers:
+      Access-Control-Expose-Headers:
+      - Link
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 7d345f05fdf33b3e-IAD
+      Connection:
+      - keep-alive
+      Content-Security-Policy:
+      - img-src https://mandiant-dtm-email-assets.s3.amazonaws.com/; style-src-attr
+        'unsafe-inline'; default-src 'none'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Tue, 06 Jun 2023 23:17:51 GMT
+      Link:
+      - <https://api.intelligence.mandiant.com/v4/dtm/monitors?page=chvrt7ol24d39uf07j6g>;
+        rel="next"
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin
+      X-Amzn-Trace-Id:
+      - fa87609662932a48ff2c6d39d51e2a11
+      X-Api-Proxy:
+      - '1'
+      content-length:
+      - '1906'
+    status:
+      code: 200
+      message: OK
+version: 1

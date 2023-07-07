@@ -1,0 +1,18 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+requests = "~=2.28.1"
+responses = "~=0.21.0"
+python-dateutil = "*"
+tenacity = "*"
+requests-mock = "*"
+vcrpy = "*"
+freezegun = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.11"

@@ -1,0 +1,310 @@
+# Copyright 2023 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+interactions:
+- request:
+    body: grant_type=client_credentials
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '29'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Cookie:
+      - __cf_bm=TPZ8GuOToLj9LWIAuUVZcuQYafsk_KL7PE.lUJ0OIi4-1674844127-0-ARFbgryOfPip/lgWcMWS8O9oCF9BYxFhFqxu3iCu8HqL7SFzTBP45wnlg2kmiMJ5CiqhRKrAKF8uUI/JlYXVMLE=
+      User-Agent:
+      - python-requests/2.28.1
+    method: POST
+    uri: https://api.intelligence.mandiant.com/token
+  response:
+    body:
+      string: '{"access_token": "FAKE_TOKEN","token_type":"Bearer","expires_in":34657}
+
+        '
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 79038cd5aab90582-IAD
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Fri, 27 Jan 2023 18:28:47 GMT
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin
+      content-length:
+      - '125'
+      x-amzn-trace-id:
+      - 8d7e3361226c2787f8d3f5c186de9aab
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate      Connection:
+      - keep-alive
+      Cookie:
+      - __cf_bm=TPZ8GuOToLj9LWIAuUVZcuQYafsk_KL7PE.lUJ0OIi4-1674844127-0-ARFbgryOfPip/lgWcMWS8O9oCF9BYxFhFqxu3iCu8HqL7SFzTBP45wnlg2kmiMJ5CiqhRKrAKF8uUI/JlYXVMLE=
+      User-Agent:
+      - python-requests/2.28.1
+      X-App-Name:
+      - MA-TI-Python-Lib-v0.1
+    method: GET
+    uri: https://api.intelligence.mandiant.com/v4/indicator?gte_mscore=0&exclude_osint=False&start_epoch=1674670863&limit=1&include_reports=True&include_campaigns=True
+  response:
+    body:
+      string: '{"indicators":[{"id":"ipv4--55ba8198-79a1-5f13-b537-632c8bad942f","mscore":58,"type":"ipv4","value":"185.132.250.1","is_publishable":true,"sources":[{"first_seen":"2022-02-23T10:10:01.828+0000","last_seen":"2022-02-23T10:10:01.828+0000","osint":true,"category":[],"source_name":"blocklist_de"},{"first_seen":"2021-06-19T23:34:03.810+0000","last_seen":"2022-12-26T23:34:03.998+0000","osint":true,"category":["exploit/vuln-scanning","exploit"],"source_name":"blocklist_net_ua"},{"first_seen":"2022-06-03T23:39:01.621+0000","last_seen":"2022-06-03T23:39:01.621+0000","osint":false,"category":[],"source_name":"Mandiant"},{"first_seen":"2022-06-20T20:20:01.549+0000","last_seen":"2022-06-20T20:20:01.549+0000","osint":true,"category":[],"source_name":"the_haleys_ssh_dict_attack"}],"misp":{"akamai":false,"alexa":false,"alexa_1M":false,"amazon-aws":false,"apple":false,"automated-malware-analysis":false,"bank-website":false,"cisco_1M":false,"cisco_top1000":false,"cisco_top10k":false,"cisco_top20k":false,"cisco_top5k":false,"cloudflare":false,"common-contact-emails":false,"common-ioc-false-positive":false,"covid":false,"covid-19-cyber-threat-coalition-whitelist":false,"covid-19-krassi-whitelist":false,"crl-hostname":false,"crl-ip":false,"dax30":false,"disposable-email":false,"dynamic-dns":false,"eicar.com":false,"empty-hashes":false,"fastly":false,"google":false,"google-chrome-crux-1million":false,"google-gcp":false,"google-gmail-sending-ips":false,"googlebot":false,"ipv6-linklocal":false,"majestic_million":false,"majestic_million_1M":false,"microsoft":false,"microsoft-attack-simulator":false,"microsoft-azure":false,"microsoft-azure-appid":false,"microsoft-azure-china":false,"microsoft-azure-germany":false,"microsoft-azure-us-gov":false,"microsoft-office365":false,"microsoft-office365-cn":false,"microsoft-office365-ip":false,"microsoft-win10-connection-endpoints":false,"moz-top500":false,"mozilla-CA":false,"mozilla-IntermediateCA":false,"multicast":false,"nioc-filehash":false,"ovh-cluster":false,"parking-domain":false,"parking-domain-ns":false,"phone_numbers":false,"public-dns-hostname":false,"public-dns-v4":false,"public-dns-v6":false,"public-ipfs-gateways":false,"rfc1918":false,"rfc3849":false,"rfc5735":false,"rfc6598":false,"rfc6761":false,"second-level-tlds":false,"security-provider-blogpost":false,"sinkholes":false,"smtp-receiving-ips":false,"smtp-sending-ips":false,"stackpath":false,"tenable-cloud-ipv4":false,"tenable-cloud-ipv6":false,"ti-falsepositives":false,"tlds":false,"tranco":false,"tranco10k":false,"university_domains":false,"url-shortener":false,"vpn-ipv4":false,"vpn-ipv6":false,"whats-my-ip":false,"wikimedia":false},"last_updated":"2023-01-26T08:19:05.976Z","first_seen":"2021-06-19T23:34:03.000Z","last_seen":"2022-12-26T23:34:03.000Z","campaigns":[],"reports":[]}],"next":"FGluY2x1ZGVfY29udGV4dF91dWlkDnF1ZXJ5VGhlbkZldGNoKhZobC1pdUF4SlRTNmF3YjQ5Wkl6Qjh3AAAAAC9QdOYWUU9NTTVqYWpTeENGWnF0VTd0Q0VhdxZFeVZVOW9jbFJXU3dvM2xzM01yMlpnAAAAADDM75kWUmdpaFJUbkVUbnlydm16bVh4d3lxURZhY3ZXQWRpSVJCT18tMFNKMW5XNG9BAAAAAC-wdo0WTGRKREd5TUNRckNFWXJhc3hRbnBKZxZUbUNidXVvdFNDNktXdWRFMDcwU3VBAAAAADJH5_sWZWpobmJSbFRTRGUtRjJoMEpESFBlZxZQU3ZIVnc2SFJHMnBCcWdrdEQ2VkhnAAAAAC_xzkEWWWZGOTJLTGlRMjJhWXlZRzh4U3ZsdxZudlRCV3lpRlRIQ3JIc2ZkMlU0SERBAAAAADH6Oe0WZkZINDZIUktSc2U2ZzlJdmZ5cmVXZxZhY3ZXQWRpSVJCT18tMFNKMW5XNG9BAAAAAC-wdo8WTGRKREd5TUNRckNFWXJhc3hRbnBKZxZhY3ZXQWRpSVJCT18tMFNKMW5XNG9BAAAAAC-wdo4WTGRKREd5TUNRckNFWXJhc3hRbnBKZxZobC1pdUF4SlRTNmF3YjQ5Wkl6Qjh3AAAAAC9QdOQWUU9NTTVqYWpTeENGWnF0VTd0Q0VhdxY2dnE4RzNVMFRaYUxpU0JwUURnaGZnAAAAAC5KKdUWSWlBalNDc2hRYWFiN3VlZWhWNWdPZxY2dnE4RzNVMFRaYUxpU0JwUURnaGZnAAAAAC5KKdcWSWlBalNDc2hRYWFiN3VlZWhWNWdPZxZudlRCV3lpRlRIQ3JIc2ZkMlU0SERBAAAAADH6Oe4WZkZINDZIUktSc2U2ZzlJdmZ5cmVXZxZES3p3R0FQSlFDcW1jQ1N4Z0xKS2hRAAAAADDiaYIWTVFPRUpvOGdUV0tQZ1FPMzFKUWduQRZUbUNidXVvdFNDNktXdWRFMDcwU3VBAAAAADJH5_oWZWpobmJSbFRTRGUtRjJoMEpESFBlZxZobC1pdUF4SlRTNmF3YjQ5Wkl6Qjh3AAAAAC9QdOcWUU9NTTVqYWpTeENGWnF0VTd0Q0VhdxY2dnE4RzNVMFRaYUxpU0JwUURnaGZnAAAAAC5KKdYWSWlBalNDc2hRYWFiN3VlZWhWNWdPZxZES3p3R0FQSlFDcW1jQ1N4Z0xKS2hRAAAAADDiaYMWTVFPRUpvOGdUV0tQZ1FPMzFKUWduQRZobC1pdUF4SlRTNmF3YjQ5Wkl6Qjh3AAAAAC9QdOUWUU9NTTVqYWpTeENGWnF0VTd0Q0VhdxZUbUNidXVvdFNDNktXdWRFMDcwU3VBAAAAADJH5_wWZWpobmJSbFRTRGUtRjJoMEpESFBlZxYtUTMzY2ZPa1M0eTdkbFVKOGY4X2dBAAAAADKq4GYWWkVBb3BKLUFRSmUxbjhHUFp2Sm44URZaN3lJYnhGZlNxU3dpOTJHdnF1WHJRAAAAACxfE3wWLTdpbXB1S3JSRkNEYzdYZ0pWWEs3ZxZFeVZVOW9jbFJXU3dvM2xzM01yMlpnAAAAADDM75oWUmdpaFJUbkVUbnlydm16bVh4d3lxURZUbUNidXVvdFNDNktXdWRFMDcwU3VBAAAAADJH5_0WZWpobmJSbFRTRGUtRjJoMEpESFBlZxZES3p3R0FQSlFDcW1jQ1N4Z0xKS2hRAAAAADDiaYQWTVFPRUpvOGdUV0tQZ1FPMzFKUWduQRZQU3ZIVnc2SFJHMnBCcWdrdEQ2VkhnAAAAAC_xzkIWWWZGOTJLTGlRMjJhWXlZRzh4U3ZsdxZnQ2ZibkxVcFFKU05jdjdqNjVJOWNBAAAAADMm2qsWSklEcml3WThRbWFKZEdzazRsam9vdxZXakJBWTlfaFRHNnFFWEtSSWlsdHBnAAAAACwMtMAWNGJSX1Y4N1FSeHVKYkVaYm8ybmtvURZQU3ZIVnc2SFJHMnBCcWdrdEQ2VkhnAAAAAC_xzkQWWWZGOTJLTGlRMjJhWXlZRzh4U3ZsdxZFeVZVOW9jbFJXU3dvM2xzM01yMlpnAAAAADDM75sWUmdpaFJUbkVUbnlydm16bVh4d3lxURZaN3lJYnhGZlNxU3dpOTJHdnF1WHJRAAAAACxfE30WLTdpbXB1S3JSRkNEYzdYZ0pWWEs3ZxZXakJBWTlfaFRHNnFFWEtSSWlsdHBnAAAAACwMtL8WNGJSX1Y4N1FSeHVKYkVaYm8ybmtvURZnQ2ZibkxVcFFKU05jdjdqNjVJOWNBAAAAADMm2qoWSklEcml3WThRbWFKZEdzazRsam9vdxZudlRCV3lpRlRIQ3JIc2ZkMlU0SERBAAAAADH6Oe8WZkZINDZIUktSc2U2ZzlJdmZ5cmVXZxZES3p3R0FQSlFDcW1jQ1N4Z0xKS2hRAAAAADDiaYEWTVFPRUpvOGdUV0tQZ1FPMzFKUWduQRZaN3lJYnhGZlNxU3dpOTJHdnF1WHJRAAAAACxfE34WLTdpbXB1S3JSRkNEYzdYZ0pWWEs3ZxYtUTMzY2ZPa1M0eTdkbFVKOGY4X2dBAAAAADKq4GcWWkVBb3BKLUFRSmUxbjhHUFp2Sm44URZnQ2ZibkxVcFFKU05jdjdqNjVJOWNBAAAAADMm2qwWSklEcml3WThRbWFKZEdzazRsam9vdxZXakJBWTlfaFRHNnFFWEtSSWlsdHBnAAAAACwMtMEWNGJSX1Y4N1FSeHVKYkVaYm8ybmtvURYtUTMzY2ZPa1M0eTdkbFVKOGY4X2dBAAAAADKq4GgWWkVBb3BKLUFRSmUxbjhHUFp2Sm44URZXakJBWTlfaFRHNnFFWEtSSWlsdHBnAAAAACwMtMIWNGJSX1Y4N1FSeHVKYkVaYm8ybmtvURZFeVZVOW9jbFJXU3dvM2xzM01yMlpnAAAAADDM75wWUmdpaFJUbkVUbnlydm16bVh4d3lxURYtUTMzY2ZPa1M0eTdkbFVKOGY4X2dBAAAAADKq4GkWWkVBb3BKLUFRSmUxbjhHUFp2Sm44UQ==.eyJsaW1pdCI6MSwicmVwb3J0X2xpbWl0IjoyNSwic3RhcnRfZXBvY2giOjE2NzQ2NzA4NjMsImd0ZV9tc2NvcmUiOjAsIm5leHRfcGFnZV9pbmRleCI6MX0="}
+
+        '
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 79038cd5eb030582-IAD
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Fri, 27 Jan 2023 18:28:47 GMT
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      - Origin
+      content-length:
+      - '5993'
+      x-amzn-trace-id:
+      - c76dbb0cae7494133182eb0d6dbae6fd
+    status:
+      code: 200
+      message: OK
+- request:
+    body: grant_type=client_credentials
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '29'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Cookie:
+      - __cf_bm=TPZ8GuOToLj9LWIAuUVZcuQYafsk_KL7PE.lUJ0OIi4-1674844127-0-ARFbgryOfPip/lgWcMWS8O9oCF9BYxFhFqxu3iCu8HqL7SFzTBP45wnlg2kmiMJ5CiqhRKrAKF8uUI/JlYXVMLE=
+      User-Agent:
+      - python-requests/2.28.1
+    method: POST
+    uri: https://api.intelligence.mandiant.com/token
+  response:
+    body:
+      string: '{"access_token": "FAKE_TOKEN","token_type":"Bearer","expires_in":23052}
+
+        '
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 79038cd64b740582-IAD
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Fri, 27 Jan 2023 18:28:47 GMT
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin
+      content-length:
+      - '125'
+      x-amzn-trace-id:
+      - b9b5a30dbc85cc3d3367862c0e04e3df
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate      Connection:
+      - keep-alive
+      Cookie:
+      - __cf_bm=TPZ8GuOToLj9LWIAuUVZcuQYafsk_KL7PE.lUJ0OIi4-1674844127-0-ARFbgryOfPip/lgWcMWS8O9oCF9BYxFhFqxu3iCu8HqL7SFzTBP45wnlg2kmiMJ5CiqhRKrAKF8uUI/JlYXVMLE=
+      User-Agent:
+      - python-requests/2.28.1
+      X-App-Name:
+      - MA-TI-Python-Lib-v0.1
+    method: GET
+    uri: https://api.intelligence.mandiant.com/v4/indicator?next=FGluY2x1ZGVfY29udGV4dF91dWlkDnF1ZXJ5VGhlbkZldGNoKhZobC1pdUF4SlRTNmF3YjQ5Wkl6Qjh3AAAAAC9QdOYWUU9NTTVqYWpTeENGWnF0VTd0Q0VhdxZFeVZVOW9jbFJXU3dvM2xzM01yMlpnAAAAADDM75kWUmdpaFJUbkVUbnlydm16bVh4d3lxURZhY3ZXQWRpSVJCT18tMFNKMW5XNG9BAAAAAC-wdo0WTGRKREd5TUNRckNFWXJhc3hRbnBKZxZUbUNidXVvdFNDNktXdWRFMDcwU3VBAAAAADJH5_sWZWpobmJSbFRTRGUtRjJoMEpESFBlZxZQU3ZIVnc2SFJHMnBCcWdrdEQ2VkhnAAAAAC_xzkEWWWZGOTJLTGlRMjJhWXlZRzh4U3ZsdxZudlRCV3lpRlRIQ3JIc2ZkMlU0SERBAAAAADH6Oe0WZkZINDZIUktSc2U2ZzlJdmZ5cmVXZxZhY3ZXQWRpSVJCT18tMFNKMW5XNG9BAAAAAC-wdo8WTGRKREd5TUNRckNFWXJhc3hRbnBKZxZhY3ZXQWRpSVJCT18tMFNKMW5XNG9BAAAAAC-wdo4WTGRKREd5TUNRckNFWXJhc3hRbnBKZxZobC1pdUF4SlRTNmF3YjQ5Wkl6Qjh3AAAAAC9QdOQWUU9NTTVqYWpTeENGWnF0VTd0Q0VhdxY2dnE4RzNVMFRaYUxpU0JwUURnaGZnAAAAAC5KKdUWSWlBalNDc2hRYWFiN3VlZWhWNWdPZxY2dnE4RzNVMFRaYUxpU0JwUURnaGZnAAAAAC5KKdcWSWlBalNDc2hRYWFiN3VlZWhWNWdPZxZudlRCV3lpRlRIQ3JIc2ZkMlU0SERBAAAAADH6Oe4WZkZINDZIUktSc2U2ZzlJdmZ5cmVXZxZES3p3R0FQSlFDcW1jQ1N4Z0xKS2hRAAAAADDiaYIWTVFPRUpvOGdUV0tQZ1FPMzFKUWduQRZUbUNidXVvdFNDNktXdWRFMDcwU3VBAAAAADJH5_oWZWpobmJSbFRTRGUtRjJoMEpESFBlZxZobC1pdUF4SlRTNmF3YjQ5Wkl6Qjh3AAAAAC9QdOcWUU9NTTVqYWpTeENGWnF0VTd0Q0VhdxY2dnE4RzNVMFRaYUxpU0JwUURnaGZnAAAAAC5KKdYWSWlBalNDc2hRYWFiN3VlZWhWNWdPZxZES3p3R0FQSlFDcW1jQ1N4Z0xKS2hRAAAAADDiaYMWTVFPRUpvOGdUV0tQZ1FPMzFKUWduQRZobC1pdUF4SlRTNmF3YjQ5Wkl6Qjh3AAAAAC9QdOUWUU9NTTVqYWpTeENGWnF0VTd0Q0VhdxZUbUNidXVvdFNDNktXdWRFMDcwU3VBAAAAADJH5_wWZWpobmJSbFRTRGUtRjJoMEpESFBlZxYtUTMzY2ZPa1M0eTdkbFVKOGY4X2dBAAAAADKq4GYWWkVBb3BKLUFRSmUxbjhHUFp2Sm44URZaN3lJYnhGZlNxU3dpOTJHdnF1WHJRAAAAACxfE3wWLTdpbXB1S3JSRkNEYzdYZ0pWWEs3ZxZFeVZVOW9jbFJXU3dvM2xzM01yMlpnAAAAADDM75oWUmdpaFJUbkVUbnlydm16bVh4d3lxURZUbUNidXVvdFNDNktXdWRFMDcwU3VBAAAAADJH5_0WZWpobmJSbFRTRGUtRjJoMEpESFBlZxZES3p3R0FQSlFDcW1jQ1N4Z0xKS2hRAAAAADDiaYQWTVFPRUpvOGdUV0tQZ1FPMzFKUWduQRZQU3ZIVnc2SFJHMnBCcWdrdEQ2VkhnAAAAAC_xzkIWWWZGOTJLTGlRMjJhWXlZRzh4U3ZsdxZnQ2ZibkxVcFFKU05jdjdqNjVJOWNBAAAAADMm2qsWSklEcml3WThRbWFKZEdzazRsam9vdxZXakJBWTlfaFRHNnFFWEtSSWlsdHBnAAAAACwMtMAWNGJSX1Y4N1FSeHVKYkVaYm8ybmtvURZQU3ZIVnc2SFJHMnBCcWdrdEQ2VkhnAAAAAC_xzkQWWWZGOTJLTGlRMjJhWXlZRzh4U3ZsdxZFeVZVOW9jbFJXU3dvM2xzM01yMlpnAAAAADDM75sWUmdpaFJUbkVUbnlydm16bVh4d3lxURZaN3lJYnhGZlNxU3dpOTJHdnF1WHJRAAAAACxfE30WLTdpbXB1S3JSRkNEYzdYZ0pWWEs3ZxZXakJBWTlfaFRHNnFFWEtSSWlsdHBnAAAAACwMtL8WNGJSX1Y4N1FSeHVKYkVaYm8ybmtvURZnQ2ZibkxVcFFKU05jdjdqNjVJOWNBAAAAADMm2qoWSklEcml3WThRbWFKZEdzazRsam9vdxZudlRCV3lpRlRIQ3JIc2ZkMlU0SERBAAAAADH6Oe8WZkZINDZIUktSc2U2ZzlJdmZ5cmVXZxZES3p3R0FQSlFDcW1jQ1N4Z0xKS2hRAAAAADDiaYEWTVFPRUpvOGdUV0tQZ1FPMzFKUWduQRZaN3lJYnhGZlNxU3dpOTJHdnF1WHJRAAAAACxfE34WLTdpbXB1S3JSRkNEYzdYZ0pWWEs3ZxYtUTMzY2ZPa1M0eTdkbFVKOGY4X2dBAAAAADKq4GcWWkVBb3BKLUFRSmUxbjhHUFp2Sm44URZnQ2ZibkxVcFFKU05jdjdqNjVJOWNBAAAAADMm2qwWSklEcml3WThRbWFKZEdzazRsam9vdxZXakJBWTlfaFRHNnFFWEtSSWlsdHBnAAAAACwMtMEWNGJSX1Y4N1FSeHVKYkVaYm8ybmtvURYtUTMzY2ZPa1M0eTdkbFVKOGY4X2dBAAAAADKq4GgWWkVBb3BKLUFRSmUxbjhHUFp2Sm44URZXakJBWTlfaFRHNnFFWEtSSWlsdHBnAAAAACwMtMIWNGJSX1Y4N1FSeHVKYkVaYm8ybmtvURZFeVZVOW9jbFJXU3dvM2xzM01yMlpnAAAAADDM75wWUmdpaFJUbkVUbnlydm16bVh4d3lxURYtUTMzY2ZPa1M0eTdkbFVKOGY4X2dBAAAAADKq4GkWWkVBb3BKLUFRSmUxbjhHUFp2Sm44UQ%3D%3D.eyJsaW1pdCI6MSwicmVwb3J0X2xpbWl0IjoyNSwic3RhcnRfZXBvY2giOjE2NzQ2NzA4NjMsImd0ZV9tc2NvcmUiOjAsIm5leHRfcGFnZV9pbmRleCI6MX0%3D&include_campaigns=True
+  response:
+    body:
+      string: '{"indicators":[{"id":"ipv4--5e60d721-21a9-5dee-8698-1df8f88c1a17","mscore":71,"type":"ipv4","value":"201.160.167.203","is_publishable":true,"sources":[{"first_seen":"2022-08-17T23:40:00.940+0000","last_seen":"2022-08-17T23:40:00.940+0000","osint":true,"category":[],"source_name":"voipbl"},{"first_seen":"2022-07-29T10:10:01.465+0000","last_seen":"2022-07-29T10:10:01.465+0000","osint":true,"category":[],"source_name":"blocklist_de"},{"first_seen":"2022-10-14T23:34:04.246+0000","last_seen":"2022-12-26T23:34:03.988+0000","osint":true,"category":["exploit/vuln-scanning","exploit"],"source_name":"blocklist_net_ua"},{"first_seen":"2022-09-13T00:20:00.933+0000","last_seen":"2022-12-13T00:20:01.088+0000","osint":true,"category":["exploit/vuln-scanning","exploit"],"source_name":"greensnow"}],"misp":{"akamai":false,"alexa":false,"alexa_1M":false,"amazon-aws":false,"apple":false,"automated-malware-analysis":false,"bank-website":false,"cisco_1M":false,"cisco_top1000":false,"cisco_top10k":false,"cisco_top20k":false,"cisco_top5k":false,"cloudflare":false,"common-contact-emails":false,"common-ioc-false-positive":false,"covid":false,"covid-19-cyber-threat-coalition-whitelist":false,"covid-19-krassi-whitelist":false,"crl-hostname":false,"crl-ip":false,"dax30":false,"disposable-email":false,"dynamic-dns":false,"eicar.com":false,"empty-hashes":false,"fastly":false,"google":false,"google-chrome-crux-1million":false,"google-gcp":false,"google-gmail-sending-ips":false,"googlebot":false,"ipv6-linklocal":false,"majestic_million":false,"majestic_million_1M":false,"microsoft":false,"microsoft-attack-simulator":false,"microsoft-azure":false,"microsoft-azure-appid":false,"microsoft-azure-china":false,"microsoft-azure-germany":false,"microsoft-azure-us-gov":false,"microsoft-office365":false,"microsoft-office365-cn":false,"microsoft-office365-ip":false,"microsoft-win10-connection-endpoints":false,"moz-top500":false,"mozilla-CA":false,"mozilla-IntermediateCA":false,"multicast":false,"nioc-filehash":false,"ovh-cluster":false,"parking-domain":false,"parking-domain-ns":false,"phone_numbers":false,"public-dns-hostname":false,"public-dns-v4":false,"public-dns-v6":false,"public-ipfs-gateways":false,"rfc1918":false,"rfc3849":false,"rfc5735":false,"rfc6598":false,"rfc6761":false,"second-level-tlds":false,"security-provider-blogpost":false,"sinkholes":false,"smtp-receiving-ips":false,"smtp-sending-ips":false,"stackpath":false,"tenable-cloud-ipv4":false,"tenable-cloud-ipv6":false,"ti-falsepositives":false,"tlds":false,"tranco":false,"tranco10k":false,"university_domains":false,"url-shortener":false,"vpn-ipv4":false,"vpn-ipv6":false,"whats-my-ip":false,"wikimedia":false},"last_updated":"2023-01-26T16:12:20.508Z","first_seen":"2022-07-29T10:10:01.000Z","last_seen":"2022-12-26T23:34:03.000Z"}],"next":"FGluY2x1ZGVfY29udGV4dF91dWlkDnF1ZXJ5VGhlbkZldGNoKhZobC1pdUF4SlRTNmF3YjQ5Wkl6Qjh3AAAAAC9QdOYWUU9NTTVqYWpTeENGWnF0VTd0Q0VhdxZFeVZVOW9jbFJXU3dvM2xzM01yMlpnAAAAADDM75kWUmdpaFJUbkVUbnlydm16bVh4d3lxURZhY3ZXQWRpSVJCT18tMFNKMW5XNG9BAAAAAC-wdo0WTGRKREd5TUNRckNFWXJhc3hRbnBKZxZUbUNidXVvdFNDNktXdWRFMDcwU3VBAAAAADJH5_sWZWpobmJSbFRTRGUtRjJoMEpESFBlZxZQU3ZIVnc2SFJHMnBCcWdrdEQ2VkhnAAAAAC_xzkEWWWZGOTJLTGlRMjJhWXlZRzh4U3ZsdxZudlRCV3lpRlRIQ3JIc2ZkMlU0SERBAAAAADH6Oe0WZkZINDZIUktSc2U2ZzlJdmZ5cmVXZxZhY3ZXQWRpSVJCT18tMFNKMW5XNG9BAAAAAC-wdo8WTGRKREd5TUNRckNFWXJhc3hRbnBKZxZhY3ZXQWRpSVJCT18tMFNKMW5XNG9BAAAAAC-wdo4WTGRKREd5TUNRckNFWXJhc3hRbnBKZxZobC1pdUF4SlRTNmF3YjQ5Wkl6Qjh3AAAAAC9QdOQWUU9NTTVqYWpTeENGWnF0VTd0Q0VhdxY2dnE4RzNVMFRaYUxpU0JwUURnaGZnAAAAAC5KKdUWSWlBalNDc2hRYWFiN3VlZWhWNWdPZxY2dnE4RzNVMFRaYUxpU0JwUURnaGZnAAAAAC5KKdcWSWlBalNDc2hRYWFiN3VlZWhWNWdPZxZudlRCV3lpRlRIQ3JIc2ZkMlU0SERBAAAAADH6Oe4WZkZINDZIUktSc2U2ZzlJdmZ5cmVXZxZES3p3R0FQSlFDcW1jQ1N4Z0xKS2hRAAAAADDiaYIWTVFPRUpvOGdUV0tQZ1FPMzFKUWduQRZUbUNidXVvdFNDNktXdWRFMDcwU3VBAAAAADJH5_oWZWpobmJSbFRTRGUtRjJoMEpESFBlZxZobC1pdUF4SlRTNmF3YjQ5Wkl6Qjh3AAAAAC9QdOcWUU9NTTVqYWpTeENGWnF0VTd0Q0VhdxY2dnE4RzNVMFRaYUxpU0JwUURnaGZnAAAAAC5KKdYWSWlBalNDc2hRYWFiN3VlZWhWNWdPZxZES3p3R0FQSlFDcW1jQ1N4Z0xKS2hRAAAAADDiaYMWTVFPRUpvOGdUV0tQZ1FPMzFKUWduQRZobC1pdUF4SlRTNmF3YjQ5Wkl6Qjh3AAAAAC9QdOUWUU9NTTVqYWpTeENGWnF0VTd0Q0VhdxZUbUNidXVvdFNDNktXdWRFMDcwU3VBAAAAADJH5_wWZWpobmJSbFRTRGUtRjJoMEpESFBlZxYtUTMzY2ZPa1M0eTdkbFVKOGY4X2dBAAAAADKq4GYWWkVBb3BKLUFRSmUxbjhHUFp2Sm44URZaN3lJYnhGZlNxU3dpOTJHdnF1WHJRAAAAACxfE3wWLTdpbXB1S3JSRkNEYzdYZ0pWWEs3ZxZFeVZVOW9jbFJXU3dvM2xzM01yMlpnAAAAADDM75oWUmdpaFJUbkVUbnlydm16bVh4d3lxURZUbUNidXVvdFNDNktXdWRFMDcwU3VBAAAAADJH5_0WZWpobmJSbFRTRGUtRjJoMEpESFBlZxZES3p3R0FQSlFDcW1jQ1N4Z0xKS2hRAAAAADDiaYQWTVFPRUpvOGdUV0tQZ1FPMzFKUWduQRZQU3ZIVnc2SFJHMnBCcWdrdEQ2VkhnAAAAAC_xzkIWWWZGOTJLTGlRMjJhWXlZRzh4U3ZsdxZnQ2ZibkxVcFFKU05jdjdqNjVJOWNBAAAAADMm2qsWSklEcml3WThRbWFKZEdzazRsam9vdxZXakJBWTlfaFRHNnFFWEtSSWlsdHBnAAAAACwMtMAWNGJSX1Y4N1FSeHVKYkVaYm8ybmtvURZQU3ZIVnc2SFJHMnBCcWdrdEQ2VkhnAAAAAC_xzkQWWWZGOTJLTGlRMjJhWXlZRzh4U3ZsdxZFeVZVOW9jbFJXU3dvM2xzM01yMlpnAAAAADDM75sWUmdpaFJUbkVUbnlydm16bVh4d3lxURZaN3lJYnhGZlNxU3dpOTJHdnF1WHJRAAAAACxfE30WLTdpbXB1S3JSRkNEYzdYZ0pWWEs3ZxZXakJBWTlfaFRHNnFFWEtSSWlsdHBnAAAAACwMtL8WNGJSX1Y4N1FSeHVKYkVaYm8ybmtvURZnQ2ZibkxVcFFKU05jdjdqNjVJOWNBAAAAADMm2qoWSklEcml3WThRbWFKZEdzazRsam9vdxZudlRCV3lpRlRIQ3JIc2ZkMlU0SERBAAAAADH6Oe8WZkZINDZIUktSc2U2ZzlJdmZ5cmVXZxZES3p3R0FQSlFDcW1jQ1N4Z0xKS2hRAAAAADDiaYEWTVFPRUpvOGdUV0tQZ1FPMzFKUWduQRZaN3lJYnhGZlNxU3dpOTJHdnF1WHJRAAAAACxfE34WLTdpbXB1S3JSRkNEYzdYZ0pWWEs3ZxYtUTMzY2ZPa1M0eTdkbFVKOGY4X2dBAAAAADKq4GcWWkVBb3BKLUFRSmUxbjhHUFp2Sm44URZnQ2ZibkxVcFFKU05jdjdqNjVJOWNBAAAAADMm2qwWSklEcml3WThRbWFKZEdzazRsam9vdxZXakJBWTlfaFRHNnFFWEtSSWlsdHBnAAAAACwMtMEWNGJSX1Y4N1FSeHVKYkVaYm8ybmtvURYtUTMzY2ZPa1M0eTdkbFVKOGY4X2dBAAAAADKq4GgWWkVBb3BKLUFRSmUxbjhHUFp2Sm44URZXakJBWTlfaFRHNnFFWEtSSWlsdHBnAAAAACwMtMIWNGJSX1Y4N1FSeHVKYkVaYm8ybmtvURZFeVZVOW9jbFJXU3dvM2xzM01yMlpnAAAAADDM75wWUmdpaFJUbkVUbnlydm16bVh4d3lxURYtUTMzY2ZPa1M0eTdkbFVKOGY4X2dBAAAAADKq4GkWWkVBb3BKLUFRSmUxbjhHUFp2Sm44UQ==.eyJsaW1pdCI6MSwicmVwb3J0X2xpbWl0IjoyNSwic3RhcnRfZXBvY2giOjE2NzQ2NzA4NjMsImd0ZV9tc2NvcmUiOjAsIm5leHRfcGFnZV9pbmRleCI6Mn0="}
+
+        '
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 79038cd68ba30582-IAD
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Fri, 27 Jan 2023 18:28:47 GMT
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      - Origin
+      content-length:
+      - '6008'
+      x-amzn-trace-id:
+      - d3d965e73e2e7605d609d3c4623d77e1
+    status:
+      code: 200
+      message: OK
+- request:
+    body: grant_type=client_credentials
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '29'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Cookie:
+      - __cf_bm=TPZ8GuOToLj9LWIAuUVZcuQYafsk_KL7PE.lUJ0OIi4-1674844127-0-ARFbgryOfPip/lgWcMWS8O9oCF9BYxFhFqxu3iCu8HqL7SFzTBP45wnlg2kmiMJ5CiqhRKrAKF8uUI/JlYXVMLE=
+      User-Agent:
+      - python-requests/2.28.1
+    method: POST
+    uri: https://api.intelligence.mandiant.com/token
+  response:
+    body:
+      string: '{"access_token": "FAKE_TOKEN","token_type":"Bearer","expires_in":35042}
+
+        '
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 79038cd6bbe10582-IAD
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Fri, 27 Jan 2023 18:28:47 GMT
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin
+      content-length:
+      - '125'
+      x-amzn-trace-id:
+      - a772907ce2b09421a33fcd5acf19c5b1
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate      Connection:
+      - keep-alive
+      Cookie:
+      - __cf_bm=TPZ8GuOToLj9LWIAuUVZcuQYafsk_KL7PE.lUJ0OIi4-1674844127-0-ARFbgryOfPip/lgWcMWS8O9oCF9BYxFhFqxu3iCu8HqL7SFzTBP45wnlg2kmiMJ5CiqhRKrAKF8uUI/JlYXVMLE=
+      User-Agent:
+      - python-requests/2.28.1
+      X-App-Name:
+      - MA-TI-Python-Lib-v0.1
+    method: GET
+    uri: https://api.intelligence.mandiant.com/v4/indicator?next=FGluY2x1ZGVfY29udGV4dF91dWlkDnF1ZXJ5VGhlbkZldGNoKhZobC1pdUF4SlRTNmF3YjQ5Wkl6Qjh3AAAAAC9QdOYWUU9NTTVqYWpTeENGWnF0VTd0Q0VhdxZFeVZVOW9jbFJXU3dvM2xzM01yMlpnAAAAADDM75kWUmdpaFJUbkVUbnlydm16bVh4d3lxURZhY3ZXQWRpSVJCT18tMFNKMW5XNG9BAAAAAC-wdo0WTGRKREd5TUNRckNFWXJhc3hRbnBKZxZUbUNidXVvdFNDNktXdWRFMDcwU3VBAAAAADJH5_sWZWpobmJSbFRTRGUtRjJoMEpESFBlZxZQU3ZIVnc2SFJHMnBCcWdrdEQ2VkhnAAAAAC_xzkEWWWZGOTJLTGlRMjJhWXlZRzh4U3ZsdxZudlRCV3lpRlRIQ3JIc2ZkMlU0SERBAAAAADH6Oe0WZkZINDZIUktSc2U2ZzlJdmZ5cmVXZxZhY3ZXQWRpSVJCT18tMFNKMW5XNG9BAAAAAC-wdo8WTGRKREd5TUNRckNFWXJhc3hRbnBKZxZhY3ZXQWRpSVJCT18tMFNKMW5XNG9BAAAAAC-wdo4WTGRKREd5TUNRckNFWXJhc3hRbnBKZxZobC1pdUF4SlRTNmF3YjQ5Wkl6Qjh3AAAAAC9QdOQWUU9NTTVqYWpTeENGWnF0VTd0Q0VhdxY2dnE4RzNVMFRaYUxpU0JwUURnaGZnAAAAAC5KKdUWSWlBalNDc2hRYWFiN3VlZWhWNWdPZxY2dnE4RzNVMFRaYUxpU0JwUURnaGZnAAAAAC5KKdcWSWlBalNDc2hRYWFiN3VlZWhWNWdPZxZudlRCV3lpRlRIQ3JIc2ZkMlU0SERBAAAAADH6Oe4WZkZINDZIUktSc2U2ZzlJdmZ5cmVXZxZES3p3R0FQSlFDcW1jQ1N4Z0xKS2hRAAAAADDiaYIWTVFPRUpvOGdUV0tQZ1FPMzFKUWduQRZUbUNidXVvdFNDNktXdWRFMDcwU3VBAAAAADJH5_oWZWpobmJSbFRTRGUtRjJoMEpESFBlZxZobC1pdUF4SlRTNmF3YjQ5Wkl6Qjh3AAAAAC9QdOcWUU9NTTVqYWpTeENGWnF0VTd0Q0VhdxY2dnE4RzNVMFRaYUxpU0JwUURnaGZnAAAAAC5KKdYWSWlBalNDc2hRYWFiN3VlZWhWNWdPZxZES3p3R0FQSlFDcW1jQ1N4Z0xKS2hRAAAAADDiaYMWTVFPRUpvOGdUV0tQZ1FPMzFKUWduQRZobC1pdUF4SlRTNmF3YjQ5Wkl6Qjh3AAAAAC9QdOUWUU9NTTVqYWpTeENGWnF0VTd0Q0VhdxZUbUNidXVvdFNDNktXdWRFMDcwU3VBAAAAADJH5_wWZWpobmJSbFRTRGUtRjJoMEpESFBlZxYtUTMzY2ZPa1M0eTdkbFVKOGY4X2dBAAAAADKq4GYWWkVBb3BKLUFRSmUxbjhHUFp2Sm44URZaN3lJYnhGZlNxU3dpOTJHdnF1WHJRAAAAACxfE3wWLTdpbXB1S3JSRkNEYzdYZ0pWWEs3ZxZFeVZVOW9jbFJXU3dvM2xzM01yMlpnAAAAADDM75oWUmdpaFJUbkVUbnlydm16bVh4d3lxURZUbUNidXVvdFNDNktXdWRFMDcwU3VBAAAAADJH5_0WZWpobmJSbFRTRGUtRjJoMEpESFBlZxZES3p3R0FQSlFDcW1jQ1N4Z0xKS2hRAAAAADDiaYQWTVFPRUpvOGdUV0tQZ1FPMzFKUWduQRZQU3ZIVnc2SFJHMnBCcWdrdEQ2VkhnAAAAAC_xzkIWWWZGOTJLTGlRMjJhWXlZRzh4U3ZsdxZnQ2ZibkxVcFFKU05jdjdqNjVJOWNBAAAAADMm2qsWSklEcml3WThRbWFKZEdzazRsam9vdxZXakJBWTlfaFRHNnFFWEtSSWlsdHBnAAAAACwMtMAWNGJSX1Y4N1FSeHVKYkVaYm8ybmtvURZQU3ZIVnc2SFJHMnBCcWdrdEQ2VkhnAAAAAC_xzkQWWWZGOTJLTGlRMjJhWXlZRzh4U3ZsdxZFeVZVOW9jbFJXU3dvM2xzM01yMlpnAAAAADDM75sWUmdpaFJUbkVUbnlydm16bVh4d3lxURZaN3lJYnhGZlNxU3dpOTJHdnF1WHJRAAAAACxfE30WLTdpbXB1S3JSRkNEYzdYZ0pWWEs3ZxZXakJBWTlfaFRHNnFFWEtSSWlsdHBnAAAAACwMtL8WNGJSX1Y4N1FSeHVKYkVaYm8ybmtvURZnQ2ZibkxVcFFKU05jdjdqNjVJOWNBAAAAADMm2qoWSklEcml3WThRbWFKZEdzazRsam9vdxZudlRCV3lpRlRIQ3JIc2ZkMlU0SERBAAAAADH6Oe8WZkZINDZIUktSc2U2ZzlJdmZ5cmVXZxZES3p3R0FQSlFDcW1jQ1N4Z0xKS2hRAAAAADDiaYEWTVFPRUpvOGdUV0tQZ1FPMzFKUWduQRZaN3lJYnhGZlNxU3dpOTJHdnF1WHJRAAAAACxfE34WLTdpbXB1S3JSRkNEYzdYZ0pWWEs3ZxYtUTMzY2ZPa1M0eTdkbFVKOGY4X2dBAAAAADKq4GcWWkVBb3BKLUFRSmUxbjhHUFp2Sm44URZnQ2ZibkxVcFFKU05jdjdqNjVJOWNBAAAAADMm2qwWSklEcml3WThRbWFKZEdzazRsam9vdxZXakJBWTlfaFRHNnFFWEtSSWlsdHBnAAAAACwMtMEWNGJSX1Y4N1FSeHVKYkVaYm8ybmtvURYtUTMzY2ZPa1M0eTdkbFVKOGY4X2dBAAAAADKq4GgWWkVBb3BKLUFRSmUxbjhHUFp2Sm44URZXakJBWTlfaFRHNnFFWEtSSWlsdHBnAAAAACwMtMIWNGJSX1Y4N1FSeHVKYkVaYm8ybmtvURZFeVZVOW9jbFJXU3dvM2xzM01yMlpnAAAAADDM75wWUmdpaFJUbkVUbnlydm16bVh4d3lxURYtUTMzY2ZPa1M0eTdkbFVKOGY4X2dBAAAAADKq4GkWWkVBb3BKLUFRSmUxbjhHUFp2Sm44UQ%3D%3D.eyJsaW1pdCI6MSwicmVwb3J0X2xpbWl0IjoyNSwic3RhcnRfZXBvY2giOjE2NzQ2NzA4NjMsImd0ZV9tc2NvcmUiOjAsIm5leHRfcGFnZV9pbmRleCI6Mn0%3D&include_campaigns=True
+  response:
+    body:
+      string: '{"indicators":[]}
+
+        '
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 79038cd6fc1f0582-IAD
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Fri, 27 Jan 2023 18:28:47 GMT
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      - Origin
+      content-length:
+      - '6086'
+      x-amzn-trace-id:
+      - 63db67b0ff43f7cac736f9778f1502de
+    status:
+      code: 200
+      message: OK
+version: 1

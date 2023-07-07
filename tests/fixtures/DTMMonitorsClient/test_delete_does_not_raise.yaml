@@ -1,0 +1,120 @@
+# Copyright 2023 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Cookie:
+      - __cf_bm=XA_H7mp_KDbKGhDaD_J0pM_CRyAe4SsggdUnL4kcoB0-1686149508-0-AYiImdRKmRtMbeD4ZLUX39hTA3/z7d09VFh5P3yZceY9nSg2yfCYfayfGasPxgUxjM56mk7NAJjhD+nIgBhnLOg=
+      User-Agent:
+      - python-requests/2.28.2
+      X-App-Name:
+      - MA-TI-Python-Lib-v0.1
+    method: GET
+    uri: https://api.intelligence.mandiant.com/v4/dtm/monitors/ci09hlgl24d39uf0c72g
+  response:
+    body:
+      string: '{"id":"ci09hlgl24d39uf0c72g","name":"Card Shops chrishultin","description":"Know
+        if your credit cards are for sale on the Deep \u0026 Dark Web.","enabled":true,"doc_condition":{"operator":"all","topic":"match_conditions","match":[{"operator":"must_equal","topic":"doc_type","match":["shop_listing","forum_post","message","paste"]},{"operator":"must_start_with","topic":"group_bin","match":["1","2","3","4"]}]},"created_at":"2023-06-07T14:48:54.936Z","updated_at":"2023-06-07T14:48:54.936Z","email_notify_enabled":false,"email_notify_immediate":false,"template_id":"7ff0bc0b-fc60-40d4-bbde-a1436a40b38a","created_by_user_id":"d5e7d710-1cd9-103c-96f7-5330685e6260","last_updated_by_user_id":"d5e7d710-1cd9-103c-96f7-5330685e6260","created_by_user_email":"Mandiant
+        User","last_updated_user_email":"Mandiant User"}
+
+        '
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 7d39b71daafe82f9-IAD
+      Connection:
+      - keep-alive
+      Content-Security-Policy:
+      - img-src https://mandiant-dtm-email-assets.s3.amazonaws.com/; style-src-attr
+        'unsafe-inline'; default-src 'none'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 07 Jun 2023 14:51:48 GMT
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin
+      X-Amzn-Trace-Id:
+      - cfeeb09ec7e4b9dc71ea5bea55e15774
+      X-Api-Proxy:
+      - '1'
+      content-length:
+      - '811'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+      Cookie:
+      - __cf_bm=XA_H7mp_KDbKGhDaD_J0pM_CRyAe4SsggdUnL4kcoB0-1686149508-0-AYiImdRKmRtMbeD4ZLUX39hTA3/z7d09VFh5P3yZceY9nSg2yfCYfayfGasPxgUxjM56mk7NAJjhD+nIgBhnLOg=
+      User-Agent:
+      - python-requests/2.28.2
+      X-App-Name:
+      - MA-TI-Python-Lib-v0.1
+    method: DELETE
+    uri: https://api.intelligence.mandiant.com/v4/dtm/monitors/ci09hlgl24d39uf0c72g
+  response:
+    body:
+      string: ''
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 7d39b71deb3982f9-IAD
+      Connection:
+      - keep-alive
+      Content-Security-Policy:
+      - img-src https://mandiant-dtm-email-assets.s3.amazonaws.com/; style-src-attr
+        'unsafe-inline'; default-src 'none'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 07 Jun 2023 14:51:49 GMT
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Vary:
+      - Origin
+      X-Amzn-Trace-Id:
+      - 4e28e9790d291172075020354e066f8e
+      X-Api-Proxy:
+      - '1'
+    status:
+      code: 204
+      message: No Content
+version: 1

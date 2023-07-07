@@ -1,0 +1,314 @@
+# Copyright 2023 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+interactions:
+- request:
+    body: grant_type=client_credentials
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '29'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Cookie:
+      - __cf_bm=xJVaQCh05Sh3azZXG1s4HKXu3r5w34EiJCImDAGWbP4-1674840753-0-AYwvhxoFIivF+O0vdY5rh3vI9FF+IWkBg3u6gcrmOsRC6ZOfU/LVrnMPEA9FgAe6LHuxdI9BIoyH+xd1WHRZeXk=
+      User-Agent:
+      - python-requests/2.28.1
+    method: POST
+    uri: https://api.intelligence.mandiant.com/token
+  response:
+    body:
+      string: '{"access_token": "FAKE_TOKEN","token_type":"Bearer","expires_in":38416}
+
+        '
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 79033a77fdf9829c-IAD
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Fri, 27 Jan 2023 17:32:33 GMT
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin
+      content-length:
+      - '125'
+      x-amzn-trace-id:
+      - e53018464ced23befd4ba9d80067fa67
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Cookie:
+      - __cf_bm=xJVaQCh05Sh3azZXG1s4HKXu3r5w34EiJCImDAGWbP4-1674840753-0-AYwvhxoFIivF+O0vdY5rh3vI9FF+IWkBg3u6gcrmOsRC6ZOfU/LVrnMPEA9FgAe6LHuxdI9BIoyH+xd1WHRZeXk=
+      User-Agent:
+      - python-requests/2.28.1
+      X-App-Name:
+      - MA-TI-Python-Lib-v0.1
+    method: GET
+    uri: https://api.intelligence.mandiant.com/v4/campaign?start_date=2023-01-27&limit=1&offset=0
+  response:
+    body:
+      string: '{"campaigns":[{"name":"APT19 Exploits CVE-2021-44228 to Deploy COLDSTEEL
+        Backdoor at Primarily Asian-Based Organizations","id":"campaign--ea9e3c86-50db-55ac-869e-f60c29fd5d3b","short_name":"CAMP.22.009","profile_updated":"2023-01-27T07:06:14.852Z"}],"total_count":45}
+
+        '
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 79033a783e56829c-IAD
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Fri, 27 Jan 2023 17:32:33 GMT
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      - Origin
+      content-length:
+      - '268'
+      x-amzn-trace-id:
+      - 0720726be1f6962aa4d1de662f54550e
+    status:
+      code: 200
+      message: OK
+- request:
+    body: grant_type=client_credentials
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '29'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Cookie:
+      - __cf_bm=xJVaQCh05Sh3azZXG1s4HKXu3r5w34EiJCImDAGWbP4-1674840753-0-AYwvhxoFIivF+O0vdY5rh3vI9FF+IWkBg3u6gcrmOsRC6ZOfU/LVrnMPEA9FgAe6LHuxdI9BIoyH+xd1WHRZeXk=
+      User-Agent:
+      - python-requests/2.28.1
+    method: POST
+    uri: https://api.intelligence.mandiant.com/token
+  response:
+    body:
+      string: '{"access_token": "FAKE_TOKEN","token_type":"Bearer","expires_in":11966}
+
+        '
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 79033a786ebe829c-IAD
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Fri, 27 Jan 2023 17:32:34 GMT
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin
+      content-length:
+      - '125'
+      x-amzn-trace-id:
+      - c7ed18bafb49933ef0a104f494e18db6
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Cookie:
+      - __cf_bm=xJVaQCh05Sh3azZXG1s4HKXu3r5w34EiJCImDAGWbP4-1674840753-0-AYwvhxoFIivF+O0vdY5rh3vI9FF+IWkBg3u6gcrmOsRC6ZOfU/LVrnMPEA9FgAe6LHuxdI9BIoyH+xd1WHRZeXk=
+      User-Agent:
+      - python-requests/2.28.1
+      X-App-Name:
+      - MA-TI-Python-Lib-v0.1
+    method: GET
+    uri: https://api.intelligence.mandiant.com/v4/campaign?start_date=2023-01-27&limit=1&offset=1
+  response:
+    body:
+      string: '{"campaigns":[{"name":"APT28 Conducts Email Phishing Campaign and Uses
+        Victim Infrastructure for Further Operations","id":"campaign--22f8e22c-d644-5647-ab57-741a4f33ad59","short_name":"CAMP.22.029","profile_updated":"2023-01-27T07:02:44.558Z"}],"total_count":45}
+
+        '
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 79033a789f0f829c-IAD
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Fri, 27 Jan 2023 17:32:34 GMT
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      - Origin
+      content-length:
+      - '263'
+      x-amzn-trace-id:
+      - 6ae8e917bc53e0ac58ec66fd839d1bfd
+    status:
+      code: 200
+      message: OK
+- request:
+    body: grant_type=client_credentials
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '29'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Cookie:
+      - __cf_bm=xJVaQCh05Sh3azZXG1s4HKXu3r5w34EiJCImDAGWbP4-1674840753-0-AYwvhxoFIivF+O0vdY5rh3vI9FF+IWkBg3u6gcrmOsRC6ZOfU/LVrnMPEA9FgAe6LHuxdI9BIoyH+xd1WHRZeXk=
+      User-Agent:
+      - python-requests/2.28.1
+    method: POST
+    uri: https://api.intelligence.mandiant.com/token
+  response:
+    body:
+      string: '{"access_token": "FAKE_TOKEN","token_type":"Bearer","expires_in":26425}
+
+        '
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 79033a78cf45829c-IAD
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Fri, 27 Jan 2023 17:32:34 GMT
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin
+      content-length:
+      - '125'
+      x-amzn-trace-id:
+      - 37743628c9c25ddb51c00a7325c71f39
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate      Connection:
+      - keep-alive
+      Cookie:
+      - __cf_bm=xJVaQCh05Sh3azZXG1s4HKXu3r5w34EiJCImDAGWbP4-1674840753-0-AYwvhxoFIivF+O0vdY5rh3vI9FF+IWkBg3u6gcrmOsRC6ZOfU/LVrnMPEA9FgAe6LHuxdI9BIoyH+xd1WHRZeXk=
+      User-Agent:
+      - python-requests/2.28.1
+      X-App-Name:
+      - MA-TI-Python-Lib-v0.1
+    method: GET
+    uri: https://api.intelligence.mandiant.com/v4/campaign?start_date=2023-01-27&limit=1&offset=2
+  response:
+    body:
+      string: '{"campaigns":[],"total_count":2}
+
+        '
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 79033a78ef84829c-IAD
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Fri, 27 Jan 2023 17:32:34 GMT
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      - Origin
+      content-length:
+      - '278'
+      x-amzn-trace-id:
+      - 57fc2b761925b4ee59cc8ef5b4ac643a
+    status:
+      code: 200
+      message: OK
+version: 1

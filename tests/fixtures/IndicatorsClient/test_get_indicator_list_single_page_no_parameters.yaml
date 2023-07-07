@@ -1,0 +1,112 @@
+# Copyright 2023 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+interactions:
+- request:
+    body: grant_type=client_credentials
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '29'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Cookie:
+      - __cf_bm=WW1P.kJbDMAmXPR5ywC6Ekzt_mBo5AlqqMFEwU7qH50-1674844969-0-AWOHdrPh0H0HKZsauBwuV3JqkOLO8mHhrnLxzFELwc4PEs/ZEqrymXio+44jMo+H3dxGP81/I620JCEFDsWa0QQ=
+      User-Agent:
+      - python-requests/2.28.1
+    method: POST
+    uri: https://api.intelligence.mandiant.com/token
+  response:
+    body:
+      string: '{"access_token": "FAKE_TOKEN","token_type":"Bearer","expires_in":34200}
+
+        '
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 7903a162dad157ca-IAD
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Fri, 27 Jan 2023 18:42:49 GMT
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin
+      content-length:
+      - '125'
+      x-amzn-trace-id:
+      - 899d9ecf1ca94824223fd6228c9ec66a
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate      Connection:
+      - keep-alive
+      Cookie:
+      - __cf_bm=WW1P.kJbDMAmXPR5ywC6Ekzt_mBo5AlqqMFEwU7qH50-1674844969-0-AWOHdrPh0H0HKZsauBwuV3JqkOLO8mHhrnLxzFELwc4PEs/ZEqrymXio+44jMo+H3dxGP81/I620JCEFDsWa0QQ=
+      User-Agent:
+      - python-requests/2.28.1
+      X-App-Name:
+      - MA-TI-Python-Lib-v0.1
+    method: GET
+    uri: https://api.intelligence.mandiant.com/v4/indicator?gte_mscore=0&exclude_osint=False&start_epoch=1674670863&limit=1000&include_reports=True&include_campaigns=True
+  response:
+    body:
+      string: "{\"indicators\":[{\"id\":\"ipv4--55ba8198-79a1-5f13-b537-632c8bad942f\",\"mscore\":58,\"type\":\"ipv4\",\"value\":\"185.132.250.1\",\"is_publishable\":true,\"sources\":[{\"first_seen\":\"2022-02-23T10:10:01.828+0000\",\"last_seen\":\"2022-02-23T10:10:01.828+0000\",\"osint\":true,\"category\":[],\"source_name\":\"blocklist_de\"},{\"first_seen\":\"2021-06-19T23:34:03.810+0000\",\"last_seen\":\"2022-12-26T23:34:03.998+0000\",\"osint\":true,\"category\":[\"exploit/vuln-scanning\",\"exploit\"],\"source_name\":\"blocklist_net_ua\"},{\"first_seen\":\"2022-06-03T23:39:01.621+0000\",\"last_seen\":\"2022-06-03T23:39:01.621+0000\",\"osint\":false,\"category\":[],\"source_name\":\"Mandiant\"},{\"first_seen\":\"2022-06-20T20:20:01.549+0000\",\"last_seen\":\"2022-06-20T20:20:01.549+0000\",\"osint\":true,\"category\":[],\"source_name\":\"the_haleys_ssh_dict_attack\"}],\"misp\":{\"akamai\":false,\"alexa\":false,\"alexa_1M\":false,\"amazon-aws\":false,\"apple\":false,\"automated-malware-analysis\":false,\"bank-website\":false,\"cisco_1M\":false,\"cisco_top1000\":false,\"cisco_top10k\":false,\"cisco_top20k\":false,\"cisco_top5k\":false,\"cloudflare\":false,\"common-contact-emails\":false,\"common-ioc-false-positive\":false,\"covid\":false,\"covid-19-cyber-threat-coalition-whitelist\":false,\"covid-19-krassi-whitelist\":false,\"crl-hostname\":false,\"crl-ip\":false,\"dax30\":false,\"disposable-email\":false,\"dynamic-dns\":false,\"eicar.com\":false,\"empty-hashes\":false,\"fastly\":false,\"google\":false,\"google-chrome-crux-1million\":false,\"google-gcp\":false,\"google-gmail-sending-ips\":false,\"googlebot\":false,\"ipv6-linklocal\":false,\"majestic_million\":false,\"majestic_million_1M\":false,\"microsoft\":false,\"microsoft-attack-simulator\":false,\"microsoft-azure\":false,\"microsoft-azure-appid\":false,\"microsoft-azure-china\":false,\"microsoft-azure-germany\":false,\"microsoft-azure-us-gov\":false,\"microsoft-office365\":false,\"microsoft-office365-cn\":false,\"microsoft-office365-ip\":false,\"microsoft-win10-connection-endpoints\":false,\"moz-top500\":false,\"mozilla-CA\":false,\"mozilla-IntermediateCA\":false,\"multicast\":false,\"nioc-filehash\":false,\"ovh-cluster\":false,\"parking-domain\":false,\"parking-domain-ns\":false,\"phone_numbers\":false,\"public-dns-hostname\":false,\"public-dns-v4\":false,\"public-dns-v6\":false,\"public-ipfs-gateways\":false,\"rfc1918\":false,\"rfc3849\":false,\"rfc5735\":false,\"rfc6598\":false,\"rfc6761\":false,\"second-level-tlds\":false,\"security-provider-blogpost\":false,\"sinkholes\":false,\"smtp-receiving-ips\":false,\"smtp-sending-ips\":false,\"stackpath\":false,\"tenable-cloud-ipv4\":false,\"tenable-cloud-ipv6\":false,\"ti-falsepositives\":false,\"tlds\":false,\"tranco\":false,\"tranco10k\":false,\"university_domains\":false,\"url-shortener\":false,\"vpn-ipv4\":false,\"vpn-ipv6\":false,\"whats-my-ip\":false,\"wikimedia\":false},\"last_updated\":\"2023-01-26T08:19:05.976Z\",\"first_seen\":\"2021-06-19T23:34:03.000Z\",\"last_seen\":\"2022-12-26T23:34:03.000Z\",\"campaigns\":[],\"reports\":[]}]}\n"
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 7903a1632b4f57ca-IAD
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Fri, 27 Jan 2023 18:42:49 GMT
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      - Origin
+      content-length:
+      - '2391658'
+      x-amzn-trace-id:
+      - cd8e6b873357cb1c3f77303425f085dd
+    status:
+      code: 200
+      message: OK
+version: 1

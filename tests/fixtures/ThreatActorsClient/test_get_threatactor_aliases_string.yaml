@@ -1,0 +1,607 @@
+# Copyright 2023 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.28.1
+      X-App-Name:
+      - MA-Python-Lib-v0.1
+    method: GET
+    uri: https://api.intelligence.mandiant.com/v4/actor/APT29
+  response:
+    body:
+      string: "{\n    \"id\": \"threat-actor--7a39953e-0dae-569a-9d49-d52a4a8865b1\",\n
+        \   \"name\": \"APT29\",\n    \"description\": \"APT29 is a cyber espionage
+        actor with a Russia nexus. Historically, targets have included Western governments,
+        foreign affairs and policymaking bodies, government contractors, universities,
+        and possibly international news outlets. Based on available data, we assess
+        that APT29 is a nation-state-sponsored group located in Russia. The group
+        appears to have formidable capabilities, to include a range of custom developed
+        tools, extensive command and control (C2) infrastructure that includes compromised
+        and satellite infrastructure (via apparent service providers), and significant
+        operational security. In investigations we worked where APT29 was present,
+        they demonstrated a high regard for operational security but were also fairly
+        aggressive in their continued operations and efforts to evade investigators
+        and remediation attempts.\",\n    \"type\": \"threat-actor\",\n    \"last_updated\":
+        \"2022-11-17T06:18:48.000Z\",\n    \"audience\": [\n        {\n            \"name\":
+        \"intel_fusion\",\n            \"license\": \"INTEL_RBI_FUS\"\n        },\n
+        \       {\n            \"name\": \"intel_ce\",\n            \"license\": \"INTEL_CYB_ESP\"\n
+        \       },\n        {\n            \"name\": \"intel_oper\",\n            \"license\":
+        \"INTEL_RBI_OPS\"\n        },\n        {\n            \"name\": \"tlp_marking\",\n
+        \           \"license\": \"amber\"\n        }\n    ],\n    \"motivations\":
+        [\n        {\n            \"id\": \"motivation--1b8ca82a-7cff-5622-bedd-965c11d38a9e\",\n
+        \           \"name\": \"Espionage\",\n            \"attribution_scope\": \"confirmed\"\n
+        \       }\n    ],\n    \"aliases\": [\"APT-C-42 (Qihoo)\",\n
+        \       {\n            \"name\": \"APT29 (NCSC)\",\n            \"attribution_scope\":
+        \"possible\"\n        },\n        {\n            \"name\": \"APT29 (Volexity)\",\n
+        \           \"attribution_scope\": \"confirmed\"\n        },\n        {\n
+        \           \"name\": \"Cloaked Ursa (Palo Alto Networks)\",\n            \"attribution_scope\":
+        \"confirmed\"\n        },\n        {\n            \"name\": \"Cozy Bear (CrowdStrike)\",\n
+        \           \"attribution_scope\": \"confirmed\"\n        },\n        {\n
+        \           \"name\": \"Dark Halo (Volexity)\",\n            \"attribution_scope\":
+        \"confirmed\"\n        },\n        {\n            \"name\": \"Dukes (ESET)\",\n
+        \           \"attribution_scope\": \"confirmed\"\n        },\n        {\n
+        \           \"name\": \"NobelBaron (SentinelOne)\",\n            \"attribution_scope\":
+        \"confirmed\"\n        },\n        {\n            \"name\": \"Nobelium (ANSSI)\",\n
+        \           \"attribution_scope\": \"confirmed\"\n        },\n        {\n
+        \           \"name\": \"Nobelium (Microsoft)\",\n            \"attribution_scope\":
+        \"confirmed\"\n        },\n        {\n            \"name\": \"Nobelium (Recorded
+        Future)\",\n            \"attribution_scope\": \"confirmed\"\n        },\n
+        \       {\n            \"name\": \"SolarStorm (Palo Alto Networks)\",\n            \"attribution_scope\":
+        \"confirmed\"\n        },\n        {\n            \"name\": \"TEMP.Monkey\",\n
+        \           \"attribution_scope\": \"confirmed\"\n        },\n        {\n
+        \           \"name\": \"The Dukes (F-Secure)\",\n            \"attribution_scope\":
+        \"confirmed\"\n        },\n        {\n            \"name\": \"The Dukes (Volexity)\",\n
+        \           \"attribution_scope\": \"confirmed\"\n        }\n    ],\n    \"industries\":
+        [\n        {\n            \"id\": \"identity--cc593632-0c42-500c-8d0b-d38e97b90f1d\",\n
+        \           \"name\": \"Aerospace & Defense\",\n            \"attribution_scope\":
+        \"confirmed\",\n            \"first_seen\": \"2020-05-06T23:30:21.000Z\",\n
+        \           \"last_seen\": \"2020-07-18T19:36:20.000Z\"\n        },\n        {\n
+        \           \"id\": \"identity--41930e54-396f-508e-8f65-418dd09f935d\",\n
+        \           \"name\": \"Automotive\",\n            \"attribution_scope\":
+        \"confirmed\"\n        },\n        {\n            \"id\": \"identity--a93f63bc-bbfc-52ab-88c0-794c74f5bec0\",\n
+        \           \"name\": \"Chemicals & Materials\",\n            \"attribution_scope\":
+        \"confirmed\",\n            \"first_seen\": \"2020-03-24T13:53:42.000Z\",\n
+        \           \"last_seen\": \"2022-01-29T06:21:38.000Z\"\n        },\n        {\n
+        \           \"id\": \"identity--65be572d-bd1a-5e1d-96e5-a5fb1d7f2bab\",\n
+        \           \"name\": \"Civil Society & Non-Profits\",\n            \"attribution_scope\":
+        \"confirmed\",\n            \"first_seen\": \"2015-07-21T12:55:42.000Z\",\n
+        \           \"last_seen\": \"2021-05-25T14:46:20.000Z\"\n        },\n        {\n
+        \           \"id\": \"identity--5b3cb2f9-14d8-5e48-bc4e-3ef3cd477ce1\",\n
+        \           \"name\": \"Construction & Engineering\",\n            \"attribution_scope\":
+        \"confirmed\",\n            \"first_seen\": \"2020-03-24T13:53:42.000Z\",\n
+        \           \"last_seen\": \"2022-01-25T13:41:53.000Z\"\n        },\n        {\n
+        \           \"id\": \"identity--74d68d1c-7ad3-5eb5-a594-5519c1ee2661\",\n
+        \           \"name\": \"Education\",\n            \"attribution_scope\": \"confirmed\",\n
+        \           \"first_seen\": \"2009-09-10T12:08:32.000Z\",\n            \"last_seen\":
+        \"2020-12-18T19:29:43.000Z\"\n        },\n        {\n            \"id\": \"identity--c5e884ab-d62f-5632-9fc8-3ab3fb752598\",\n
+        \           \"name\": \"Energy & Utilities\",\n            \"attribution_scope\":
+        \"confirmed\",\n            \"first_seen\": \"2019-10-10T23:28:10.000Z\",\n
+        \           \"last_seen\": \"2020-12-21T20:01:26.000Z\"\n        },\n        {\n
+        \           \"id\": \"identity--eaaa8a1a-0db8-5c22-a895-3b0327e3eff1\",\n
+        \           \"name\": \"Financial Services\",\n            \"attribution_scope\":
+        \"confirmed\",\n            \"first_seen\": \"2015-07-21T00:00:00.000Z\",\n
+        \           \"last_seen\": \"2021-11-11T16:18:41.000Z\"\n        },\n        {\n
+        \           \"id\": \"identity--8d0881d8-d199-5e5a-bef9-be3ca6bb8f0d\",\n
+        \           \"name\": \"Governments\",\n            \"attribution_scope\":
+        \"confirmed\",\n            \"first_seen\": \"2014-08-05T00:00:00.000Z\",\n
+        \           \"last_seen\": \"2022-06-30T13:58:21.000Z\"\n        },\n        {\n
+        \           \"id\": \"identity--cacd2de0-d89e-54e3-a8af-88a41d312a12\",\n
+        \           \"name\": \"Healthcare\",\n            \"attribution_scope\":
+        \"confirmed\",\n            \"first_seen\": \"2015-07-21T14:39:39.000Z\",\n
+        \           \"last_seen\": \"2022-02-11T22:43:54.000Z\"\n        },\n        {\n
+        \           \"id\": \"identity--5a90f5ac-2ac0-5cbe-ae22-eb07a4da67c9\",\n
+        \           \"name\": \"Hospitality\",\n            \"attribution_scope\":
+        \"confirmed\",\n            \"first_seen\": \"2015-07-21T14:37:39.000Z\",\n
+        \           \"last_seen\": \"2021-12-01T00:00:00.000Z\"\n        },\n        {\n
+        \           \"id\": \"identity--846d258f-ee99-5097-b0b2-ac2d3f34e2c9\",\n
+        \           \"name\": \"Insurance\",\n            \"attribution_scope\": \"confirmed\",\n
+        \           \"first_seen\": \"2015-07-21T00:00:00.000Z\",\n            \"last_seen\":
+        \"2021-11-11T16:18:41.000Z\"\n        },\n        {\n            \"id\": \"identity--8b245566-834c-5039-95ae-f6a4ffc03b44\",\n
+        \           \"name\": \"Legal & Professional Services\",\n            \"attribution_scope\":
+        \"confirmed\",\n            \"first_seen\": \"2015-07-01T00:00:00.000Z\",\n
+        \           \"last_seen\": \"2022-10-25T15:57:23.000Z\"\n        },\n        {\n
+        \           \"id\": \"identity--e0fc24e1-1f79-556a-b8f4-b56735ccf42b\",\n
+        \           \"name\": \"Manufacturing\",\n            \"attribution_scope\":
+        \"confirmed\",\n            \"first_seen\": \"2015-07-21T15:03:09.000Z\",\n
+        \           \"last_seen\": \"2022-02-11T22:43:54.000Z\"\n        },\n        {\n
+        \           \"id\": \"identity--5d058af8-02a8-5266-8076-27cc2751e64e\",\n
+        \           \"name\": \"Media & Entertainment\",\n            \"attribution_scope\":
+        \"confirmed\",\n            \"first_seen\": \"2019-10-10T07:28:10.000Z\",\n
+        \           \"last_seen\": \"2020-12-16T16:06:46.000Z\"\n        },\n        {\n
+        \           \"id\": \"identity--60c05066-3b67-5783-b32e-4104b86d06c1\",\n
+        \           \"name\": \"Oil & Gas\",\n            \"attribution_scope\": \"confirmed\",\n
+        \           \"first_seen\": \"2020-05-12T03:24:32.000Z\",\n            \"last_seen\":
+        \"2020-12-14T19:23:38.000Z\"\n        },\n        {\n            \"id\": \"identity--c9000eb7-82e8-5859-9845-17c4760400cb\",\n
+        \           \"name\": \"Pharmaceuticals\",\n            \"attribution_scope\":
+        \"confirmed\",\n            \"first_seen\": \"2018-11-14T16:02:10.000Z\",\n
+        \           \"last_seen\": \"2020-12-16T16:12:44.000Z\"\n        },\n        {\n
+        \           \"id\": \"identity--c09ecb05-79d5-5a2b-b47f-65c1092a3a56\",\n
+        \           \"name\": \"Retail\",\n            \"attribution_scope\": \"confirmed\",\n
+        \           \"first_seen\": \"2019-10-10T19:28:10.000Z\",\n            \"last_seen\":
+        \"2022-01-27T00:00:00.000Z\"\n        },\n        {\n            \"id\": \"identity--02142d73-54af-5e18-a4f5-70b194ca002b\",\n
+        \           \"name\": \"Technology\",\n            \"attribution_scope\":
+        \"confirmed\",\n            \"first_seen\": \"2016-07-16T13:18:47.000Z\",\n
+        \           \"last_seen\": \"2021-02-04T22:57:41.000Z\"\n        },\n        {\n
+        \           \"id\": \"identity--93209517-b16c-5893-b55e-b7edc9b478d0\",\n
+        \           \"name\": \"Telecommunications\",\n            \"attribution_scope\":
+        \"confirmed\",\n            \"first_seen\": \"2018-09-27T19:49:52.000Z\",\n
+        \           \"last_seen\": \"2021-09-16T08:36:04.000Z\"\n        },\n        {\n
+        \           \"id\": \"identity--8768c9d0-830d-5c94-88d1-1506fef6c838\",\n
+        \           \"name\": \"Transportation\",\n            \"attribution_scope\":
+        \"confirmed\",\n            \"first_seen\": \"2019-10-10T19:28:10.000Z\",\n
+        \           \"last_seen\": \"2021-07-29T00:00:00.000Z\"\n        }\n    ],\n
+        \   \"observed\": [\n        {\n            \"earliest\": \"2011-01-29T00:00:00.000Z\",\n
+        \           \"recent\": \"2015-03-12T00:00:00.000Z\",\n            \"attribution_scope\":
+        \"suspected\"\n        },\n        {\n            \"earliest\": \"2020-04-07T10:02:36.000Z\",\n
+        \           \"recent\": \"2021-08-26T15:00:34.000Z\",\n            \"attribution_scope\":
+        \"possible\"\n        },\n        {\n            \"earliest\": \"2002-11-17T00:00:00.000Z\",\n
+        \           \"recent\": \"2022-10-25T15:57:23.000Z\",\n            \"attribution_scope\":
+        \"confirmed\"\n        }\n    ],\n    \"malware\": [\n        {\n            \"id\":
+        \"malware--0e538ca1-3abc-5580-83c2-4612ecb8ec9a\",\n            \"name\":
+        \"BABYDUKE\",\n            \"attribution_scope\": \"confirmed\",\n            \"first_seen\":
+        \"2014-06-05T12:06:33.000Z\",\n            \"last_seen\": \"2014-08-28T01:38:11.000Z\"\n
+        \       },\n        {\n            \"id\": \"malware--448e822d-8496-5021-88cb-599062f74176\",\n
+        \           \"name\": \"BEACON\",\n            \"attribution_scope\": \"confirmed\",\n
+        \           \"first_seen\": \"2020-06-24T13:06:21.000Z\",\n            \"last_seen\":
+        \"2022-01-18T16:49:42.000Z\"\n        },\n        {\n            \"id\": \"malware--81b6c216-1690-5733-a063-ff074e641709\",\n
+        \           \"name\": \"BEATDROP\",\n            \"attribution_scope\": \"confirmed\",\n
+        \           \"first_seen\": \"2022-01-17T12:24:26.000Z\",\n            \"last_seen\":
+        \"2022-01-25T12:34:40.000Z\"\n        },\n        {\n            \"id\": \"malware--8ce80eb5-0e00-5766-84f7-d6370290717e\",\n
+        \           \"name\": \"BOOMMIC\",\n            \"attribution_scope\": \"confirmed\",\n
+        \           \"first_seen\": \"2022-01-18T14:03:09.000Z\",\n            \"last_seen\":
+        \"2022-01-18T15:29:05.000Z\"\n        },\n        {\n            \"id\": \"malware--d6aafc1a-b026-563d-ba75-fb63ccb4477f\",\n
+        \           \"name\": \"CARWRECK\",\n            \"attribution_scope\": \"suspected\"\n
+        \       },\n        {\n            \"id\": \"malware--29f1ecf0-3de8-5a6a-9321-ace9ee9a33e9\",\n
+        \           \"name\": \"CEELOADER\",\n            \"attribution_scope\": \"confirmed\",\n
+        \           \"first_seen\": \"2017-02-08T14:40:22.000Z\",\n            \"last_seen\":
+        \"2021-08-17T16:33:14.000Z\"\n        },\n        {\n            \"id\": \"malware--674dd39b-12f4-585d-a198-3c61bc85f8c0\",\n
+        \           \"name\": \"CHAINLNK\",\n            \"attribution_scope\": \"confirmed\"\n
+        \       },\n        {\n            \"id\": \"malware--f4dd812f-58b6-5458-af39-409c5df36319\",\n
+        \           \"name\": \"COZYCAR\",\n            \"attribution_scope\": \"confirmed\",\n
+        \           \"first_seen\": \"2014-08-12T09:48:00.000Z\",\n            \"last_seen\":
+        \"2014-08-12T11:13:08.000Z\"\n        },\n        {\n            \"id\": \"malware--1d33286f-8ca6-5432-a756-b7c7f3d41dd0\",\n
+        \           \"name\": \"CRASHDUMMY\",\n            \"attribution_scope\":
+        \"suspected\"\n        },\n        {\n            \"id\": \"malware--02176060-4e76-5ad9-bcb0-83a018d1a283\",\n
+        \           \"name\": \"CRIMSONBOX\",\n            \"attribution_scope\":
+        \"confirmed\",\n            \"first_seen\": \"2020-09-17T18:32:07.000Z\",\n
+        \           \"last_seen\": \"2020-09-17T18:32:07.000Z\"\n        },\n        {\n
+        \           \"id\": \"malware--3b2988ea-a50e-5091-978c-bf58818a5229\",\n            \"name\":
+        \"CROOKEDROOK\",\n            \"attribution_scope\": \"suspected\"\n        },\n
+        \       {\n            \"id\": \"malware--b728b2eb-d5f4-5a99-88d3-de5de4c3e27b\",\n
+        \           \"name\": \"DAVESHELL\",\n            \"attribution_scope\": \"confirmed\"\n
+        \       },\n        {\n            \"id\": \"malware--c979be39-5da1-5421-9ed0-36d62236046a\",\n
+        \           \"name\": \"FLATTOP\",\n            \"attribution_scope\": \"confirmed\",\n
+        \           \"first_seen\": \"2016-08-16T13:39:26.000Z\",\n            \"last_seen\":
+        \"2016-08-16T14:32:31.000Z\"\n        },\n        {\n            \"id\": \"malware--7348f904-f00f-59fd-b7e0-9bb2ea937f0b\",\n
+        \           \"name\": \"FOGGYKEY\",\n            \"attribution_scope\": \"possible\"\n
+        \       },\n        {\n            \"id\": \"malware--39154d89-bbd5-5834-a364-7732303568f9\",\n
+        \           \"name\": \"GREEDYHEIR\",\n            \"attribution_scope\":
+        \"suspected\"\n        },\n        {\n            \"id\": \"malware--6cd697cd-43d2-5e56-8432-372b23420388\",\n
+        \           \"name\": \"GSSBOT\",\n            \"attribution_scope\": \"confirmed\"\n
+        \       },\n        {\n            \"id\": \"malware--d7b72cf6-c413-59e1-9bb2-e06c861bded4\",\n
+        \           \"name\": \"HAMMERTOSS\",\n            \"attribution_scope\":
+        \"confirmed\"\n        },\n        {\n            \"id\": \"malware--b0e965fb-1737-5c63-85c7-e90a323b1e27\",\n
+        \           \"name\": \"HTRAN\",\n            \"attribution_scope\": \"confirmed\",\n
+        \           \"first_seen\": \"2014-08-11T08:35:40.000Z\",\n            \"last_seen\":
+        \"2016-06-02T15:44:12.000Z\"\n        },\n        {\n            \"id\": \"malware--bdf583a4-60a8-5dd0-b184-c30a62f6dcc2\",\n
+        \           \"name\": \"ICEBREAKER\",\n            \"attribution_scope\":
+        \"confirmed\"\n        },\n        {\n            \"id\": \"malware--c8a2bee7-35fc-565c-9c0b-5c87fdcb2815\",\n
+        \           \"name\": \"KINGCRAB\",\n            \"attribution_scope\": \"suspected\"\n
+        \       },\n        {\n            \"id\": \"malware--cbb4818d-53e8-5826-baf0-91fc01c5e0b4\",\n
+        \           \"name\": \"KINGPRAWN\",\n            \"attribution_scope\": \"suspected\"\n
+        \       },\n        {\n            \"id\": \"malware--e93a6526-c471-5e8a-a8e4-2bb202488d27\",\n
+        \           \"name\": \"LINKSHELL\",\n            \"attribution_scope\": \"confirmed\"\n
+        \       },\n        {\n            \"id\": \"malware--15cb3780-b840-5efc-b9cb-3b86a28367a9\",\n
+        \           \"name\": \"LOUDGUEST\",\n            \"attribution_scope\": \"confirmed\"\n
+        \       },\n        {\n            \"id\": \"malware--039a0d4a-6fed-546c-a9df-a312e512bbf5\",\n
+        \           \"name\": \"MAMADOGS\",\n            \"attribution_scope\": \"confirmed\",\n
+        \           \"first_seen\": \"2020-05-29T11:25:55.000Z\",\n            \"last_seen\":
+        \"2020-05-29T14:19:31.000Z\"\n        },\n        {\n            \"id\": \"malware--1665bbb9-a601-5cb2-b723-cecd230e0659\",\n
+        \           \"name\": \"MINIDIONIS\",\n            \"attribution_scope\":
+        \"confirmed\",\n            \"first_seen\": \"2015-07-01T00:00:00.000Z\",\n
+        \           \"last_seen\": \"2015-07-21T17:03:03.000Z\"\n        },\n        {\n
+        \           \"id\": \"malware--06f475b3-d8c2-5a08-b80d-8e0e3c13a75d\",\n            \"name\":
+        \"MINIDUKE\",\n            \"attribution_scope\": \"suspected\"\n        },\n
+        \       {\n            \"id\": \"malware--fd6309a1-44fe-5085-a091-d2ff88b01a27\",\n
+        \           \"name\": \"NOSEDIVE\",\n            \"attribution_scope\": \"suspected\"\n
+        \       },\n        {\n            \"id\": \"malware--c344318c-36db-5f6b-b193-9c59df74cca7\",\n
+        \           \"name\": \"ONIONDUKE\",\n            \"attribution_scope\": \"suspected\"\n
+        \       },\n        {\n            \"id\": \"malware--a027c53b-4940-5021-b3df-5a8f7eccf6fc\",\n
+        \           \"name\": \"PASTQUEEN\",\n            \"attribution_scope\": \"suspected\"\n
+        \       },\n        {\n            \"id\": \"malware--52f7afd9-e657-52ac-93a7-c8eff2fdc77a\",\n
+        \           \"name\": \"POSHSPY\",\n            \"attribution_scope\": \"confirmed\"\n
+        \       },\n        {\n            \"id\": \"malware--3188e217-433f-5920-8695-ddf25955cf25\",\n
+        \           \"name\": \"QUEENBEE\",\n            \"attribution_scope\": \"suspected\"\n
+        \       },\n        {\n            \"id\": \"malware--795f28df-dace-5716-82e2-6f735d1e68ea\",\n
+        \           \"name\": \"QUEENPIECE\",\n            \"attribution_scope\":
+        \"confirmed\",\n            \"first_seen\": \"2014-06-05T12:06:33.000Z\",\n
+        \           \"last_seen\": \"2014-06-11T14:07:52.000Z\"\n        },\n        {\n
+        \           \"id\": \"malware--4b6ff91f-0171-52ac-aac9-5d0ff369cdc5\",\n            \"name\":
+        \"QUIETEXIT\",\n            \"attribution_scope\": \"confirmed\",\n            \"first_seen\":
+        \"2019-12-21T00:00:52.000Z\",\n            \"last_seen\": \"2022-01-17T19:59:11.000Z\"\n
+        \       },\n        {\n            \"id\": \"malware--5013252b-fa46-5698-a22c-1be309238ba5\",\n
+        \           \"name\": \"RAINDROP\",\n            \"attribution_scope\": \"confirmed\",\n
+        \           \"first_seen\": \"2016-07-16T13:18:47.000Z\",\n            \"last_seen\":
+        \"2020-12-24T20:20:27.000Z\"\n        },\n        {\n            \"id\": \"malware--33065e77-067e-5554-a325-86f0e95968dc\",\n
+        \           \"name\": \"REGEORG\",\n            \"attribution_scope\": \"confirmed\",\n
+        \           \"first_seen\": \"2020-07-14T13:58:39.000Z\",\n            \"last_seen\":
+        \"2021-02-13T12:59:21.000Z\"\n        },\n        {\n            \"id\": \"malware--684b0b84-4e04-517c-ae2c-eaf14193e392\",\n
+        \           \"name\": \"REMCOM\",\n            \"attribution_scope\": \"confirmed\",\n
+        \           \"first_seen\": \"2014-08-01T13:10:03.000Z\",\n            \"last_seen\":
+        \"2014-08-01T13:10:03.000Z\"\n        },\n        {\n            \"id\": \"malware--9bc0786c-b2c1-5250-9e1f-cbffaef5524f\",\n
+        \           \"name\": \"ROOTSAW\",\n            \"attribution_scope\": \"confirmed\",\n
+        \           \"first_seen\": \"2021-04-22T15:32:39.000Z\",\n            \"last_seen\":
+        \"2022-06-30T15:29:04.000Z\"\n        },\n        {\n            \"id\": \"malware--36123d95-7c63-515d-adf5-7e2f54a4bd9f\",\n
+        \           \"name\": \"ROYALCOURT\",\n            \"attribution_scope\":
+        \"suspected\"\n        },\n        {\n            \"id\": \"malware--633c7859-cf91-5d15-a33d-0ba63a1d0b0c\",\n
+        \           \"name\": \"SALTSHAKER\",\n            \"attribution_scope\":
+        \"confirmed\"\n        },\n        {\n            \"id\": \"malware--3eaeb7ec-8001-5a2d-84e9-02b70234b68c\",\n
+        \           \"name\": \"SAYWHAT\",\n            \"attribution_scope\": \"confirmed\"\n
+        \       },\n        {\n            \"id\": \"malware--9ec804f7-cbb7-5e79-9d42-d2e3bd44bbb8\",\n
+        \           \"name\": \"SEADADDY\",\n            \"attribution_scope\": \"confirmed\",\n
+        \           \"first_seen\": \"2014-07-29T10:29:26.000Z\",\n            \"last_seen\":
+        \"2015-08-12T11:11:24.000Z\"\n        },\n        {\n            \"id\": \"malware--1ac81840-5592-5354-b3d4-f24e2a3c643d\",\n
+        \           \"name\": \"SEVENMINUS\",\n            \"attribution_scope\":
+        \"possible\"\n        },\n        {\n            \"id\": \"malware--54f0093d-baa0-5461-ba56-74e50ad6f911\",\n
+        \           \"name\": \"SICKINVITE\",\n            \"attribution_scope\":
+        \"confirmed\"\n        },\n        {\n            \"id\": \"malware--00328b1e-3a1e-56b2-b9ba-83e08813415d\",\n
+        \           \"name\": \"SIXPLUS\",\n            \"attribution_scope\": \"possible\",\n
+        \           \"first_seen\": \"2020-04-16T16:57:03.000Z\",\n            \"last_seen\":
+        \"2020-04-19T16:47:01.000Z\"\n        },\n        {\n            \"id\": \"malware--6ee30fbe-3bb4-5cc2-b38e-8b99381c62fb\",\n
+        \           \"name\": \"SMALLBULB\",\n            \"attribution_scope\": \"suspected\"\n
+        \       },\n        {\n            \"id\": \"malware--3edafaf6-11fd-58c7-892b-e52ca019a309\",\n
+        \           \"name\": \"SPIKERUSH\",\n            \"attribution_scope\": \"confirmed\",\n
+        \           \"first_seen\": \"2016-08-30T15:19:36.000Z\",\n            \"last_seen\":
+        \"2016-10-14T01:03:09.000Z\"\n        },\n        {\n            \"id\": \"malware--4d299cfd-ffd7-5e46-b30c-cc88ac5a57c1\",\n
+        \           \"name\": \"SUNBURST\",\n            \"attribution_scope\": \"confirmed\",\n
+        \           \"first_seen\": \"2019-10-10T15:28:10.000Z\",\n            \"last_seen\":
+        \"2021-11-11T16:18:41.000Z\"\n        },\n        {\n            \"id\": \"malware--fe962d3c-6a16-561f-811d-76398556e16d\",\n
+        \           \"name\": \"SUNSHUTTLE\",\n            \"attribution_scope\":
+        \"confirmed\",\n            \"first_seen\": \"2019-11-19T08:17:10.000Z\",\n
+        \           \"last_seen\": \"2021-08-20T14:19:10.000Z\"\n        },\n        {\n
+        \           \"id\": \"malware--5d79a161-10eb-5ad3-a13d-ac2b456499f8\",\n            \"name\":
+        \"SWIFTKICK\",\n            \"attribution_scope\": \"confirmed\",\n            \"first_seen\":
+        \"2015-07-07T14:30:37.000Z\",\n            \"last_seen\": \"2015-07-09T11:29:55.000Z\"\n
+        \       },\n        {\n            \"id\": \"malware--75bfd96f-bf08-5aab-b54f-7c94dd547cb8\",\n
+        \           \"name\": \"TADPOLE\",\n            \"attribution_scope\": \"confirmed\",\n
+        \           \"first_seen\": \"2016-08-10T15:12:22.000Z\",\n            \"last_seen\":
+        \"2016-08-10T16:10:11.000Z\"\n        },\n        {\n            \"id\": \"malware--3baa3d65-a3fe-5284-a3ab-8007fff7fe78\",\n
+        \           \"name\": \"TEARDROP\",\n            \"attribution_scope\": \"confirmed\",\n
+        \           \"first_seen\": \"2020-06-01T10:13:54.000Z\",\n            \"last_seen\":
+        \"2020-08-31T09:26:59.000Z\"\n        },\n        {\n            \"id\": \"malware--545e4107-0c07-57ee-9757-fd8fd6d1f5fd\",\n
+        \           \"name\": \"VERNALDROP\",\n            \"attribution_scope\":
+        \"confirmed\",\n            \"first_seen\": \"2016-08-10T15:12:22.000Z\",\n
+        \           \"last_seen\": \"2016-08-25T14:15:27.000Z\"\n        },\n        {\n
+        \           \"id\": \"malware--9e650610-c8ce-5889-a219-8ce51c22e99b\",\n            \"name\":
+        \"ZOOTSUIT\",\n            \"attribution_scope\": \"possible\"\n        }\n
+        \   ],\n    \"tools\": [\n        {\n            \"id\": \"malware--fee46624-b54f-521a-8cbd-3f84a0c10e23\",\n
+        \           \"name\": \"BITVISE\",\n            \"attribution_scope\": \"confirmed\"\n
+        \       },\n        {\n            \"id\": \"malware--4fb0b16d-53d6-56e5-975f-10458225f317\",\n
+        \           \"name\": \"COBALTSTRIKE\",\n            \"attribution_scope\":
+        \"confirmed\"\n        },\n        {\n            \"id\": \"malware--777576be-814f-5c51-8af5-e18a3adc86f3\",\n
+        \           \"name\": \"PSCP\",\n            \"attribution_scope\": \"confirmed\"\n
+        \       },\n        {\n            \"id\": \"malware--bd261c86-ce9f-50ec-89a7-aec768a70dd9\",\n
+        \           \"name\": \"ADFIND\",\n            \"attribution_scope\": \"confirmed\"\n
+        \       },\n        {\n            \"id\": \"malware--188eea74-6a07-55f2-b73f-6a109121a940\",\n
+        \           \"name\": \"SHOVIV\",\n            \"attribution_scope\": \"confirmed\"\n
+        \       },\n        {\n            \"id\": \"malware--125d583e-0617-5192-bc27-9f3377bb98c3\",\n
+        \           \"name\": \"WINRAR\",\n            \"attribution_scope\": \"possible\"\n
+        \       },\n        {\n            \"id\": \"malware--7b17a6c3-b71c-53ee-9c05-5af3bed0265d\",\n
+        \           \"name\": \"PSKILL\",\n            \"attribution_scope\": \"confirmed\"\n
+        \       },\n        {\n            \"id\": \"malware--778e06b6-ab96-53d6-a759-41650db7b2eb\",\n
+        \           \"name\": \"PORTQRY\",\n            \"attribution_scope\": \"confirmed\"\n
+        \       },\n        {\n            \"id\": \"malware--b2bb2d97-675e-5023-9cdd-a4274893b4a7\",\n
+        \           \"name\": \"SFXRAR\",\n            \"attribution_scope\": \"confirmed\"\n
+        \       },\n        {\n            \"id\": \"malware--9d2690f2-35ac-5776-9e2d-72da1618bb67\",\n
+        \           \"name\": \"PSLOGGEDON\",\n            \"attribution_scope\":
+        \"possible\"\n        },\n        {\n            \"id\": \"malware--fed3481f-0095-53f2-8c32-7e286013233b\",\n
+        \           \"name\": \"DSQUERY\",\n            \"attribution_scope\": \"confirmed\"\n
+        \       },\n        {\n            \"id\": \"malware--76dd491b-1e9d-5b83-b727-455609de7ed0\",\n
+        \           \"name\": \"RUBEUS\",\n            \"attribution_scope\": \"confirmed\"\n
+        \       },\n        {\n            \"id\": \"malware--e224f74a-ca0e-540b-884f-03753787316f\",\n
+        \           \"name\": \"NLTEST\",\n            \"attribution_scope\": \"confirmed\"\n
+        \       },\n        {\n            \"id\": \"malware--934dcadf-f9a8-52c1-9c90-353a1c3144d5\",\n
+        \           \"name\": \"PSEXEC\",\n            \"attribution_scope\": \"confirmed\"\n
+        \       },\n        {\n            \"id\": \"malware--f5a8a4cc-c312-5829-871a-0446a670d98e\",\n
+        \           \"name\": \"RCLONE\",\n            \"attribution_scope\": \"possible\"\n
+        \       },\n        {\n            \"id\": \"malware--cb6874ee-49ae-5909-ac1f-0caf9fadadda\",\n
+        \           \"name\": \"IMPACKET.WMIEXEC\",\n            \"attribution_scope\":
+        \"confirmed\"\n        },\n        {\n            \"id\": \"malware--5c2bfbf2-44a7-50f1-b20e-e7d2efb4baa0\",\n
+        \           \"name\": \"AADINTERNALS\",\n            \"attribution_scope\":
+        \"confirmed\"\n        },\n        {\n            \"id\": \"malware--666abf8a-4b7e-51e4-8991-014a95d45ef4\",\n
+        \           \"name\": \"WEXTRACT\",\n            \"attribution_scope\": \"confirmed\"\n
+        \       },\n        {\n            \"id\": \"malware--f872b3e0-c277-5716-baae-885a9c410398\",\n
+        \           \"name\": \"WHOAMI\",\n            \"attribution_scope\": \"confirmed\"\n
+        \       },\n        {\n            \"id\": \"malware--47530422-6b2d-5329-95c1-fcf7698edeee\",\n
+        \           \"name\": \"7ZIP\",\n            \"attribution_scope\": \"confirmed\"\n
+        \       },\n        {\n            \"id\": \"malware--5d383d23-028b-5f12-b55c-e1464669074c\",\n
+        \           \"name\": \"POWERSPLOIT\",\n            \"attribution_scope\":
+        \"confirmed\"\n        },\n        {\n            \"id\": \"malware--405817d8-a607-5231-a5f1-e0d1cb4226df\",\n
+        \           \"name\": \"AADCONNECT\",\n            \"attribution_scope\":
+        \"confirmed\"\n        },\n        {\n            \"id\": \"malware--f7b14ce3-c453-5dab-a1bd-0a5f5b673866\",\n
+        \           \"name\": \"GIT\",\n            \"attribution_scope\": \"confirmed\"\n
+        \       },\n        {\n            \"id\": \"malware--0c7945de-0968-55e3-ad4e-1600ddfc6b36\",\n
+        \           \"name\": \"PROCDUMP\",\n            \"attribution_scope\": \"confirmed\"\n
+        \       },\n        {\n            \"id\": \"malware--5fcb13d7-0fc1-55e7-9ab4-6e8400bffb2a\",\n
+        \           \"name\": \"TOR\",\n            \"attribution_scope\": \"confirmed\"\n
+        \       },\n        {\n            \"id\": \"malware--bf2fc1e5-7850-5ecd-87a7-263e6da5708d\",\n
+        \           \"name\": \"MIMIKATZ\",\n            \"attribution_scope\": \"confirmed\"\n
+        \       }\n    ],\n    \"locations\": {\n        \"source\": [\n            {\n
+        \               \"region\": {\n                    \"id\": \"location--89b58fc6-de5e-55e4-9d8c-29ba659e770f\",\n
+        \                   \"name\": \"Europe\",\n                    \"attribution_scope\":
+        \"confirmed\"\n                },\n                \"sub_region\": {\n                    \"id\":
+        \"location--57644af5-a064-5e14-be58-05b22d2768be\",\n                    \"name\":
+        \"East Europe\",\n                    \"attribution_scope\": \"confirmed\"\n
+        \               },\n                \"country\": {\n                    \"id\":
+        \"location--188145fd-6fd1-5bd6-a70c-8e33ed149584\",\n                    \"name\":
+        \"Russia\",\n                    \"iso2\": \"RU\",\n                    \"attribution_scope\":
+        \"confirmed\"\n                }\n            }\n        ],\n        \"target\":
+        [\n            {\n                \"id\": \"location--87f90bb2-973b-596e-9131-d2a2b4e1e424\",\n
+        \               \"name\": \"Albania\",\n                \"iso2\": \"AL\",\n
+        \               \"region\": \"Europe\",\n                \"attribution_scope\":
+        \"confirmed\",\n                \"sub-region\": \"South Europe\"\n            },\n
+        \           {\n                \"id\": \"location--27a1d59f-56ec-5da4-963c-ce1f9c6c0402\",\n
+        \               \"name\": \"Australia\",\n                \"iso2\": \"AU\",\n
+        \               \"region\": \"Oceania\",\n                \"attribution_scope\":
+        \"confirmed\",\n                \"sub-region\": \"Australia and New Zealand\"\n
+        \           },\n            {\n                \"id\": \"location--826ca4ac-8555-5c47-b794-55d00fe0ddde\",\n
+        \               \"name\": \"Austria\",\n                \"iso2\": \"AT\",\n
+        \               \"region\": \"Europe\",\n                \"attribution_scope\":
+        \"confirmed\",\n                \"sub-region\": \"West Europe\"\n            },\n
+        \           {\n                \"id\": \"location--a509dfc8-789b-595b-a201-29c7af1dc0bb\",\n
+        \               \"name\": \"Belgium\",\n                \"iso2\": \"BE\",\n
+        \               \"region\": \"Europe\",\n                \"attribution_scope\":
+        \"confirmed\",\n                \"sub-region\": \"West Europe\"\n            },\n
+        \           {\n                \"id\": \"location--fde14246-c07b-5f3f-9ac8-8d4d50910f15\",\n
+        \               \"name\": \"Canada\",\n                \"iso2\": \"CA\",\n
+        \               \"region\": \"Americas\",\n                \"attribution_scope\":
+        \"confirmed\",\n                \"sub-region\": \"North America\"\n            },\n
+        \           {\n                \"id\": \"location--d6f7955e-1887-5e6c-aed2-e8ec5f9a1436\",\n
+        \               \"name\": \"Croatia\",\n                \"iso2\": \"HR\",\n
+        \               \"region\": \"Europe\",\n                \"attribution_scope\":
+        \"confirmed\",\n                \"sub-region\": \"South Europe\"\n            },\n
+        \           {\n                \"id\": \"location--b1f13d3f-b956-511a-a8f4-1b89d1e8ed4a\",\n
+        \               \"name\": \"Denmark\",\n                \"iso2\": \"DK\",\n
+        \               \"region\": \"Europe\",\n                \"attribution_scope\":
+        \"confirmed\",\n                \"sub-region\": \"North Europe\"\n            },\n
+        \           {\n                \"id\": \"location--48b6c887-9123-53a0-9f33-92194a8c5850\",\n
+        \               \"name\": \"Estonia\",\n                \"iso2\": \"EE\",\n
+        \               \"region\": \"Europe\",\n                \"attribution_scope\":
+        \"confirmed\",\n                \"sub-region\": \"North Europe\"\n            },\n
+        \           {\n                \"id\": \"location--339d906b-89a6-5807-bfe8-0cd8bb32b10c\",\n
+        \               \"name\": \"France\",\n                \"iso2\": \"FR\",\n
+        \               \"region\": \"Europe\",\n                \"attribution_scope\":
+        \"confirmed\",\n                \"sub-region\": \"West Europe\"\n            },\n
+        \           {\n                \"id\": \"location--0342c53c-190f-5cff-b39d-e20cd2608d65\",\n
+        \               \"name\": \"Georgia\",\n                \"iso2\": \"GE\",\n
+        \               \"region\": \"Asia\",\n                \"attribution_scope\":
+        \"confirmed\",\n                \"sub-region\": \"West Asia\"\n            },\n
+        \           {\n                \"id\": \"location--a0662aac-87ac-53a8-b3a9-7a8ee72f8059\",\n
+        \               \"name\": \"Germany\",\n                \"iso2\": \"DE\",\n
+        \               \"region\": \"Europe\",\n                \"attribution_scope\":
+        \"confirmed\",\n                \"sub-region\": \"West Europe\"\n            },\n
+        \           {\n                \"id\": \"location--f7ff6ed1-f6f6-5f4b-b085-6174315521a1\",\n
+        \               \"name\": \"Hong Kong\",\n                \"iso2\": \"HK\",\n
+        \               \"region\": \"Asia\",\n                \"attribution_scope\":
+        \"confirmed\",\n                \"sub-region\": \"East Asia\"\n            },\n
+        \           {\n                \"id\": \"location--ddf9cac3-4310-5b20-abd7-6bdd7a010ef4\",\n
+        \               \"name\": \"Hungary\",\n                \"iso2\": \"HU\",\n
+        \               \"region\": \"Europe\",\n                \"attribution_scope\":
+        \"confirmed\",\n                \"sub-region\": \"East Europe\"\n            },\n
+        \           {\n                \"id\": \"location--1543356e-c02c-52c3-a571-e6c44d34f35a\",\n
+        \               \"name\": \"Ireland\",\n                \"iso2\": \"IE\",\n
+        \               \"region\": \"Europe\",\n                \"attribution_scope\":
+        \"confirmed\",\n                \"sub-region\": \"North Europe\"\n            },\n
+        \           {\n                \"id\": \"location--2695d13c-64c9-544b-9804-a951b9331252\",\n
+        \               \"name\": \"Israel\",\n                \"iso2\": \"IL\",\n
+        \               \"region\": \"Asia\",\n                \"attribution_scope\":
+        \"confirmed\",\n                \"sub-region\": \"West Asia\"\n            },\n
+        \           {\n                \"id\": \"location--484d0c02-5e35-59f5-b308-99ebffd9adcd\",\n
+        \               \"name\": \"Italy\",\n                \"iso2\": \"IT\",\n
+        \               \"region\": \"Europe\",\n                \"attribution_scope\":
+        \"confirmed\",\n                \"sub-region\": \"South Europe\"\n            },\n
+        \           {\n                \"id\": \"location--8309810a-48ea-58ae-8d57-04080bc634d6\",\n
+        \               \"name\": \"Jordan\",\n                \"iso2\": \"JO\",\n
+        \               \"region\": \"Asia\",\n                \"attribution_scope\":
+        \"confirmed\",\n                \"sub-region\": \"West Asia\"\n            },\n
+        \           {\n                \"id\": \"location--dce9cb57-4cce-5288-94ed-6910167e3910\",\n
+        \               \"name\": \"Latvia\",\n                \"iso2\": \"LV\",\n
+        \               \"region\": \"Europe\",\n                \"attribution_scope\":
+        \"confirmed\",\n                \"sub-region\": \"North Europe\"\n            },\n
+        \           {\n                \"id\": \"location--99bc8abc-8306-56a8-9ac1-217f4de4f8a6\",\n
+        \               \"name\": \"Liechtenstein\",\n                \"iso2\": \"LI\",\n
+        \               \"region\": \"Europe\",\n                \"attribution_scope\":
+        \"confirmed\",\n                \"sub-region\": \"West Europe\"\n            },\n
+        \           {\n                \"id\": \"location--f3ad40a3-e452-52bc-9541-49ab64fe9734\",\n
+        \               \"name\": \"Macedonia\",\n                \"iso2\": \"MK\",\n
+        \               \"region\": \"Europe\",\n                \"attribution_scope\":
+        \"confirmed\",\n                \"sub-region\": \"South Europe\"\n            },\n
+        \           {\n                \"id\": \"location--6c024343-c218-5432-8a12-f0c81063fe0c\",\n
+        \               \"name\": \"Netherlands\",\n                \"iso2\": \"NL\",\n
+        \               \"region\": \"Europe\",\n                \"attribution_scope\":
+        \"confirmed\",\n                \"sub-region\": \"West Europe\"\n            },\n
+        \           {\n                \"id\": \"location--6e754937-5110-521c-bcc9-ac1ffb42ba0d\",\n
+        \               \"name\": \"New Zealand\",\n                \"iso2\": \"NZ\",\n
+        \               \"region\": \"Oceania\",\n                \"attribution_scope\":
+        \"confirmed\",\n                \"sub-region\": \"Australia and New Zealand\"\n
+        \           },\n            {\n                \"id\": \"location--77afbac1-8250-5f6d-9586-0cedcc138eb1\",\n
+        \               \"name\": \"Norway\",\n                \"iso2\": \"NO\",\n
+        \               \"region\": \"Europe\",\n                \"attribution_scope\":
+        \"confirmed\",\n                \"sub-region\": \"North Europe\"\n            },\n
+        \           {\n                \"id\": \"location--86d78cd7-6571-59e3-ae8d-5f5ed95c4685\",\n
+        \               \"name\": \"Philippines\",\n                \"iso2\": \"PH\",\n
+        \               \"region\": \"Asia\",\n                \"attribution_scope\":
+        \"confirmed\",\n                \"sub-region\": \"South East Asia\"\n            },\n
+        \           {\n                \"id\": \"location--3f3a8e8f-248f-56d0-be34-8052ea441f62\",\n
+        \               \"name\": \"Poland\",\n                \"iso2\": \"PL\",\n
+        \               \"region\": \"Europe\",\n                \"attribution_scope\":
+        \"confirmed\",\n                \"sub-region\": \"East Europe\"\n            },\n
+        \           {\n                \"id\": \"location--72f0758a-5a47-535f-a138-6ed31de50ae3\",\n
+        \               \"name\": \"Portugal\",\n                \"iso2\": \"PT\",\n
+        \               \"region\": \"Europe\",\n                \"attribution_scope\":
+        \"confirmed\",\n                \"sub-region\": \"South Europe\"\n            },\n
+        \           {\n                \"id\": \"location--66ef0e72-11dd-5e36-ba9d-178ad16f8d53\",\n
+        \               \"name\": \"Qatar\",\n                \"iso2\": \"QA\",\n
+        \               \"region\": \"Asia\",\n                \"attribution_scope\":
+        \"confirmed\",\n                \"sub-region\": \"West Asia\"\n            },\n
+        \           {\n                \"id\": \"location--76146154-586b-5821-ae92-2a442a7a5c1e\",\n
+        \               \"name\": \"Saudi Arabia\",\n                \"iso2\": \"SA\",\n
+        \               \"region\": \"Asia\",\n                \"attribution_scope\":
+        \"confirmed\",\n                \"sub-region\": \"West Asia\"\n            },\n
+        \           {\n                \"id\": \"location--00ab0ba1-a1d2-56b9-a039-73c9e2e4cb4f\",\n
+        \               \"name\": \"Singapore\",\n                \"iso2\": \"SG\",\n
+        \               \"region\": \"Asia\",\n                \"attribution_scope\":
+        \"confirmed\",\n                \"sub-region\": \"South East Asia\"\n            },\n
+        \           {\n                \"id\": \"location--9ca4bff3-2cfc-5401-80bf-4eebf0717455\",\n
+        \               \"name\": \"South Africa\",\n                \"iso2\": \"ZA\",\n
+        \               \"region\": \"Africa\",\n                \"attribution_scope\":
+        \"confirmed\",\n                \"sub-region\": \"South Africa\"\n            },\n
+        \           {\n                \"id\": \"location--e4dfef14-268e-5eb6-a9da-ba4d044ffc96\",\n
+        \               \"name\": \"Spain\",\n                \"iso2\": \"ES\",\n
+        \               \"region\": \"Europe\",\n                \"attribution_scope\":
+        \"confirmed\",\n                \"sub-region\": \"South Europe\"\n            },\n
+        \           {\n                \"id\": \"location--05f7f948-55eb-5994-9003-c5e44ccf3ba9\",\n
+        \               \"name\": \"Sweden\",\n                \"iso2\": \"SE\",\n
+        \               \"region\": \"Europe\",\n                \"attribution_scope\":
+        \"confirmed\",\n                \"sub-region\": \"North Europe\"\n            },\n
+        \           {\n                \"id\": \"location--daeba678-894d-59fe-a00c-f1aec473c62f\",\n
+        \               \"name\": \"Switzerland\",\n                \"iso2\": \"CH\",\n
+        \               \"region\": \"Europe\",\n                \"attribution_scope\":
+        \"confirmed\",\n                \"sub-region\": \"West Europe\"\n            },\n
+        \           {\n                \"id\": \"location--1228220c-7de8-5dc6-94bf-98b2fa79bb7f\",\n
+        \               \"name\": \"Ukraine\",\n                \"iso2\": \"UA\",\n
+        \               \"region\": \"Europe\",\n                \"attribution_scope\":
+        \"confirmed\",\n                \"sub-region\": \"East Europe\"\n            },\n
+        \           {\n                \"id\": \"location--322cae79-a217-5c63-8005-de217f336e6b\",\n
+        \               \"name\": \"United Arab Emirates\",\n                \"iso2\":
+        \"AE\",\n                \"region\": \"Asia\",\n                \"attribution_scope\":
+        \"confirmed\",\n                \"sub-region\": \"West Asia\"\n            },\n
+        \           {\n                \"id\": \"location--f66d95f4-10dc-55f9-a444-81dc49fcf238\",\n
+        \               \"name\": \"United Kingdom\",\n                \"iso2\": \"GB\",\n
+        \               \"region\": \"Europe\",\n                \"attribution_scope\":
+        \"confirmed\",\n                \"sub-region\": \"North Europe\"\n            },\n
+        \           {\n                \"id\": \"location--5c5b39aa-9308-52a6-9daf-0547d5aaa160\",\n
+        \               \"name\": \"United States of America\",\n                \"iso2\":
+        \"US\",\n                \"region\": \"Americas\",\n                \"attribution_scope\":
+        \"confirmed\",\n                \"sub-region\": \"North America\"\n            }\n
+        \       ],\n        \"target_sub_region\": [\n            {\n                \"id\":
+        \"location--cdf44f32-c648-5661-be2b-58fbd1479d05\",\n                \"name\":
+        \"Australia and New Zealand\",\n                \"key\": \"australiaandnewzealand\",\n
+        \               \"region\": \"Oceania\",\n                \"attribution_scope\":
+        \"confirmed\"\n            },\n            {\n                \"id\": \"location--7b33370b-da4b-5c48-9741-b69f69febb77\",\n
+        \               \"name\": \"East Asia\",\n                \"key\": \"eastasia\",\n
+        \               \"region\": \"Asia\",\n                \"attribution_scope\":
+        \"confirmed\"\n            },\n            {\n                \"id\": \"location--57644af5-a064-5e14-be58-05b22d2768be\",\n
+        \               \"name\": \"East Europe\",\n                \"key\": \"easteurope\",\n
+        \               \"region\": \"Europe\",\n                \"attribution_scope\":
+        \"confirmed\"\n            },\n            {\n                \"id\": \"location--0daadcfb-ad23-5f16-b53b-6c5b09bf20de\",\n
+        \               \"name\": \"North America\",\n                \"key\": \"northamerica\",\n
+        \               \"region\": \"Americas\",\n                \"attribution_scope\":
+        \"confirmed\"\n            },\n            {\n                \"id\": \"location--07071b1c-a0fb-56e7-9619-11397860bd4c\",\n
+        \               \"name\": \"North Europe\",\n                \"key\": \"northeurope\",\n
+        \               \"region\": \"Europe\",\n                \"attribution_scope\":
+        \"confirmed\"\n            },\n            {\n                \"id\": \"location--9ca4bff3-2cfc-5401-80bf-4eebf0717455\",\n
+        \               \"name\": \"South Africa\",\n                \"key\": \"southafrica\",\n
+        \               \"region\": \"Africa\",\n                \"attribution_scope\":
+        \"confirmed\"\n            },\n            {\n                \"id\": \"location--afcfcb4e-cd47-5c76-91e7-d52cb7d922f0\",\n
+        \               \"name\": \"South East Asia\",\n                \"key\": \"southeastasia\",\n
+        \               \"region\": \"Asia\",\n                \"attribution_scope\":
+        \"confirmed\"\n            },\n            {\n                \"id\": \"location--51df1368-64cc-59a8-bdec-1add9b59d232\",\n
+        \               \"name\": \"South Europe\",\n                \"key\": \"southeurope\",\n
+        \               \"region\": \"Europe\",\n                \"attribution_scope\":
+        \"confirmed\"\n            },\n            {\n                \"id\": \"location--68cdd130-61d1-5b6b-a3d8-560810432d8e\",\n
+        \               \"name\": \"West Asia\",\n                \"key\": \"westasia\",\n
+        \               \"region\": \"Asia\",\n                \"attribution_scope\":
+        \"confirmed\"\n            },\n            {\n                \"id\": \"location--34b867a9-0a6c-5559-bd8a-08edbf5287c4\",\n
+        \               \"name\": \"West Europe\",\n                \"key\": \"westeurope\",\n
+        \               \"region\": \"Europe\",\n                \"attribution_scope\":
+        \"confirmed\"\n            }\n        ],\n        \"target_region\": [\n            {\n
+        \               \"id\": \"location--9488166d-6469-5e54-ba5f-9abf2a385824\",\n
+        \               \"name\": \"Africa\",\n                \"key\": \"africa\",\n
+        \               \"attribution_scope\": \"confirmed\"\n            },\n            {\n
+        \               \"id\": \"location--6d65522f-0166-5e7e-973c-35cf7973e4e3\",\n
+        \               \"name\": \"Americas\",\n                \"key\": \"americas\",\n
+        \               \"attribution_scope\": \"confirmed\"\n            },\n            {\n
+        \               \"id\": \"location--8fc231f3-4e62-57e7-b734-eaee0a734612\",\n
+        \               \"name\": \"Asia\",\n                \"key\": \"asia\",\n
+        \               \"attribution_scope\": \"confirmed\"\n            },\n            {\n
+        \               \"id\": \"location--89b58fc6-de5e-55e4-9d8c-29ba659e770f\",\n
+        \               \"name\": \"Europe\",\n                \"key\": \"europe\",\n
+        \               \"attribution_scope\": \"confirmed\"\n            },\n            {\n
+        \               \"id\": \"location--08d5ce25-021e-5dcf-8b1b-52483dfe1589\",\n
+        \               \"name\": \"Oceania\",\n                \"key\": \"oceania\",\n
+        \               \"attribution_scope\": \"confirmed\"\n            }\n        ]\n
+        \   },\n    \"cve\": [\n        {\n            \"id\": \"vulnerability--033082b3-ae89-53f0-9f13-9cad3e2bbee1\",\n
+        \           \"cve_id\": \"CVE-2013-0641\",\n            \"attribution_scope\":
+        \"suspected\"\n        },\n        {\n            \"id\": \"vulnerability--1a869fc9-5449-5108-a710-b1220c881940\",\n
+        \           \"cve_id\": \"CVE-2013-0640\",\n            \"attribution_scope\":
+        \"suspected\"\n        },\n        {\n            \"id\": \"vulnerability--a96c30fc-0ca4-5d4a-95aa-416346357ec6\",\n
+        \           \"cve_id\": \"CVE-2013-0632\",\n            \"attribution_scope\":
+        \"confirmed\"\n        },\n        {\n            \"id\": \"vulnerability--f1ff751a-6302-52ac-b910-c138e3f77fd9\",\n
+        \           \"cve_id\": \"CVE-2011-0611\",\n            \"attribution_scope\":
+        \"suspected\"\n        }\n    ],\n    \"last_activity_time\": \"2022-10-25T15:57:23.000Z\",\n
+        \   \"suspected_attribution\": [],\n    \"associated_uncs\": [\n        {\n
+        \           \"id\": \"threat-actor--99391985-6432-54bf-8660-80987a50070d\",\n
+        \           \"name\": \"UNC122\",\n            \"attribution_scope\": \"suspected\"\n
+        \       },\n        {\n            \"id\": \"threat-actor--4e535153-f13e-59fd-a192-f219c6d7f2a0\",\n
+        \           \"name\": \"UNC497\",\n            \"attribution_scope\": \"suspected\"\n
+        \       },\n        {\n            \"id\": \"threat-actor--daae8aa0-9131-5cbf-8f81-d523aee1ff06\",\n
+        \           \"name\": \"UNC2062\",\n            \"attribution_scope\": \"possible\"\n
+        \       },\n        {\n            \"id\": \"threat-actor--a57eb78a-620f-548c-aa5d-f2b7863c096e\",\n
+        \           \"name\": \"UNC2506\",\n            \"attribution_scope\": \"possible\"\n
+        \       },\n        {\n            \"id\": \"threat-actor--99e188f3-83d7-586a-81e5-5b8e652516e8\",\n
+        \           \"name\": \"UNC2507\",\n            \"attribution_scope\": \"possible\"\n
+        \       },\n        {\n            \"id\": \"threat-actor--5b6e4fd6-f265-565b-93b9-e8bf34d4ebb0\",\n
+        \           \"name\": \"UNC2598\",\n            \"attribution_scope\": \"suspected\"\n
+        \       },\n        {\n            \"id\": \"threat-actor--2f3e43cb-0eb5-520d-8912-a312d7c7c561\",\n
+        \           \"name\": \"UNC2676\",\n            \"attribution_scope\": \"suspected\"\n
+        \       },\n        {\n            \"id\": \"threat-actor--aa7369ab-141f-5cc8-b7d6-2fc387cd7c3e\",\n
+        \           \"name\": \"UNC4146\",\n            \"attribution_scope\": \"possible\"\n
+        \       },\n        {\n            \"id\": \"threat-actor--21e48808-3556-5572-8fa8-f1474a3773a2\",\n
+        \           \"name\": \"UNC4242\",\n            \"attribution_scope\": \"possible\"\n
+        \       }\n    ],\n    \"is_publishable\": true,\n    \"counts\": {\n        \"reports\":
+        0,\n        \"malware\": 53,\n        \"cve\": 4,\n        \"associated_uncs\":
+        9,\n        \"aliases\": 15,\n        \"industries\": 21,\n        \"attack_patterns\":
+        189\n    },\n    \"intel_free\": false\n}"
+    headers:
+      Cache-Control:
+      - max-age=3600, must-revalidate, private
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 17 Nov 2022 17:36:38 GMT
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin
+      - Accept-Encoding
+      - Authorization
+    status:
+      code: 200
+      message: OK
+version: 1

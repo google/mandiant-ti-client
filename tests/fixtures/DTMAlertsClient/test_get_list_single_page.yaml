@@ -1,0 +1,155 @@
+# Copyright 2023 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Cookie:
+      - __cf_bm=_REEWfekiW7SP_aPuwrFqtogrwmaRcmiGW5nlRvpV.Y-1685730654-0-AcFpdS52nEi8Vr90/IEfVhn9v8LdwVgKNt2A332u1QYmPjSLT25qnDgCaXEEdN9ttscgjvIA4rsqb0ZZCv0A4/A=
+      User-Agent:
+      - python-requests/2.28.2
+      X-App-Name:
+      - MA-TI-Python-Lib-v0.1
+    method: GET
+    uri: https://api.intelligence.mandiant.com/v4/dtm/alerts?sort=created_at&order=desc&size=1&sanitize=False&mscore_gte=0
+  response:
+    body:
+      string: "{\"alerts\":[{\"id\":\"cht3an1c3h7fvkrrbeog\",\"monitor_id\":\"cbho6aip8c2uhj8qkalg\",\"doc\":{\"__id\":\"9f973866-0ea9-46a3-bbe0-ffec40cc4ea0\",\"__type\":\"message\",\"source\":\"vanellope\",\"timestamp\":\"2023-06-02T18:30:47Z\",\"body\":\"\U0001F525EdeaShop
+        \U0001F525\\n\\nFRESH AND HQ STOCK\\n\\n\U0001F47E Botnet Loads \U0001F47E\\n\u2B07\uFE0F
+        250 loads - $21 \u2B07\uFE0F\\n\u2B07\uFE0F 5000 loads - $250 \u2B07\uFE0F\\n\u2B07\uFE0F
+        10000 loads - $400 \u2B07\uFE0F\\n\u2B07\uFE0F 20000 loads - $700 \u2B07\uFE0F\\n\u2B07\uFE0F
+        50000 loads - $1500 \u2B07\uFE0F\\n\\n\U0001F47E FUD crypt - $20 \U0001F47E\\n\\nWhat
+        is allowed?\\nStealer Redline or something like that idc\\nCrypto Miners\\nRATS\\nAnd
+        more shit\\n\\nWhat is forbidden?\\nRansomware\\n\\n\\n\U0001F4B0Wallets\U0001F4B0\\nExodus
+        Files with Guide\\nMetamask Recovery Codes\\nCoinbase with OTP + Guide\\n\\n\u2666\uFE0FCrypto
+        Casino\u2666\uFE0F\\nStake.com (send the money to your account as a tip and
+        then cashout) Full Access\\nSportbets.io\\nBitcasino.io\\n\\n\u2709\uFE0FMail
+        Access\u2709\uFE0F\\nYahoo\\n\\n\U0001F499 PayPal's \U0001F499\\nFull Capture
+        China PP with Number and bank or cc\\nFull Capture USA PP with Number and
+        bank or cc\\nFull Capture German PP with Number and bank or cc\\n\\n\U0001F51EPorn\U0001F51E\\nOnlyfans
+        with cc\\n\\n\U0001F44AOther Stuff\U0001F44A \\nAmazon Giftcards GLOBAL Works
+        in every country\\n\\n\U0001F5A5Tools\U0001F5A5\\nEdeaOTP OTP Bot\\nEdeaPal
+        PayPal Checker\",\"channel\":{\"__type\":\"channel\",\"channel_id\":\"-1001313375849\",\"channel_info\":{},\"messenger\":{\"id\":\"telegram\",\"name\":\"Telegram\"},\"name\":\"FixCombo
+        Marketplace\"},\"ingested\":\"2023-06-02T18:30:48Z\",\"message_id\":\"1570990194688\",\"messenger\":{\"id\":\"telegram\",\"name\":\"Telegram\"},\"sender\":{\"__type\":\"profile\",\"identity\":{\"first_name\":\"fdasdfsadsa\",\"name\":\"fdasdfsadsa
+        \"},\"telegram\":{\"name\":\"dasdasdsad3r2\",\"user_id\":5770588253}}},\"labels\":[{\"id\":\"cd1a54c7-7ad0-44b3-be21-b11da5447108\",\"classifier\":\"classifier-content\",\"version\":\"2-0-0\",\"label\":\"prose\",\"confidence\":100,\"element_path\":\"body\"},{\"id\":\"7788998d-298f-4fd6-a498-2193f5511e5d\",\"classifier\":\"classifier-language\",\"version\":\"1-0-0\",\"label\":\"en\",\"confidence\":63,\"element_path\":\"body\"},{\"id\":\"60501a45-e1ac-49bf-ac3a-520550588474\",\"classifier\":\"classifier-threat\",\"version\":\"3-0-0\",\"label\":\"information-security/botnet\",\"confidence\":100},{\"id\":\"b7793465-e7a9-4147-b1e7-c548ca432bf5\",\"classifier\":\"classifier-threat\",\"version\":\"3-0-0\",\"label\":\"information-security/malware/ransomware\",\"confidence\":100}],\"topics\":[{\"id\":\"7f93c2f0-b6de-42b0-870a-a580485103ed\",\"type\":\"name\",\"value\":\"FixCombo
+        Marketplace\",\"extractor\":\"dtm-ma\",\"extractor_version\":\"0.1.239\",\"entity_locations\":[{\"element_path\":\"channel.name\",\"offsets\":[0,20]}]},{\"id\":\"a45c8c22-187a-41ca-87d8-81116099e2dd\",\"type\":\"service_name\",\"value\":\"Telegram\",\"extractor\":\"dtm-ma\",\"extractor_version\":\"0.1.239\",\"entity_locations\":[{\"element_path\":\"messenger.name\",\"offsets\":[0,8]},{\"element_path\":\"channel.messenger.name\",\"offsets\":[0,8]}]},{\"id\":\"c2dc5ddc-da7f-4769-8119-7b8f2a0e2382\",\"type\":\"organization\",\"value\":\"EdeaOTP\",\"extractor\":\"analysis-pipeline.nerprocessor-nerenglish-gpu\",\"extractor_version\":\"4-0-1\",\"confidence\":47,\"entity_locations\":[{\"element_path\":\"body\",\"offsets\":[810,817]}]},{\"id\":\"a329b61f-530d-43a3-a718-80921ea8841b\",\"type\":\"organization\",\"value\":\"EdeaShop\",\"extractor\":\"analysis-pipeline.nerprocessor-nerenglish-gpu\",\"extractor_version\":\"4-0-1\",\"confidence\":100,\"entity_locations\":[{\"element_path\":\"body\",\"offsets\":[1,9]}]},{\"id\":\"35011dfa-aa7d-42fd-a67e-efcc27e1dfbf\",\"type\":\"organization\",\"value\":\"Stealer
+        Redline\",\"extractor\":\"analysis-pipeline.nerprocessor-nerenglish-gpu\",\"extractor_version\":\"4-0-1\",\"confidence\":92,\"entity_locations\":[{\"element_path\":\"body\",\"offsets\":[211,226]}]},{\"id\":\"4057361b-fcae-4f94-8cae-4d8d269aa3ab\",\"type\":\"organization\",\"value\":\"OTP\",\"extractor\":\"analysis-pipeline.nerprocessor-nerenglish-gpu\",\"extractor_version\":\"4-0-1\",\"confidence\":49,\"entity_locations\":[{\"element_path\":\"body\",\"offsets\":[392,395]}]},{\"id\":\"1fc3d3ed-b362-46ee-8119-740ea3440d13\",\"type\":\"organization\",\"value\":\"Yahoo\",\"extractor\":\"analysis-pipeline.nerprocessor-nerenglish-gpu\",\"extractor_version\":\"4-0-1\",\"confidence\":100,\"entity_locations\":[{\"element_path\":\"body\",\"offsets\":[547,552]}]},{\"id\":\"c17d08ff-2d49-49f0-9bae-c27c3945fdad\",\"type\":\"organization\",\"value\":\"PayPal\",\"extractor\":\"analysis-pipeline.nerprocessor-nerenglish-gpu\",\"extractor_version\":\"4-0-1\",\"confidence\":100,\"entity_locations\":[{\"element_path\":\"body\",\"offsets\":[556,562]}]},{\"id\":\"61131c99-7a26-4eac-bc72-0b57ce15f373\",\"type\":\"organization\",\"value\":\"Amazon\",\"extractor\":\"analysis-pipeline.nerprocessor-nerenglish-gpu\",\"extractor_version\":\"4-0-1\",\"confidence\":100,\"entity_locations\":[{\"element_path\":\"body\",\"offsets\":[754,760]}]},{\"id\":\"b04901f2-2d91-4db2-802f-91b72a876e94\",\"type\":\"product\",\"value\":\"Coinbase\",\"extractor\":\"analysis-pipeline.nerprocessor-nerenglish-gpu\",\"extractor_version\":\"4-0-1\",\"confidence\":94,\"entity_locations\":[{\"element_path\":\"body\",\"offsets\":[378,386]}]},{\"id\":\"4bb69c12-13b0-4772-b8b1-7c499eec9388\",\"type\":\"product\",\"value\":\"German\",\"extractor\":\"analysis-pipeline.nerprocessor-nerenglish-gpu\",\"extractor_version\":\"4-0-1\",\"confidence\":100,\"entity_locations\":[{\"element_path\":\"body\",\"offsets\":[676,682]}]},{\"id\":\"99aaec1f-05b4-4a2f-aef2-5fd57e25c756\",\"type\":\"product\",\"value\":\"OTP
+        Bot EdeaPal PayPal Checker\",\"extractor\":\"analysis-pipeline.nerprocessor-nerenglish-gpu\",\"extractor_version\":\"4-0-1\",\"confidence\":94,\"entity_locations\":[{\"element_path\":\"body\",\"offsets\":[818,848]}]},{\"id\":\"7c9f7f8a-79db-46c7-b6dc-3dec398ad923\",\"type\":\"location_name\",\"value\":\"USA\",\"extractor\":\"analysis-pipeline.nerprocessor-nerenglish-gpu\",\"extractor_version\":\"4-0-1\",\"confidence\":100,\"entity_locations\":[{\"element_path\":\"body\",\"offsets\":[629,632]}]},{\"id\":\"140a06e8-ff9f-4021-a348-c2359438da8c\",\"type\":\"identity_name\",\"value\":\"fdasdfsadsa\",\"extractor\":\"dtm-ma\",\"extractor_version\":\"0.1.239\",\"entity_locations\":[{\"element_path\":\"sender.identity.first_name\",\"offsets\":[0,11]}]},{\"id\":\"004ab4ab-2ab4-4858-b416-057ab729bfc8\",\"type\":\"identity_name\",\"value\":\"fdasdfsadsa
+        \",\"extractor\":\"dtm-ma\",\"extractor_version\":\"0.1.239\",\"entity_locations\":[{\"element_path\":\"sender.identity.name\",\"offsets\":[0,12]}]},{\"id\":\"3b9a64ab-d207-4a32-88d2-a566a3dfd1d1\",\"type\":\"telegram_user_name\",\"value\":\"dasdasdsad3r2\",\"extractor\":\"dtm-ma\",\"extractor_version\":\"0.1.239\",\"entity_locations\":[{\"element_path\":\"sender.telegram.name\",\"offsets\":[0,13]}]},{\"id\":\"b0c350f2-082a-4353-b145-04ce5099f896\",\"type\":\"domain\",\"value\":\"Bitcasino.io\",\"extractor\":\"analysis-pipeline.preprocessor\",\"extractor_version\":\"2-0-0\",\"confidence\":100,\"entity_locations\":[{\"element_path\":\"body\",\"offsets\":[517,529]}]},{\"id\":\"be65d1b2-5b56-4d78-9112-de110c4ebf29\",\"type\":\"domain\",\"value\":\"Stake.com\",\"extractor\":\"analysis-pipeline.preprocessor\",\"extractor_version\":\"2-0-0\",\"confidence\":100,\"entity_locations\":[{\"element_path\":\"body\",\"offsets\":[423,432]}]},{\"id\":\"aa17390e-a0a4-4f1d-8996-b81dc30daabf\",\"type\":\"domain\",\"value\":\"Sportbets.io\",\"extractor\":\"analysis-pipeline.preprocessor\",\"extractor_version\":\"2-0-0\",\"confidence\":100,\"entity_locations\":[{\"element_path\":\"body\",\"offsets\":[504,516]}]},{\"id\":\"814aab31-bbea-457b-9421-508d867fb5bf\",\"type\":\"country\",\"value\":\"China\",\"extractor\":\"analysis-pipeline.nerprocessor-country\",\"extractor_version\":\"2-0-0\",\"confidence\":100,\"entity_locations\":[{\"element_path\":\"body\",\"offsets\":[580,585]}]}],\"topic_matches\":[{\"topic_id\":\"7f93c2f0-b6de-42b0-870a-a580485103ed\",\"value\":\"FixCombo
+        Marketplace\",\"term\":\"pl\",\"offsets\":[9,20]},{\"topic_id\":\"doc_type:message\",\"value\":\"message\"}],\"label_matches\":[{\"label_id\":\"b7793465-e7a9-4147-b1e7-c548ca432bf5\",\"value\":\"information-security/malware/ransomware\"}],\"doc_matches\":[],\"tags\":[],\"created_at\":\"2023-06-02T18:30:52.984Z\",\"updated_at\":\"2023-06-02T18:30:52.984Z\",\"labels_url\":\"https://api.intelligence.mandiant.com/v4/dtm/docs/message/9f973866-0ea9-46a3-bbe0-ffec40cc4ea0/labels\",\"topics_url\":\"https://api.intelligence.mandiant.com/v4/dtm/docs/message/9f973866-0ea9-46a3-bbe0-ffec40cc4ea0/topics\",\"doc_url\":\"https://api.intelligence.mandiant.com/v4/dtm/docs/message/9f973866-0ea9-46a3-bbe0-ffec40cc4ea0\",\"status\":\"new\",\"alert_type\":\"Message\",\"alert_summary\":\"EdeaShop
+        FRESH AND HQ STOCK Botnet Loads 250 loads 21 5000 loads 250 10000 loads 400
+        20000 loads 700 50000 loads 1500 FUD crypt 20 What is allowed Stealer Redline
+        or something like that idc Crypto Miners RATS And more shit What is forbidden
+        Ransomware Wal\u2026\",\"title\":\"Found topic \\\"pl\\\" posted by actor
+        \\\"dasdasdsad3r2\\\" on Telegram channel \\\"FixCombo Marketplace\\\"\",\"email_sent_at\":\"\",\"indicator_mscore\":24,\"indicator_attributions\":[],\"monitor_version\":1}]}\n"
+    headers:
+      Access-Control-Expose-Headers:
+      - Link
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 7d11c52e8d0c5758-IAD
+      Connection:
+      - keep-alive
+      Content-Security-Policy:
+      - img-src https://mandiant-dtm-email-assets.s3.amazonaws.com/; style-src-attr
+        'unsafe-inline'; default-src 'none'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Fri, 02 Jun 2023 18:30:55 GMT
+      Link:
+      - <https://api.intelligence.mandiant.com/v4/dtm/alerts?page=cht3anol24d39uevbak0>;
+        rel="next"
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin
+      X-Amzn-Trace-Id:
+      - 156b59ab3deec8b590778cb8db1656f0
+      X-Api-Proxy:
+      - '1'
+      content-length:
+      - '8462'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Cookie:
+      - __cf_bm=_REEWfekiW7SP_aPuwrFqtogrwmaRcmiGW5nlRvpV.Y-1685730654-0-AcFpdS52nEi8Vr90/IEfVhn9v8LdwVgKNt2A332u1QYmPjSLT25qnDgCaXEEdN9ttscgjvIA4rsqb0ZZCv0A4/A=
+      User-Agent:
+      - python-requests/2.28.2
+      X-App-Name:
+      - MA-TI-Python-Lib-v0.1
+    method: GET
+    uri: https://api.intelligence.mandiant.com/v4/dtm/alerts?page=cht3anol24d39uevbak0
+  response:
+    body:
+      string: "{\"alerts\":[]}\n"
+    headers:
+      Access-Control-Expose-Headers:
+      - Link
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 7d11c533ec5a5758-IAD
+      Connection:
+      - keep-alive
+      Content-Security-Policy:
+      - img-src https://mandiant-dtm-email-assets.s3.amazonaws.com/; style-src-attr
+        'unsafe-inline'; default-src 'none'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Fri, 02 Jun 2023 18:30:56 GMT
+      Link:
+      - <https://api.intelligence.mandiant.com/v4/dtm/alerts?page=cht3ao0l24d39uevbal0>;
+        rel="next"
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin
+      X-Amzn-Trace-Id:
+      - 3121dc2e1115225824960476f66cfdc5
+      X-Api-Proxy:
+      - '1'
+      content-length:
+      - '8512'
+    status:
+      code: 200
+      message: OK
+version: 1

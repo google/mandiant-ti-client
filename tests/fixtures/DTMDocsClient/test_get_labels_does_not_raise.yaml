@@ -1,0 +1,69 @@
+# Copyright 2023 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Cookie:
+      - __cf_bm=lobXxk.hNU7FntV_T9r3Bc1LZTIEJKMq8hIvLm.T3Qg-1685996029-0-AR0xHPgAwel43fNLYMNbdrnJeKEzrzt5qMnwAv0H/+FfLyWL/7f9DIe6qChKL8nNdPjCf2ljuZsqEYvh2QT2bdw=
+      User-Agent:
+      - python-requests/2.28.2
+      X-App-Name:
+      - MA-TI-Python-Lib-v0.1
+    method: GET
+    uri: https://api.intelligence.mandiant.com/v4/dtm/docs/web_content_publish/21ecacbe-18b7-464f-a38a-f3c5d0ca4bd6/labels
+  response:
+    body:
+      string: '{"labels":[{"__id":"dbde06f8-5af7-455b-9bd0-88903deddd13","classifier":"classifier-content","confidence":100,"element_path":"text","label":"structured","version":"2-0-0"},{"__id":"3d2de52c-af1b-4ffe-9354-ad0ed94d6706","classifier":"classifier-type","confidence":100,"element_path":"text","label":"text/plain","version":"2-0-0"}]}
+
+        '
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 7d2b1410c8876fd3-IAD
+      Connection:
+      - keep-alive
+      Content-Security-Policy:
+      - img-src https://mandiant-dtm-email-assets.s3.amazonaws.com/; style-src-attr
+        'unsafe-inline'; default-src 'none'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Mon, 05 Jun 2023 20:13:49 GMT
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin
+      X-Amzn-Trace-Id:
+      - fddfa8b6f8b8b34f8691676024bf4c48
+      X-Api-Proxy:
+      - '1'
+      content-length:
+      - '330'
+    status:
+      code: 200
+      message: OK
+version: 1

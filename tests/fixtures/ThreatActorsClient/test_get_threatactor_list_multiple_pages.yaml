@@ -1,0 +1,190 @@
+# Copyright 2023 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.28.1
+      X-App-Name:
+      - MA-Python-Lib-v0.1
+    method: GET
+    uri: https://api.intelligence.mandiant.com/v4/actor?limit=1&offset=0
+  response:
+    body:
+      string: "{\n    \"threat-actors\": [\n        {\n            \"last_updated\":
+        \"2022-11-10T05:32:54.000Z\",\n            \"aliases\": [\n                {\n
+        \                   \"attribution_scope\": \"confirmed\",\n                    \"name\":
+        \"Apt1 (Recorded Future)\"\n                },\n                {\n                    \"attribution_scope\":
+        \"confirmed\",\n                    \"name\": \"Bronzesunset (Dell SecureWorks)\"\n
+        \               },\n                {\n                    \"attribution_scope\":
+        \"confirmed\",\n                    \"name\": \"Comment Crew (Internet)\"\n
+        \               },\n                {\n                    \"attribution_scope\":
+        \"confirmed\",\n                    \"name\": \"Comment Crew (ThreatConnect)\"\n
+        \               },\n                {\n                    \"attribution_scope\":
+        \"confirmed\",\n                    \"name\": \"Comment Panda (CrowdStrike)\"\n
+        \               },\n                {\n                    \"attribution_scope\":
+        \"confirmed\",\n                    \"name\": \"Commentcrew (Symantec)\"\n
+        \               },\n                {\n                    \"attribution_scope\":
+        \"confirmed\",\n                    \"name\": \"Dev0046 (Microsoft)\"\n                },\n
+        \               {\n                    \"attribution_scope\": \"confirmed\",\n
+        \                   \"name\": \"Fluorine (Microsoft)\"\n                },\n
+        \               {\n                    \"attribution_scope\": \"confirmed\",\n
+        \                   \"name\": \"Foxypanda (CrowdStrike)\"\n                },\n
+        \               {\n                    \"attribution_scope\": \"possible\",\n
+        \                   \"name\": \"Ghostemperor (Kaspersky)\"\n                },\n
+        \               {\n                    \"attribution_scope\": \"confirmed\",\n
+        \                   \"name\": \"Kumming Group (Dell SecureWorks)\"\n                },\n
+        \               {\n                    \"attribution_scope\": \"confirmed\",\n
+        \                   \"name\": \"Shanghaigroup (Dell SecureWorks)\"\n                },\n
+        \               {\n                    \"attribution_scope\": \"confirmed\",\n
+        \                   \"name\": \"Tg8223 (Dell SecureWorks)\"\n                }\n
+        \           ],\n            \"name\": \"APT1\",\n            \"description\":
+        \"APT1 refers to a distinct grouping of global cyber espionage activity with
+        a nexus to China. Based on available data, we assess that this is a nation-state-sponsored
+        group located in China. Specifically, we believe that APT1 is the 2nd Bureau
+        of the People's Liberation Army (PLA) General Staff Department's 3rd Department,
+        or Unit 61398. The activity is distinguished by the use of common infrastructure
+        and tools and a clear intent to collect intelligence on a number of issues
+        that may be of interest to the People's Republic of China (PRC).\",\n            \"id\":
+        \"threat-actor--0ac5c1db-8ad6-54b8-b4b9-c32fc738c54a\",\n            \"intel_free\":
+        false\n        }\n    ],\n    \"total_count\": 283\n}"
+    headers:
+      Cache-Control:
+      - max-age=3600, must-revalidate, private
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 17 Nov 2022 17:40:54 GMT
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin
+      - Accept-Encoding
+      - Authorization
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.28.1
+      X-App-Name:
+      - MA-Python-Lib-v0.1
+    method: GET
+    uri: https://api.intelligence.mandiant.com/v4/actor?limit=1&offset=1
+  response:
+    body:
+      string: "{\n    \"threat-actors\": [\n        {\n            \"last_updated\":
+        \"2022-11-10T06:15:10.000Z\",\n            \"aliases\": [\n                {\n
+        \                   \"attribution_scope\": \"confirmed\",\n                    \"name\":
+        \"4H\"\n                },\n                {\n                    \"attribution_scope\":
+        \"confirmed\",\n                    \"name\": \"Apt2 (Recorded Future)\"\n
+        \               },\n                {\n                    \"attribution_scope\":
+        \"confirmed\",\n                    \"name\": \"Bronzemidway (Dell SecureWorks)\"\n
+        \               },\n                {\n                    \"attribution_scope\":
+        \"confirmed\",\n                    \"name\": \"Icarus (PwC)\"\n                },\n
+        \               {\n                    \"attribution_scope\": \"confirmed\",\n
+        \                   \"name\": \"Junebug (Symantec)\"\n                },\n
+        \               {\n                    \"attribution_scope\": \"confirmed\",\n
+        \                   \"name\": \"Putter Panda (CrowdStrike)\"\n                },\n
+        \               {\n                    \"attribution_scope\": \"confirmed\",\n
+        \                   \"name\": \"Sulfur (Microsoft)\"\n                },\n
+        \               {\n                    \"attribution_scope\": \"confirmed\",\n
+        \                   \"name\": \"Xdown (BAE)\"\n                }\n            ],\n
+        \           \"name\": \"APT2\",\n            \"description\": \"APT2 is a
+        China-nexus cyber espionage group that has been recorded as far back as 2010.
+        Their activity targets several industries, including military and aerospace.
+        APT2 engages in cyber operations where the goal is intellectual property theft,
+        usually focusing on the data and projects that make an organization competitive
+        within its field.  \",\n            \"id\": \"threat-actor--547739f1-8168-5768-9227-91c1b19eb325\",\n
+        \           \"intel_free\": false\n        }\n    ],\n    \"total_count\":
+        283\n}"
+    headers:
+      Cache-Control:
+      - max-age=3600, must-revalidate, private
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 17 Nov 2022 17:40:54 GMT
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin
+      - Accept-Encoding
+      - Authorization
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.28.1
+      X-App-Name:
+      - MA-Python-Lib-v0.1
+    method: GET
+    uri: https://api.intelligence.mandiant.com/v4/actor?limit=1&offset=2
+  response:
+    body:
+      string: "{\n    \"threat-actors\": []}"
+    headers:
+      Cache-Control:
+      - max-age=3600, must-revalidate, private
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 17 Nov 2022 17:40:54 GMT
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin
+      - Accept-Encoding
+      - Authorization
+    status:
+      code: 200
+      message: OK
+version: 1

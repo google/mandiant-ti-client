@@ -1,0 +1,56 @@
+# Copyright 2023 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.28.1
+      X-App-Name:
+      - MA-Python-Lib-v0.1
+    method: GET
+    uri: https://api.intelligence.mandiant.com/v4/reports?start_epoch=1662870397&limit=50&end_epoch=1668565800
+  response:
+    body:
+      string: '{"objects":[{"id":"report--ad50e9cb-9b18-5f0f-a77a-59de5493d03e","report_id":"22-00025714","title":"Ursnif
+        Targeting Update October 2022","threat_scape":["Cyber Crime"],"audience":["cyber
+        crime","fusion"],"publish_date":"2022-11-16T01:43:17.263Z","version":"1","version_one_publish_date":"2022-11-16T01:43:17.263Z","intelligence_type":"threat","report_type":"Trends
+        and Forecasting","report_link":"https://advantage.mandiant.com/reports/22-00025714"}],"next":"FGluY2x1ZGVfY29udGV4dF91dWlkDnF1ZXJ5VGhlbkZldGNoAxZjWTFieVZsZlR5ZUx1ek50QzQ3MzdnAAAAACxDouYWSklEcml3WThRbWFKZEdzazRsam9vdxZUeVRhODMyU1J5R2lBVHdfalM4cWpBAAAAAC7RXYYWZkZINDZIUktSc2U2ZzlJdmZ5cmVXZxZ5NzZIQ3hES1J5YTcxdzFuV0QyT2p3AAAAAC23ezoWTVFPRUpvOGdUV0tQZ1FPMzFKUWduQQ==","total_count":6405}
+
+        '
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Thu, 17 Nov 2022 00:05:20 GMT
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      - Origin
+    status:
+      code: 200
+      message: OK
+version: 1

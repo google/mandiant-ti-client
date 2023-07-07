@@ -1,0 +1,650 @@
+# Copyright 2023 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+interactions:
+- request:
+    body: grant_type=client_credentials
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '29'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Cookie:
+      - __cf_bm=MNdHakBV.aJ1G9T3CQlLZk2415j0ymFmXJGVEUyhFbs-1674840626-0-AY6bfg+21x9/p5ZLgmjBKQDOJI06ALqanwomIsKjD7yUZrz85Lx5xUE1nB/alEJ7TY5w0qgYFiK9urlU53YZa44=
+      User-Agent:
+      - python-requests/2.28.1
+    method: POST
+    uri: https://api.intelligence.mandiant.com/token
+  response:
+    body:
+      string: '{"access_token": "FAKE_TOKEN","token_type":"Bearer","expires_in":26553}
+
+        '
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 7903375a3f10826f-IAD
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Fri, 27 Jan 2023 17:30:26 GMT
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin
+      content-length:
+      - '125'
+      x-amzn-trace-id:
+      - 47e2245621e5cc0fe2dbe47172de3570
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate      Connection:
+      - keep-alive
+      Cookie:
+      - __cf_bm=MNdHakBV.aJ1G9T3CQlLZk2415j0ymFmXJGVEUyhFbs-1674840626-0-AY6bfg+21x9/p5ZLgmjBKQDOJI06ALqanwomIsKjD7yUZrz85Lx5xUE1nB/alEJ7TY5w0qgYFiK9urlU53YZa44=
+      User-Agent:
+      - python-requests/2.28.1
+      X-App-Name:
+      - MA-TI-Python-Lib-v0.1
+    method: GET
+    uri: https://api.intelligence.mandiant.com/v4/campaign/CAMP.22.063
+  response:
+    body:
+      string: "{\n    \"type\": \"campaign\",\n    \"id\": \"campaign--6ed45e70-f2c5-5f62-a5ec-d8c25764cd8c\",\n
+        \   \"name\": \"Financially Motivated Group FIN11 Targeting Vulnerable Cisco
+        VPNs\",\n    \"description\": \"In early December 2022, Mandiant observed
+        threat actors conduct widespread scanning to identify vulnerable Cisco AnyConnect
+        appliances. The threat actors may have been attempting to exploit CVE-2020-3433
+        and/or CVE-2020-3153, given that CISA added these vulnerabilities to their
+        Exploited Catalog in October 2022; however, the timing may be coincedental.
+        We believe that this activity was conducted by FIN11, based on infrastructure
+        and server certificate overlaps. Further, exploitation of vulnerabilities
+        in internet-facing systems is consistent with FIN11 activity observed earlier
+        in 2022.\\n\\nMandiant has not yet identified significant follow-on activity;
+        however, since 2019 FIN11 has consistently monetized access via data theft
+        and/or CLOP ransomware deployment. FIN11 has historically been known for widespread
+        phishing campaigns, but the group has shifted to exploiting vulnerabilities
+        in internet-facing systems for initial access. While FIN11 has exploited recently
+        disclosed vulnerabilities, overlaps between FIN11 and UNC2582\\u2014a threat
+        cluster that conducted data theft extortion after UNC2546 exploited several
+        zero-day vulnerabilities in Accellion\\u2019s legacy File Transfer Appliance
+        (FTA)\\u2014suggest that FIN11 may have developed or acquired zero-day vulnerabilities
+        in the past.\",\n    \"releasable\": true,\n    \"counts\": {\n        \"actors\":
+        1,\n        \"reports\": 1,\n        \"malware\": 1,\n        \"campaigns\":
+        0,\n        \"industries\": 11,\n        \"timeline\": 19,\n        \"vulnerabilities\":
+        1,\n        \"actor_collaborations\": 0,\n        \"tools\": 0\n    },\n    \"audience\":
+        [\n        {\n            \"name\": \"intel_oper\",\n            \"license\":
+        \"INTEL_RBI_OPS\"\n        },\n        {\n            \"name\": \"intel_fusion\",\n
+        \           \"license\": \"INTEL_RBI_FUS\"\n        },\n        {\n            \"name\":
+        \"tlp_marking\",\n            \"license\": \"amber\"\n        }\n    ],\n
+        \   \"profile_updated\": \"2023-01-27T07:04:48.297Z\",\n    \"campaign_type\":
+        \"Individual\",\n    \"short_name\": \"CAMP.22.063\",\n    \"last_activity_time\":
+        \"2023-01-18T00:00:00.000Z\",\n    \"campaigns\": [],\n    \"timeline\": [\n
+        \       {\n            \"name\": \"Campaign Created\",\n            \"description\":
+        \"Mandiant Declared Campaign\",\n            \"releasable\": true,\n            \"event_type\":
+        \"created\",\n            \"timestamp\": \"2022-12-29T00:00:00.000Z\"\n        },\n
+        \       {\n            \"name\": \"First Observed\",\n            \"description\":
+        \"Mandiant Observed First Activity of Campaign\",\n            \"releasable\":
+        true,\n            \"event_type\": \"first_observed\",\n            \"timestamp\":
+        \"2022-02-08T00:00:00.000Z\"\n        },\n        {\n            \"name\":
+        \"Technique Observed\",\n            \"description\": \"Mandiant Observed
+        Use of The Technique\",\n            \"releasable\": true,\n            \"event_type\":
+        \"technique_observed\",\n            \"mandiant_technique\": {\n                \"type\":
+        \"attack-pattern\",\n                \"id\": \"attack-pattern--370af2df-e616-5b93-a0d8-21b656ac11c8\",\n
+        \               \"name\": \"Port Scanning\",\n                \"attribution_scope\":
+        \"confirmed\",\n                \"releasable\": true\n            },\n            \"mitre_techniques\":
+        [\n                {\n                    \"type\": \"attack-pattern\",\n
+        \                   \"id\": \"attack-pattern--e3a12395-188d-4051-9a16-ea8e14d07b88\",\n
+        \                   \"name\": \"Network Service Discovery\",\n                    \"attribution_scope\":
+        \"confirmed\",\n                    \"releasable\": true,\n                    \"mitre_id\":
+        \"T1046\",\n                    \"tactics\": [\n                        \"Discovery\"\n
+        \                   ]\n                }\n            ],\n            \"used_by\":
+        [\n                {\n                    \"releasable\": true,\n                    \"actor\":
+        {\n                        \"type\": \"threat-actor\",\n                        \"id\":
+        \"threat-actor--b8ee8129-5ecc-581a-a636-fb17051d2ffe\",\n                        \"name\":
+        \"FIN11\",\n                        \"attribution_scope\": \"confirmed\",\n
+        \                       \"releasable\": true\n                    },\n                    \"first_observed\":
+        \"2022-12-03T00:00:00.000Z\",\n                    \"last_observed\": \"2022-12-07T00:00:00.000Z\"\n
+        \               }\n            ]\n        },\n        {\n            \"name\":
+        \"Technique Observed\",\n            \"description\": \"Mandiant Observed
+        Use of The Technique\",\n            \"releasable\": true,\n            \"event_type\":
+        \"technique_observed\",\n            \"mandiant_technique\": {\n                \"type\":
+        \"attack-pattern\",\n                \"id\": \"attack-pattern--3bffb47c-a8e6-5152-9146-062d5f07d420\",\n
+        \               \"name\": \"Use of SSH\",\n                \"attribution_scope\":
+        \"confirmed\",\n                \"releasable\": true\n            },\n            \"mitre_techniques\":
+        [\n                {\n                    \"type\": \"attack-pattern\",\n
+        \                   \"id\": \"attack-pattern--2db31dcd-54da-405d-acef-b9129b816ed6\",\n
+        \                   \"name\": \"SSH\",\n                    \"attribution_scope\":
+        \"confirmed\",\n                    \"releasable\": true,\n                    \"mitre_id\":
+        \"T1021.004\",\n                    \"tactics\": [\n                        \"Lateral
+        Movement\"\n                    ]\n                },\n                {\n
+        \                   \"type\": \"attack-pattern\",\n                    \"id\":
+        \"attack-pattern--54a649ff-439a-41a4-9856-8d144a2551ba\",\n                    \"name\":
+        \"Remote Services\",\n                    \"attribution_scope\": \"confirmed\",\n
+        \                   \"releasable\": true,\n                    \"mitre_id\":
+        \"T1021\",\n                    \"tactics\": [\n                        \"Lateral
+        Movement\"\n                    ]\n                }\n            ],\n            \"used_by\":
+        [\n                {\n                    \"releasable\": true,\n                    \"actor\":
+        {\n                        \"type\": \"threat-actor\",\n                        \"id\":
+        \"threat-actor--b8ee8129-5ecc-581a-a636-fb17051d2ffe\",\n                        \"name\":
+        \"FIN11\",\n                        \"attribution_scope\": \"confirmed\",\n
+        \                       \"releasable\": true\n                    },\n                    \"first_observed\":
+        \"2022-02-10T00:00:00.000Z\",\n                    \"last_observed\": \"2022-02-10T00:00:00.000Z\"\n
+        \               }\n            ]\n        },\n        {\n            \"name\":
+        \"Technique Observed\",\n            \"description\": \"Mandiant Observed
+        Use of The Technique\",\n            \"releasable\": true,\n            \"event_type\":
+        \"technique_observed\",\n            \"mandiant_technique\": {\n                \"type\":
+        \"attack-pattern\",\n                \"id\": \"attack-pattern--2b4d5f0a-908f-5533-9952-17b6f15affb6\",\n
+        \               \"name\": \"Use of SSL\",\n                \"attribution_scope\":
+        \"confirmed\",\n                \"releasable\": true\n            },\n            \"mitre_techniques\":
+        [\n                {\n                    \"type\": \"attack-pattern\",\n
+        \                   \"name\": \"Install Digital Certificate\",\n                    \"attribution_scope\":
+        \"confirmed\",\n                    \"releasable\": true,\n                    \"mitre_id\":
+        \"T1608.003\",\n                    \"tactics\": [\n                        \"Resource
+        Development\"\n                    ]\n                },\n                {\n
+        \                   \"type\": \"attack-pattern\",\n                    \"id\":
+        \"attack-pattern--bf176076-b789-408e-8cba-7275e81c0ada\",\n                    \"name\":
+        \"Asymmetric Cryptography\",\n                    \"attribution_scope\": \"confirmed\",\n
+        \                   \"releasable\": true,\n                    \"mitre_id\":
+        \"T1573.002\",\n                    \"tactics\": [\n                        \"Command
+        and Control\"\n                    ]\n                },\n                {\n
+        \                   \"type\": \"attack-pattern\",\n                    \"id\":
+        \"attack-pattern--b8902400-e6c5-4ba2-95aa-2d35b442b118\",\n                    \"name\":
+        \"Encrypted Channel\",\n                    \"attribution_scope\": \"confirmed\",\n
+        \                   \"releasable\": true,\n                    \"mitre_id\":
+        \"T1573\",\n                    \"tactics\": [\n                        \"Command
+        and Control\"\n                    ]\n                },\n                {\n
+        \                   \"type\": \"attack-pattern\",\n                    \"name\":
+        \"Stage Capabilities\",\n                    \"attribution_scope\": \"confirmed\",\n
+        \                   \"releasable\": true,\n                    \"mitre_id\":
+        \"T1608\",\n                    \"tactics\": [\n                        \"Resource
+        Development\"\n                    ]\n                }\n            ],\n
+        \           \"used_by\": [\n                {\n                    \"releasable\":
+        true,\n                    \"actor\": {\n                        \"type\":
+        \"threat-actor\",\n                        \"id\": \"threat-actor--b8ee8129-5ecc-581a-a636-fb17051d2ffe\",\n
+        \                       \"name\": \"FIN11\",\n                        \"attribution_scope\":
+        \"confirmed\",\n                        \"releasable\": true\n                    },\n
+        \                   \"first_observed\": \"2022-12-03T00:00:00.000Z\",\n                    \"last_observed\":
+        \"2022-12-04T00:00:00.000Z\"\n                }\n            ]\n        },\n
+        \       {\n            \"name\": \"Technique Observed\",\n            \"description\":
+        \"Mandiant Observed Use of The Technique\",\n            \"releasable\": true,\n
+        \           \"event_type\": \"technique_observed\",\n            \"mandiant_technique\":
+        {\n                \"type\": \"attack-pattern\",\n                \"id\":
+        \"attack-pattern--82b5dca0-8c6c-58c5-8079-9938b1c141b4\",\n                \"name\":
+        \"Use of TCP\",\n                \"attribution_scope\": \"confirmed\",\n                \"releasable\":
+        true\n            },\n            \"mitre_techniques\": [\n                {\n
+        \                   \"type\": \"attack-pattern\",\n                    \"id\":
+        \"attack-pattern--c21d5a77-d422-4a69-acd7-2c53c1faa34b\",\n                    \"name\":
+        \"Non-Application Layer Protocol\",\n                    \"attribution_scope\":
+        \"confirmed\",\n                    \"releasable\": true,\n                    \"mitre_id\":
+        \"T1095\",\n                    \"tactics\": [\n                        \"Command
+        and Control\"\n                    ]\n                }\n            ],\n
+        \           \"used_by\": [\n                {\n                    \"releasable\":
+        true,\n                    \"actor\": {\n                        \"type\":
+        \"threat-actor\",\n                        \"id\": \"threat-actor--b8ee8129-5ecc-581a-a636-fb17051d2ffe\",\n
+        \                       \"name\": \"FIN11\",\n                        \"attribution_scope\":
+        \"confirmed\",\n                        \"releasable\": true\n                    },\n
+        \                   \"first_observed\": \"2022-02-10T00:00:00.000Z\",\n                    \"last_observed\":
+        \"2023-01-18T00:00:00.000Z\"\n                }\n            ]\n        },\n
+        \       {\n            \"name\": \"Technique Observed\",\n            \"description\":
+        \"Mandiant Observed Use of The Technique\",\n            \"releasable\": true,\n
+        \           \"event_type\": \"technique_observed\",\n            \"mandiant_technique\":
+        {\n                \"type\": \"attack-pattern\",\n                \"id\":
+        \"attack-pattern--8154ff97-5013-5fbe-815f-2b4ae13c734a\",\n                \"name\":
+        \"Malicious use of HTTP\",\n                \"attribution_scope\": \"confirmed\",\n
+        \               \"releasable\": true\n            },\n            \"mitre_techniques\":
+        [\n                {\n                    \"type\": \"attack-pattern\",\n
+        \                   \"id\": \"attack-pattern--df8b2a25-8bdf-4856-953c-a04372b1c161\",\n
+        \                   \"name\": \"Web Protocols\",\n                    \"attribution_scope\":
+        \"confirmed\",\n                    \"releasable\": true,\n                    \"mitre_id\":
+        \"T1071.001\",\n                    \"tactics\": [\n                        \"Command
+        and Control\"\n                    ]\n                },\n                {\n
+        \                   \"type\": \"attack-pattern\",\n                    \"id\":
+        \"attack-pattern--355be19c-ffc9-46d5-8d50-d6a036c675b6\",\n                    \"name\":
+        \"Application Layer Protocol\",\n                    \"attribution_scope\":
+        \"confirmed\",\n                    \"releasable\": true,\n                    \"mitre_id\":
+        \"T1071\",\n                    \"tactics\": [\n                        \"Command
+        and Control\"\n                    ]\n                }\n            ],\n
+        \           \"used_by\": [\n                {\n                    \"releasable\":
+        true,\n                    \"actor\": {\n                        \"type\":
+        \"threat-actor\",\n                        \"id\": \"threat-actor--b8ee8129-5ecc-581a-a636-fb17051d2ffe\",\n
+        \                       \"name\": \"FIN11\",\n                        \"attribution_scope\":
+        \"confirmed\",\n                        \"releasable\": true\n                    },\n
+        \                   \"first_observed\": \"2022-02-10T00:00:00.000Z\",\n                    \"last_observed\":
+        \"2023-01-18T00:00:00.000Z\"\n                }\n            ]\n        },\n
+        \       {\n            \"name\": \"Technique Observed\",\n            \"description\":
+        \"Mandiant Observed Use of The Technique\",\n            \"releasable\": true,\n
+        \           \"event_type\": \"technique_observed\",\n            \"mandiant_technique\":
+        {\n                \"type\": \"attack-pattern\",\n                \"id\":
+        \"attack-pattern--3998b1a6-17df-5d58-8fe7-61e3ec2e05c1\",\n                \"name\":
+        \"Download using WGET\",\n                \"attribution_scope\": \"confirmed\",\n
+        \               \"releasable\": true\n            },\n            \"mitre_techniques\":
+        [\n                {\n                    \"type\": \"attack-pattern\",\n
+        \                   \"id\": \"attack-pattern--e6919abc-99f9-4c6c-95a5-14761e7b2add\",\n
+        \                   \"name\": \"Ingress Tool Transfer\",\n                    \"attribution_scope\":
+        \"confirmed\",\n                    \"releasable\": true,\n                    \"mitre_id\":
+        \"T1105\",\n                    \"tactics\": [\n                        \"Command
+        and Control\"\n                    ]\n                }\n            ],\n
+        \           \"used_by\": [\n                {\n                    \"releasable\":
+        true,\n                    \"actor\": {\n                        \"type\":
+        \"threat-actor\",\n                        \"id\": \"threat-actor--b8ee8129-5ecc-581a-a636-fb17051d2ffe\",\n
+        \                       \"name\": \"FIN11\",\n                        \"attribution_scope\":
+        \"confirmed\",\n                        \"releasable\": true\n                    },\n
+        \                   \"first_observed\": \"2022-02-11T00:00:00.000Z\",\n                    \"last_observed\":
+        \"2022-06-26T00:00:00.000Z\"\n                }\n            ]\n        },\n
+        \       {\n            \"name\": \"Event\",\n            \"description\":
+        \"Key Event\",\n            \"releasable\": true,\n            \"event_type\":
+        \"key_event\",\n            \"timestamp\": \"2022-12-16T00:00:00.000Z\",\n
+        \           \"attributions\": {\n                \"releasable\": true,\n                \"events\":
+        [\n                    {\n                        \"type\": \"event\",\n                        \"id\":
+        \"event--e01684bd-b8e8-58e5-aebc-67a110f6fbca\",\n                        \"name\":
+        \"GOBLINGATE MD5s:\\n\\nb758af9f2b4db9a493764611741fc008\\n1de09033f01578fb01c59ff240447021\\n4075470df8e7632024dd62d8cb284a29\\na2670de8b8a8a0e84def57c2dafbe117\\n8cf596ddc2f3e878cce1df7ed65c934e\\n63e68ea96586ec6b32665c573865117e\\n638dbbc722e9bb46dad4cdea9fb850c1\\n7be04656159f6ad59967e3109a994e4e\\n0a0c43726fd256ad827f4108bdf5e772\",\n
+        \                       \"attribution_scope\": \"confirmed\",\n                        \"releasable\":
+        true\n                    }\n                ],\n                \"malware\":
+        [\n                    {\n                        \"type\": \"malware\",\n
+        \                       \"id\": \"malware--bddff367-0c7a-59b2-8bd6-0d7ab91b8005\",\n
+        \                       \"name\": \"GOBLINGATE\",\n                        \"attribution_scope\":
+        \"confirmed\",\n                        \"releasable\": true\n                    }\n
+        \               ]\n            },\n            \"brief\": \"GOBLINGATE Uploaded
+        to Public Repository\",\n            \"analyst_brief\": \"Throughout 2022,
+        a total of nine samples of GOBLINGATE have been made available to the public
+        via upload to a repository. Notably, five of these samples were added on December
+        16th of that year. These samples either resolved to one of the three following
+        C2 domains:\\r\\n- webserv.systems\\r\\n- hostnet.systems\\r\\n- linuxes.systems\"\n
+        \       },\n        {\n            \"name\": \"X509\",\n            \"description\":
+        \"New x509 SSL Certificate Created\",\n            \"releasable\": true,\n
+        \           \"event_type\": \"key_event\",\n            \"timestamp\": \"2022-02-08T00:00:00.000Z\",\n
+        \           \"attributions\": {\n                \"releasable\": true,\n                \"actors\":
+        [\n                    {\n                        \"type\": \"threat-actor\",\n
+        \                       \"id\": \"threat-actor--b8ee8129-5ecc-581a-a636-fb17051d2ffe\",\n
+        \                       \"name\": \"FIN11\",\n                        \"attribution_scope\":
+        \"confirmed\",\n                        \"releasable\": true\n                    }\n
+        \               ]\n            }\n        },\n        {\n            \"name\":
+        \"Event\",\n            \"description\": \"Key Event\",\n            \"releasable\":
+        true,\n            \"event_type\": \"key_event\",\n            \"timestamp\":
+        \"2022-02-10T00:00:00.000Z\",\n            \"attributions\": {\n                \"releasable\":
+        true,\n                \"mandiant_techniques\": [\n                    {\n
+        \                       \"type\": \"attack-pattern\",\n                        \"id\":
+        \"attack-pattern--3bffb47c-a8e6-5152-9146-062d5f07d420\",\n                        \"name\":
+        \"Use of SSH\",\n                        \"attribution_scope\": \"confirmed\",\n
+        \                       \"releasable\": true,\n                        \"mitre_techniques\":
+        [\n                            {\n                                \"type\":
+        \"attack-pattern\",\n                                \"id\": \"attack-pattern--2db31dcd-54da-405d-acef-b9129b816ed6\",\n
+        \                               \"name\": \"SSH\",\n                                \"attribution_scope\":
+        \"confirmed\",\n                                \"releasable\": true,\n                                \"mitre_id\":
+        \"T1021.004\",\n                                \"tactics\": [\n                                    \"Lateral
+        Movement\"\n                                ]\n                            },\n
+        \                           {\n                                \"type\": \"attack-pattern\",\n
+        \                               \"id\": \"attack-pattern--54a649ff-439a-41a4-9856-8d144a2551ba\",\n
+        \                               \"name\": \"Remote Services\",\n                                \"attribution_scope\":
+        \"confirmed\",\n                                \"releasable\": true,\n                                \"mitre_id\":
+        \"T1021\",\n                                \"tactics\": [\n                                    \"Lateral
+        Movement\"\n                                ]\n                            }\n
+        \                       ]\n                    }\n                ],\n                \"actors\":
+        [\n                    {\n                        \"type\": \"threat-actor\",\n
+        \                       \"id\": \"threat-actor--b8ee8129-5ecc-581a-a636-fb17051d2ffe\",\n
+        \                       \"name\": \"FIN11\",\n                        \"attribution_scope\":
+        \"confirmed\",\n                        \"releasable\": true\n                    }\n
+        \               ]\n            },\n            \"brief\": \"Infrastructure
+        Established\",\n            \"analyst_brief\": \"This was the first observed
+        occurrence of a known FIN11 SSH public key at the IP address 194.165.16.24.
+        Notably, FIN11 was making use of the non-standard port 229, to host the SSH
+        service.\"\n        },\n        {\n            \"name\": \"Event\",\n            \"description\":
+        \"Key Event\",\n            \"releasable\": true,\n            \"event_type\":
+        \"key_event\",\n            \"timestamp\": \"2022-12-03T00:00:00.000Z\",\n
+        \           \"attributions\": {\n                \"releasable\": true,\n                \"mandiant_techniques\":
+        [\n                    {\n                        \"type\": \"attack-pattern\",\n
+        \                       \"id\": \"attack-pattern--370af2df-e616-5b93-a0d8-21b656ac11c8\",\n
+        \                       \"name\": \"Port Scanning\",\n                        \"attribution_scope\":
+        \"confirmed\",\n                        \"releasable\": true,\n                        \"mitre_techniques\":
+        [\n                            {\n                                \"type\":
+        \"attack-pattern\",\n                                \"id\": \"attack-pattern--e3a12395-188d-4051-9a16-ea8e14d07b88\",\n
+        \                               \"name\": \"Network Service Discovery\",\n
+        \                               \"attribution_scope\": \"confirmed\",\n                                \"releasable\":
+        true,\n                                \"mitre_id\": \"T1046\",\n                                \"tactics\":
+        [\n                                    \"Discovery\"\n                                ]\n
+        \                           }\n                        ]\n                    }\n
+        \               ],\n                \"actors\": [\n                    {\n
+        \                       \"type\": \"threat-actor\",\n                        \"id\":
+        \"threat-actor--b8ee8129-5ecc-581a-a636-fb17051d2ffe\",\n                        \"name\":
+        \"FIN11\",\n                        \"attribution_scope\": \"confirmed\",\n
+        \                       \"releasable\": true\n                    }\n                ]\n
+        \           },\n            \"brief\": \"Earliest Scan Observed\",\n            \"analyst_brief\":
+        \"FIN11 was recently spotted conducting scans for Cisco AnyConnect devices
+        from the IP address 194.165.16.24. The purpose of these scans is currently
+        unknown, but it is suspected that FIN11 may be searching for servers vulnerable
+        to the CVE-2020-3433 and CVE-2020-3153 vulnerability, which was reported on
+        in October 20. This event marks the earliest instance of FIN11's scanning
+        activity that has been observed.\"\n        },\n        {\n            \"name\":
+        \"Event\",\n            \"description\": \"Key Event\",\n            \"releasable\":
+        true,\n            \"event_type\": \"key_event\",\n            \"timestamp\":
+        \"2022-03-30T00:00:00.000Z\",\n            \"attributions\": {\n                \"releasable\":
+        true,\n                \"malware\": [\n                    {\n                        \"type\":
+        \"malware\",\n                        \"id\": \"malware--bddff367-0c7a-59b2-8bd6-0d7ab91b8005\",\n
+        \                       \"name\": \"GOBLINGATE\",\n                        \"attribution_scope\":
+        \"confirmed\",\n                        \"releasable\": true\n                    }\n
+        \               ]\n            },\n            \"brief\": \"First GOBLINGATE
+        Sample Uploaded\",\n            \"analyst_brief\": \"The first samples of
+        GOBLINGATE were added to a public repository on March 30th, 2022. These samples
+        were found to reach out to the C2 domain webserv.systems.\"\n        },\n
+        \       {\n            \"name\": \"Event\",\n            \"description\":
+        \"Key Event\",\n            \"releasable\": true,\n            \"event_type\":
+        \"key_event\",\n            \"timestamp\": \"2022-04-24T00:00:00.000Z\",\n
+        \           \"attributions\": {\n                \"releasable\": true,\n                \"mandiant_techniques\":
+        [],\n                \"actors\": [\n                    {\n                        \"type\":
+        \"threat-actor\",\n                        \"id\": \"threat-actor--b8ee8129-5ecc-581a-a636-fb17051d2ffe\",\n
+        \                       \"name\": \"FIN11\",\n                        \"attribution_scope\":
+        \"confirmed\",\n                        \"releasable\": true\n                    }\n
+        \               ]\n            },\n            \"brief\": \"Domain Registered\",\n
+        \           \"analyst_brief\": \"The domain hostnet.systems began resolving
+        to the FIN11 controlled server 194.165.16.24. This domain was utilized by
+        GOBLINGATE samples. GOBLINGATE is a Linux backdoor that is utilized by FIN11.\"\n
+        \       },\n        {\n            \"name\": \"Event\",\n            \"description\":
+        \"Key Event\",\n            \"releasable\": true,\n            \"event_type\":
+        \"key_event\",\n            \"timestamp\": \"2022-02-10T00:00:00.000Z\",\n
+        \           \"attributions\": {\n                \"releasable\": true,\n                \"mandiant_techniques\":
+        [],\n                \"actors\": [\n                    {\n                        \"type\":
+        \"threat-actor\",\n                        \"id\": \"threat-actor--b8ee8129-5ecc-581a-a636-fb17051d2ffe\",\n
+        \                       \"name\": \"FIN11\",\n                        \"attribution_scope\":
+        \"confirmed\",\n                        \"releasable\": true\n                    }\n
+        \               ]\n            },\n            \"brief\": \"HTTPS Established\",\n
+        \           \"analyst_brief\": \"At the time the HTTPS service on port 8229
+        was established, FIN11 was in control of the server. The certificate for this
+        service had a subject name of \\\"Ubiquiti,\\\" and it appears that this service
+        was set up in conjunction with the SSH service. It is believed that FIN11
+        either established these services themselves or was using them at this time.\"\n
+        \       },\n        {\n            \"name\": \"Event\",\n            \"description\":
+        \"Key Event\",\n            \"releasable\": true,\n            \"event_type\":
+        \"key_event\",\n            \"timestamp\": \"2022-02-10T00:00:00.000Z\",\n
+        \           \"attributions\": {\n                \"releasable\": true,\n                \"mandiant_techniques\":
+        [\n                    {\n                        \"type\": \"attack-pattern\",\n
+        \                       \"id\": \"attack-pattern--82b5dca0-8c6c-58c5-8079-9938b1c141b4\",\n
+        \                       \"name\": \"Use of TCP\",\n                        \"attribution_scope\":
+        \"confirmed\",\n                        \"releasable\": true,\n                        \"mitre_techniques\":
+        [\n                            {\n                                \"type\":
+        \"attack-pattern\",\n                                \"id\": \"attack-pattern--c21d5a77-d422-4a69-acd7-2c53c1faa34b\",\n
+        \                               \"name\": \"Non-Application Layer Protocol\",\n
+        \                               \"attribution_scope\": \"confirmed\",\n                                \"releasable\":
+        true,\n                                \"mitre_id\": \"T1095\",\n                                \"tactics\":
+        [\n                                    \"Command and Control\"\n                                ]\n
+        \                           }\n                        ]\n                    }\n
+        \               ],\n                \"actors\": [\n                    {\n
+        \                       \"type\": \"threat-actor\",\n                        \"id\":
+        \"threat-actor--b8ee8129-5ecc-581a-a636-fb17051d2ffe\",\n                        \"name\":
+        \"FIN11\",\n                        \"attribution_scope\": \"confirmed\",\n
+        \                       \"releasable\": true\n                    }\n                ]\n
+        \           },\n            \"brief\": \"Open Directory\",\n            \"analyst_brief\":
+        \"A Simple HTTP Python Server was set up and exposed on this server (194.165.16.24)
+        on port 8228. FIN11 utilized this Simple HTTP server to host their payloads.\"\n
+        \       },\n        {\n            \"name\": \"Event\",\n            \"description\":
+        \"Key Event\",\n            \"releasable\": true,\n            \"event_type\":
+        \"key_event\",\n            \"timestamp\": \"2022-12-07T00:00:00.000Z\",\n
+        \           \"attributions\": {\n                \"releasable\": true,\n                \"mandiant_techniques\":
+        [\n                    {\n                        \"type\": \"attack-pattern\",\n
+        \                       \"id\": \"attack-pattern--370af2df-e616-5b93-a0d8-21b656ac11c8\",\n
+        \                       \"name\": \"Port Scanning\",\n                        \"attribution_scope\":
+        \"confirmed\",\n                        \"releasable\": true,\n                        \"mitre_techniques\":
+        [\n                            {\n                                \"type\":
+        \"attack-pattern\",\n                                \"id\": \"attack-pattern--e3a12395-188d-4051-9a16-ea8e14d07b88\",\n
+        \                               \"name\": \"Network Service Discovery\",\n
+        \                               \"attribution_scope\": \"confirmed\",\n                                \"releasable\":
+        true,\n                                \"mitre_id\": \"T1046\",\n                                \"tactics\":
+        [\n                                    \"Discovery\"\n                                ]\n
+        \                           }\n                        ]\n                    }\n
+        \               ],\n                \"actors\": [\n                    {\n
+        \                       \"type\": \"threat-actor\",\n                        \"id\":
+        \"threat-actor--b8ee8129-5ecc-581a-a636-fb17051d2ffe\",\n                        \"name\":
+        \"FIN11\",\n                        \"attribution_scope\": \"confirmed\",\n
+        \                       \"releasable\": true\n                    }\n                ]\n
+        \           },\n            \"brief\": \"Last Scan Observed\",\n            \"analyst_brief\":
+        \"FIN11 was recently seen conducting scans of various devices from December
+        3rd to December 7th, 2022. This marks the most recent instance of FIN11's
+        scanning activity from IP address 194.165.16.24 that has been observed.\"\n
+        \       },\n        {\n            \"name\": \"Event\",\n            \"description\":
+        \"Key Event\",\n            \"releasable\": true,\n            \"event_type\":
+        \"key_event\",\n            \"timestamp\": \"2022-04-25T00:00:00.000Z\",\n
+        \           \"attributions\": {\n                \"releasable\": true,\n                \"mandiant_techniques\":
+        [],\n                \"actors\": [\n                    {\n                        \"type\":
+        \"threat-actor\",\n                        \"id\": \"threat-actor--b8ee8129-5ecc-581a-a636-fb17051d2ffe\",\n
+        \                       \"name\": \"FIN11\",\n                        \"attribution_scope\":
+        \"confirmed\",\n                        \"releasable\": true\n                    }\n
+        \               ]\n            },\n            \"brief\": \"Domain Registered\",\n
+        \           \"analyst_brief\": \"The domain linuxes.systems began resolving
+        to the FIN11 controlled server 194.165.16.24. This domain was utilized by
+        GOBLINGATE samples. GOBLINGATE is a Linux backdoor that is utilized by FIN11.\"\n
+        \       },\n        {\n            \"name\": \"Event\",\n            \"description\":
+        \"Key Event\",\n            \"releasable\": true,\n            \"event_type\":
+        \"key_event\",\n            \"timestamp\": \"2022-10-24T00:00:00.000Z\",\n
+        \           \"attributions\": {\n                \"releasable\": true,\n                \"vulnerabilities\":
+        [\n                    {\n                        \"type\": \"vulnerability\",\n
+        \                       \"id\": \"vulnerability--523d5c3e-e439-5239-b8d0-130640a05013\",\n
+        \                       \"attribution_scope\": \"confirmed\",\n                        \"releasable\":
+        true,\n                        \"cve_id\": \"CVE-2020-3153\"\n                    }\n
+        \               ]\n            },\n            \"brief\": \"Two CVEs Added
+        to CISA's Known Exploited Vulnerabilities Catalog\",\n            \"analyst_brief\":
+        \"The Cybersecurity and Infrastructure Security Agency (CISA) has added two
+        vulnerabilities in Cisco AnyConnect to the Known Exploited Vulnerabilities
+        Catalog. These vulnerabilities, identified as CVE-2020-3433 (a DLL Hijacking
+        vulnerability) and CVE-2020-3153 (an Uncontrolled Search Path Vulnerability),
+        have not been confirmed as being exploited by FIN11 at this time. However,
+        the suspicious timing of their inclusion in the catalog and FIN11's recent
+        scanning activity warrants further investigation and raises significant concern.\"\n
+        \       }\n    ],\n    \"aliases\": {\n        \"releasable\": true,\n        \"actor\":
+        [],\n        \"malware\": [],\n        \"campaign\": []\n    },\n    \"actors\":
+        [\n        {\n            \"type\": \"threat-actor\",\n            \"id\":
+        \"threat-actor--b8ee8129-5ecc-581a-a636-fb17051d2ffe\",\n            \"name\":
+        \"FIN11\",\n            \"attribution_scope\": \"confirmed\",\n            \"releasable\":
+        true,\n            \"motivations\": [\n                {\n                    \"type\":
+        \"motivation\",\n                    \"id\": \"motivation--fa4d4992-1762-50ac-b0b1-2c75210645d0\",\n
+        \                   \"name\": \"Financial Gain\",\n                    \"attribution_scope\":
+        \"confirmed\",\n                    \"releasable\": true\n                }\n
+        \           ],\n            \"source_locations\": [\n                {\n                    \"releasable\":
+        true,\n                    \"region\": {\n                        \"type\":
+        \"location\",\n                        \"id\": \"location--89b58fc6-de5e-55e4-9d8c-29ba659e770f\",\n
+        \                       \"name\": \"Europe\",\n                        \"attribution_scope\":
+        \"confirmed\",\n                        \"releasable\": true\n                    },\n
+        \                   \"sub_region\": {\n                        \"type\": \"location\",\n
+        \                       \"id\": \"location--57644af5-a064-5e14-be58-05b22d2768be\",\n
+        \                       \"name\": \"East Europe\",\n                        \"attribution_scope\":
+        \"confirmed\",\n                        \"releasable\": true\n                    }\n
+        \               }\n            ]\n        }\n    ],\n    \"malware\": [\n
+        \       {\n            \"type\": \"malware\",\n            \"id\": \"malware--bddff367-0c7a-59b2-8bd6-0d7ab91b8005\",\n
+        \           \"name\": \"GOBLINGATE\",\n            \"attribution_scope\":
+        \"confirmed\",\n            \"releasable\": true\n        }\n    ],\n    \"tools\":
+        [],\n    \"vulnerabilities\": [\n        {\n            \"type\": \"vulnerability\",\n
+        \           \"id\": \"vulnerability--523d5c3e-e439-5239-b8d0-130640a05013\",\n
+        \           \"attribution_scope\": \"confirmed\",\n            \"releasable\":
+        true,\n            \"cve_id\": \"CVE-2020-3153\"\n        }\n    ],\n    \"industries\":
+        [\n        {\n            \"type\": \"identity\",\n            \"id\": \"identity--c09ecb05-79d5-5a2b-b47f-65c1092a3a56\",\n
+        \           \"name\": \"Retail\",\n            \"attribution_scope\": \"confirmed\",\n
+        \           \"releasable\": true\n        },\n        {\n            \"type\":
+        \"identity\",\n            \"id\": \"identity--8d0881d8-d199-5e5a-bef9-be3ca6bb8f0d\",\n
+        \           \"name\": \"Governments\",\n            \"attribution_scope\":
+        \"confirmed\",\n            \"releasable\": true\n        },\n        {\n
+        \           \"type\": \"identity\",\n            \"id\": \"identity--e0fc24e1-1f79-556a-b8f4-b56735ccf42b\",\n
+        \           \"name\": \"Manufacturing\",\n            \"attribution_scope\":
+        \"confirmed\",\n            \"releasable\": true\n        },\n        {\n
+        \           \"type\": \"identity\",\n            \"id\": \"identity--eaaa8a1a-0db8-5c22-a895-3b0327e3eff1\",\n
+        \           \"name\": \"Financial Services\",\n            \"attribution_scope\":
+        \"confirmed\",\n            \"releasable\": true\n        },\n        {\n
+        \           \"type\": \"identity\",\n            \"id\": \"identity--93209517-b16c-5893-b55e-b7edc9b478d0\",\n
+        \           \"name\": \"Telecommunications\",\n            \"attribution_scope\":
+        \"confirmed\",\n            \"releasable\": true\n        },\n        {\n
+        \           \"type\": \"identity\",\n            \"id\": \"identity--5d058af8-02a8-5266-8076-27cc2751e64e\",\n
+        \           \"name\": \"Media & Entertainment\",\n            \"attribution_scope\":
+        \"confirmed\",\n            \"releasable\": true\n        },\n        {\n
+        \           \"type\": \"identity\",\n            \"id\": \"identity--02142d73-54af-5e18-a4f5-70b194ca002b\",\n
+        \           \"name\": \"Technology\",\n            \"attribution_scope\":
+        \"confirmed\",\n            \"releasable\": true\n        },\n        {\n
+        \           \"type\": \"identity\",\n            \"id\": \"identity--8b245566-834c-5039-95ae-f6a4ffc03b44\",\n
+        \           \"name\": \"Legal & Professional Services\",\n            \"attribution_scope\":
+        \"confirmed\",\n            \"releasable\": true\n        },\n        {\n
+        \           \"type\": \"identity\",\n            \"id\": \"identity--5b3cb2f9-14d8-5e48-bc4e-3ef3cd477ce1\",\n
+        \           \"name\": \"Construction & Engineering\",\n            \"attribution_scope\":
+        \"confirmed\",\n            \"releasable\": true\n        },\n        {\n
+        \           \"type\": \"identity\",\n            \"id\": \"identity--cc593632-0c42-500c-8d0b-d38e97b90f1d\",\n
+        \           \"name\": \"Aerospace & Defense\",\n            \"attribution_scope\":
+        \"confirmed\",\n            \"releasable\": true\n        },\n        {\n
+        \           \"type\": \"identity\",\n            \"id\": \"identity--8768c9d0-830d-5c94-88d1-1506fef6c838\",\n
+        \           \"name\": \"Transportation\",\n            \"attribution_scope\":
+        \"confirmed\",\n            \"releasable\": true\n        }\n    ],\n    \"target_locations\":
+        {\n        \"releasable\": true,\n        \"countries\": [\n            {\n
+        \               \"type\": \"location\",\n                \"id\": \"location--05f7f948-55eb-5994-9003-c5e44ccf3ba9\",\n
+        \               \"name\": \"Sweden\",\n                \"attribution_scope\":
+        \"confirmed\",\n                \"iso2\": \"SE\",\n                \"region\":
+        \"location--89b58fc6-de5e-55e4-9d8c-29ba659e770f\",\n                \"sub_region\":
+        \"location--07071b1c-a0fb-56e7-9619-11397860bd4c\",\n                \"releasable\":
+        true,\n                \"count\": 1\n            },\n            {\n                \"type\":
+        \"location\",\n                \"id\": \"location--27a1d59f-56ec-5da4-963c-ce1f9c6c0402\",\n
+        \               \"name\": \"Australia\",\n                \"attribution_scope\":
+        \"confirmed\",\n                \"iso2\": \"AU\",\n                \"region\":
+        \"location--08d5ce25-021e-5dcf-8b1b-52483dfe1589\",\n                \"sub_region\":
+        \"location--cdf44f32-c648-5661-be2b-58fbd1479d05\",\n                \"releasable\":
+        true,\n                \"count\": 1\n            },\n            {\n                \"type\":
+        \"location\",\n                \"id\": \"location--daeba678-894d-59fe-a00c-f1aec473c62f\",\n
+        \               \"name\": \"Switzerland\",\n                \"attribution_scope\":
+        \"confirmed\",\n                \"iso2\": \"CH\",\n                \"region\":
+        \"location--89b58fc6-de5e-55e4-9d8c-29ba659e770f\",\n                \"sub_region\":
+        \"location--34b867a9-0a6c-5559-bd8a-08edbf5287c4\",\n                \"releasable\":
+        true,\n                \"count\": 1\n            },\n            {\n                \"type\":
+        \"location\",\n                \"id\": \"location--881e484c-0d4f-59e3-83ed-893f7bbe33f0\",\n
+        \               \"name\": \"Peru\",\n                \"attribution_scope\":
+        \"confirmed\",\n                \"iso2\": \"PE\",\n                \"region\":
+        \"location--6d65522f-0166-5e7e-973c-35cf7973e4e3\",\n                \"sub_region\":
+        \"location--eeb814e2-3884-50a5-b748-81ff39f85113\",\n                \"releasable\":
+        true,\n                \"count\": 1\n            },\n            {\n                \"type\":
+        \"location\",\n                \"id\": \"location--9db88233-1698-517a-b51e-0f9a31743c0b\",\n
+        \               \"name\": \"Mexico\",\n                \"attribution_scope\":
+        \"confirmed\",\n                \"iso2\": \"MX\",\n                \"region\":
+        \"location--6d65522f-0166-5e7e-973c-35cf7973e4e3\",\n                \"sub_region\":
+        \"location--b28ccd1c-91b0-50d5-b862-efda911a80fe\",\n                \"releasable\":
+        true,\n                \"count\": 1\n            },\n            {\n                \"type\":
+        \"location\",\n                \"id\": \"location--e9aa97dc-1bbf-57c4-a6b1-ac274fde7f0e\",\n
+        \               \"name\": \"Saint Vincent and the Grenadines\",\n                \"attribution_scope\":
+        \"confirmed\",\n                \"iso2\": \"VC\",\n                \"region\":
+        \"location--6d65522f-0166-5e7e-973c-35cf7973e4e3\",\n                \"sub_region\":
+        \"location--8858cc47-3ffd-5b2a-9934-251be9d1359b\",\n                \"releasable\":
+        true,\n                \"count\": 1\n            },\n            {\n                \"type\":
+        \"location\",\n                \"id\": \"location--fde14246-c07b-5f3f-9ac8-8d4d50910f15\",\n
+        \               \"name\": \"Canada\",\n                \"attribution_scope\":
+        \"confirmed\",\n                \"iso2\": \"CA\",\n                \"region\":
+        \"location--6d65522f-0166-5e7e-973c-35cf7973e4e3\",\n                \"sub_region\":
+        \"location--0daadcfb-ad23-5f16-b53b-6c5b09bf20de\",\n                \"releasable\":
+        true,\n                \"count\": 1\n            },\n            {\n                \"type\":
+        \"location\",\n                \"id\": \"location--5c5b39aa-9308-52a6-9daf-0547d5aaa160\",\n
+        \               \"name\": \"United States of America\",\n                \"attribution_scope\":
+        \"confirmed\",\n                \"iso2\": \"US\",\n                \"region\":
+        \"location--6d65522f-0166-5e7e-973c-35cf7973e4e3\",\n                \"sub_region\":
+        \"location--0daadcfb-ad23-5f16-b53b-6c5b09bf20de\",\n                \"releasable\":
+        true,\n                \"count\": 22\n            }\n        ],\n        \"regions\":
+        [\n            {\n                \"type\": \"location\",\n                \"id\":
+        \"location--08d5ce25-021e-5dcf-8b1b-52483dfe1589\",\n                \"name\":
+        \"Oceania\",\n                \"attribution_scope\": \"confirmed\",\n                \"releasable\":
+        true,\n                \"count\": 1\n            },\n            {\n                \"type\":
+        \"location\",\n                \"id\": \"location--6d65522f-0166-5e7e-973c-35cf7973e4e3\",\n
+        \               \"name\": \"Americas\",\n                \"attribution_scope\":
+        \"confirmed\",\n                \"releasable\": true,\n                \"count\":
+        26\n            },\n            {\n                \"type\": \"location\",\n
+        \               \"id\": \"location--89b58fc6-de5e-55e4-9d8c-29ba659e770f\",\n
+        \               \"name\": \"Europe\",\n                \"attribution_scope\":
+        \"confirmed\",\n                \"releasable\": true,\n                \"count\":
+        2\n            }\n        ],\n        \"sub_regions\": [\n            {\n
+        \               \"type\": \"location\",\n                \"id\": \"location--0daadcfb-ad23-5f16-b53b-6c5b09bf20de\",\n
+        \               \"name\": \"North America\",\n                \"attribution_scope\":
+        \"confirmed\",\n                \"region\": \"location--6d65522f-0166-5e7e-973c-35cf7973e4e3\",\n
+        \               \"releasable\": true,\n                \"count\": 23\n            },\n
+        \           {\n                \"type\": \"location\",\n                \"id\":
+        \"location--eeb814e2-3884-50a5-b748-81ff39f85113\",\n                \"name\":
+        \"South America\",\n                \"attribution_scope\": \"confirmed\",\n
+        \               \"region\": \"location--6d65522f-0166-5e7e-973c-35cf7973e4e3\",\n
+        \               \"releasable\": true,\n                \"count\": 1\n            },\n
+        \           {\n                \"type\": \"location\",\n                \"id\":
+        \"location--cdf44f32-c648-5661-be2b-58fbd1479d05\",\n                \"name\":
+        \"Australia and New Zealand\",\n                \"attribution_scope\": \"confirmed\",\n
+        \               \"region\": \"location--08d5ce25-021e-5dcf-8b1b-52483dfe1589\",\n
+        \               \"releasable\": true,\n                \"count\": 1\n            },\n
+        \           {\n                \"type\": \"location\",\n                \"id\":
+        \"location--07071b1c-a0fb-56e7-9619-11397860bd4c\",\n                \"name\":
+        \"North Europe\",\n                \"attribution_scope\": \"confirmed\",\n
+        \               \"region\": \"location--89b58fc6-de5e-55e4-9d8c-29ba659e770f\",\n
+        \               \"releasable\": true,\n                \"count\": 1\n            },\n
+        \           {\n                \"type\": \"location\",\n                \"id\":
+        \"location--34b867a9-0a6c-5559-bd8a-08edbf5287c4\",\n                \"name\":
+        \"West Europe\",\n                \"attribution_scope\": \"confirmed\",\n
+        \               \"region\": \"location--89b58fc6-de5e-55e4-9d8c-29ba659e770f\",\n
+        \               \"releasable\": true,\n                \"count\": 1\n            },\n
+        \           {\n                \"type\": \"location\",\n                \"id\":
+        \"location--8858cc47-3ffd-5b2a-9934-251be9d1359b\",\n                \"name\":
+        \"Carribean\",\n                \"attribution_scope\": \"confirmed\",\n                \"region\":
+        \"location--6d65522f-0166-5e7e-973c-35cf7973e4e3\",\n                \"releasable\":
+        true,\n                \"count\": 1\n            },\n            {\n                \"type\":
+        \"location\",\n                \"id\": \"location--b28ccd1c-91b0-50d5-b862-efda911a80fe\",\n
+        \               \"name\": \"Central America\",\n                \"attribution_scope\":
+        \"confirmed\",\n                \"region\": \"location--6d65522f-0166-5e7e-973c-35cf7973e4e3\",\n
+        \               \"releasable\": true,\n                \"count\": 1\n            }\n
+        \       ]\n    },\n    \"actor_collaborations\": [],\n    \"is_publishable\":
+        true,\n    \"intel_free\": false\n}"
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 7903375a4f3d826f-IAD
+      Cache-Control:
+      - max-age=3600, must-revalidate, private
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 27 Jan 2023 17:30:26 GMT
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin
+      - Accept-Encoding
+      - Authorization
+      X-Api-Proxy:
+      - '1'
+      content-length:
+      - '42963'
+      x-amzn-trace-id:
+      - 9f918ff28079fa75d1f989093b3e4977
+    status:
+      code: 200
+      message: OK
+version: 1

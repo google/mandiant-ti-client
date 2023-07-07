@@ -1,0 +1,134 @@
+# Copyright 2023 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Cookie:
+      - __cf_bm=UsjQGEc2RUXXepZUdABwHHurPxN35m9oNky6m_e5LOA-1686239475-0-ASpCu2wx1RXoRLBejEAzs/8idgQZbJ+EsAMbUS7MgGrNHZ9YddS4DdPYrklTRsvgKsTj1Dfjh9OcSHa2XamLYnk=
+      User-Agent:
+      - python-requests/2.28.2
+      X-App-Name:
+      - MA-TI-Python-Lib-v0.1
+    method: GET
+    uri: https://api.intelligence.mandiant.com/v4/dtm/monitors/ci0ac90l24d39uf0cr3g
+  response:
+    body:
+      string: '{"id":"ci0ac90l24d39uf0cr3g","name":"TEST CARD SHOP","description":"Know
+        if your credit cards are for sale on the Deep \u0026 Dark Web.","enabled":true,"doc_condition":{"operator":"all","topic":"match_conditions","match":[{"operator":"must_equal","topic":"doc_type","match":["shop_listing","forum_post","message","paste"]},{"operator":"must_start_with","topic":"group_bin","match":["1"]}]},"created_at":"2023-06-07T15:45:40.847Z","updated_at":"2023-06-08T15:50:34.362Z","email_notify_enabled":false,"email_notify_immediate":false,"template_id":"7ff0bc0b-fc60-40d4-bbde-a1436a40b38a","created_by_user_id":"d5e7d710-1cd9-103c-96f7-5330685e6260","last_updated_by_user_id":"45b8aeaa-a094-103c-9b0a-87398b79b7c8","created_by_user_email":"Mandiant
+        User"}
+
+        '
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 7d424b91998e0817-IAD
+      Connection:
+      - keep-alive
+      Content-Security-Policy:
+      - img-src https://mandiant-dtm-email-assets.s3.amazonaws.com/; style-src-attr
+        'unsafe-inline'; default-src 'none'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Thu, 08 Jun 2023 15:51:15 GMT
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin
+      X-Amzn-Trace-Id:
+      - ad56fddc6fb12217893a2ff3eb77c1e4
+      X-Api-Proxy:
+      - '1'
+      content-length:
+      - '749'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"name": "TEST CARD SHOP", "description": "Know if your credit cards are
+      for sale on the Deep & Dark Web.", "doc_condition": {"operator": "all", "topic":
+      "match_conditions", "match": [{"operator": "must_equal", "topic": "doc_type",
+      "match": ["shop_listing", "forum_post", "message", "paste"]}, {"operator": "must_start_with",
+      "topic": "group_bin", "match": ["1"]}]}, "enabled": true, "email_notify_enabled":
+      false, "email_notify_immediate": false}'
+    headers:
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '447'
+      Content-Type:
+      - application/json
+      Cookie:
+      - __cf_bm=UsjQGEc2RUXXepZUdABwHHurPxN35m9oNky6m_e5LOA-1686239475-0-ASpCu2wx1RXoRLBejEAzs/8idgQZbJ+EsAMbUS7MgGrNHZ9YddS4DdPYrklTRsvgKsTj1Dfjh9OcSHa2XamLYnk=
+      User-Agent:
+      - python-requests/2.28.2
+      X-App-Name:
+      - MA-TI-Python-Lib-v0.1
+      accept:
+      - application/json
+    method: PUT
+    uri: https://api.intelligence.mandiant.com/v4/dtm/monitors/ci0ac90l24d39uf0cr3g
+  response:
+    body:
+      string: '{"id":"ci0ac90l24d39uf0cr3g","name":"TEST CARD SHOP","description":"Know
+        if your credit cards are for sale on the Deep \u0026 Dark Web.","enabled":true,"doc_condition":{"operator":"all","topic":"match_conditions","match":[{"operator":"must_equal","topic":"doc_type","match":["shop_listing","forum_post","message","paste"]},{"operator":"must_start_with","topic":"group_bin","match":["1"]}]},"created_at":"2023-06-07T15:45:40.847Z","updated_at":"2023-06-08T15:51:15.542Z","email_notify_enabled":false,"email_notify_immediate":false,"created_by_user_id":"d5e7d710-1cd9-103c-96f7-5330685e6260","last_updated_by_user_id":"45b8aeaa-a094-103c-9b0a-87398b79b7c8"}
+
+        '
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 7d424b91fa240817-IAD
+      Connection:
+      - keep-alive
+      Content-Security-Policy:
+      - img-src https://mandiant-dtm-email-assets.s3.amazonaws.com/; style-src-attr
+        'unsafe-inline'; default-src 'none'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Thu, 08 Jun 2023 15:51:15 GMT
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin
+      X-Amzn-Trace-Id:
+      - 6b59e2e4dfc873d5c1f4e744708cdfb4
+      X-Api-Proxy:
+      - '1'
+      content-length:
+      - '656'
+    status:
+      code: 200
+      message: OK
+version: 1

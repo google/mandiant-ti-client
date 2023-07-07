@@ -1,0 +1,145 @@
+# Copyright 2023 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+interactions:
+- request:
+    body: '{"query": "test"}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '17'
+      Content-Type:
+      - application/json
+      Cookie:
+      - __cf_bm=cih9skmysSkYUVXF8K_GSzZjWHqTqwCAqGAYME66O5k-1686009715-0-AVG/K76ctLGf7kswdr3Ijpaw3Q7FYawQPQJfVCF3MJ2/3gBfcpZNrukSoy7ScWyGQIExPpUgFytp7bgZxMGFLRI=
+      User-Agent:
+      - python-requests/2.28.2
+      X-App-Name:
+      - MA-TI-Python-Lib-v0.1
+    method: POST
+    uri: https://api.intelligence.mandiant.com/v4/dtm/docs/search?size=1&sanitize=False
+  response:
+    body:
+      string: "{\"timed_out\":false,\"total_docs\":200,\"docs\":[{\"__id\":\"271a7d23-a827-408f-af3c-a7b829b3abec\",\"__type\":\"message\",\"source\":\"vanellope\",\"timestamp\":\"2023-06-05T23:47:27Z\",\"body\":\"Site
+        please?\",\"channel\":{\"__type\":\"channel\",\"channel_id\":\"-1001461164493\",\"channel_info\":{\"description\":\"Hey,what\u2019s
+        up bro \U0001F44B \\n\U0001F468\u200D\U0001F4BBOwner @nicodrip\\nChannel id
+        @test123ND\\nYou have ask ? Contact me on @nico_12345_bot\\nGroupe Id @test1234J\\nThank
+        for share the groupe \U0001F970\"},\"messenger\":{\"id\":\"telegram\",\"name\":\"Telegram\"},\"name\":\"TEST
+        group\"},\"entities\":[{\"__id\":\"9a883400-5c18-479f-a8a4-d6ce338a8d25\",\"entity_locations\":[{\"element_path\":\"channel.messenger.name\",\"offsets\":[0,8]},{\"element_path\":\"messenger.name\",\"offsets\":[0,8]}],\"extractor\":\"dtm-ma\",\"extractor_version\":\"0.1.239\",\"type\":\"service_name\",\"value\":\"Telegram\"},{\"__id\":\"98d82e5b-722f-4d60-a96b-173bb7959059\",\"entity_locations\":[{\"element_path\":\"channel.name\",\"offsets\":[0,10]}],\"extractor\":\"dtm-ma\",\"extractor_version\":\"0.1.239\",\"type\":\"name\",\"value\":\"TEST
+        group\"},{\"__id\":\"d1ea5f20-3ee7-4f38-a795-7c6ffd5d3950\",\"entity_locations\":[{\"element_path\":\"sender.identity.first_name\",\"offsets\":[0,10]}],\"extractor\":\"dtm-ma\",\"extractor_version\":\"0.1.239\",\"type\":\"identity_name\",\"value\":\"Yook
+        Jalto\"},{\"__id\":\"05d06fed-6efd-45d6-82d9-c0bb29a92c91\",\"entity_locations\":[{\"element_path\":\"sender.identity.name\",\"offsets\":[0,11]}],\"extractor\":\"dtm-ma\",\"extractor_version\":\"0.1.239\",\"type\":\"identity_name\",\"value\":\"Yook
+        Jalto \"},{\"__id\":\"248d298b-e95a-4fb1-9c98-56932e70956d\",\"entity_locations\":[{\"element_path\":\"sender.telegram.name\",\"offsets\":[0,8]}],\"extractor\":\"dtm-ma\",\"extractor_version\":\"0.1.239\",\"type\":\"telegram_user_name\",\"value\":\"yook1102\"}],\"ingested\":\"2023-06-05T23:47:29Z\",\"message_id\":\"302648393728\",\"messenger\":{\"id\":\"telegram\",\"name\":\"Telegram\"},\"sender\":{\"__type\":\"profile\",\"identity\":{\"first_name\":\"Yook
+        Jalto\",\"name\":\"Yook Jalto \"},\"telegram\":{\"name\":\"yook1102\",\"user_id\":5638989662}}}]}\n"
+    headers:
+      Access-Control-Expose-Headers:
+      - Link
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 7d2c6234fab83b38-IAD
+      Connection:
+      - keep-alive
+      Content-Security-Policy:
+      - img-src https://mandiant-dtm-email-assets.s3.amazonaws.com/; style-src-attr
+        'unsafe-inline'; default-src 'none'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Tue, 06 Jun 2023 00:01:59 GMT
+      Link:
+      - <https://api.intelligence.mandiant.com/v4/dtm/docs/search?page=chv7etol24d39uevquig>;
+        rel="next"
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin
+      X-Amzn-Trace-Id:
+      - 964325abe3eab18b9b030c3fba40196e
+      X-Api-Proxy:
+      - '1'
+      content-length:
+      - '1941'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"query": "test"}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '17'
+      Content-Type:
+      - application/json
+      Cookie:
+      - __cf_bm=cih9skmysSkYUVXF8K_GSzZjWHqTqwCAqGAYME66O5k-1686009715-0-AVG/K76ctLGf7kswdr3Ijpaw3Q7FYawQPQJfVCF3MJ2/3gBfcpZNrukSoy7ScWyGQIExPpUgFytp7bgZxMGFLRI=
+      User-Agent:
+      - python-requests/2.28.2
+      X-App-Name:
+      - MA-TI-Python-Lib-v0.1
+    method: POST
+    uri: https://api.intelligence.mandiant.com/v4/dtm/docs/search?page=chv7etol24d39uevquig
+  response:
+    body:
+      string: "{\"timed_out\":false,\"total_docs\":200,\"docs\":[]}\n"
+    headers:
+      Access-Control-Expose-Headers:
+      - Link
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 7d2c624c38943b38-IAD
+      Connection:
+      - keep-alive
+      Content-Security-Policy:
+      - img-src https://mandiant-dtm-email-assets.s3.amazonaws.com/; style-src-attr
+        'unsafe-inline'; default-src 'none'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Tue, 06 Jun 2023 00:02:03 GMT
+      Link:
+      - <https://api.intelligence.mandiant.com/v4/dtm/docs/search?page=chv7euol24d39uevqujg>;
+        rel="next"
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin
+      X-Amzn-Trace-Id:
+      - 5ea155caabeae380c0e8442d76b13b32
+      X-Api-Proxy:
+      - '1'
+      content-length:
+      - '759231'
+    status:
+      code: 200
+      message: OK
+version: 1

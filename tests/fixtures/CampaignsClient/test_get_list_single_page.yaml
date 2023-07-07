@@ -1,0 +1,116 @@
+# Copyright 2023 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+interactions:
+- request:
+    body: grant_type=client_credentials
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '29'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Cookie:
+      - __cf_bm=5eqhpH71rmzeriY3F8uD.aFREh9imqriqUVlTZV1Mm4-1674840756-0-AUz++N874BTS+QW3HR6uJBH+yULbqrU+k0jHgQXxH+ORekNJ3tCOH77DX6uXGw/iZHWaN3nBs4p1FZLKEB1Xb/s=
+      User-Agent:
+      - python-requests/2.28.1
+    method: POST
+    uri: https://api.intelligence.mandiant.com/token
+  response:
+    body:
+      string: '{"access_token": "FAKE_TOKEN","token_type":"Bearer","expires_in":38028}
+
+        '
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 79033a87dd7c9c22-IAD
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Fri, 27 Jan 2023 17:32:36 GMT
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin
+      content-length:
+      - '125'
+      x-amzn-trace-id:
+      - 60b4492fcd95d9e54864187f01841561
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Cookie:
+      - __cf_bm=5eqhpH71rmzeriY3F8uD.aFREh9imqriqUVlTZV1Mm4-1674840756-0-AUz++N874BTS+QW3HR6uJBH+yULbqrU+k0jHgQXxH+ORekNJ3tCOH77DX6uXGw/iZHWaN3nBs4p1FZLKEB1Xb/s=
+      User-Agent:
+      - python-requests/2.28.1
+      X-App-Name:
+      - MA-TI-Python-Lib-v0.1
+    method: GET
+    uri: https://api.intelligence.mandiant.com/v4/campaign?start_date=2023-01-27&limit=50&offset=0
+  response:
+    body:
+      string: '{"campaigns":[{"name":"APT19 Exploits CVE-2021-44228 to Deploy COLDSTEEL
+        Backdoor at Primarily Asian-Based Organizations","id":"campaign--ea9e3c86-50db-55ac-869e-f60c29fd5d3b","short_name":"CAMP.22.009","profile_updated":"2023-01-27T07:06:14.852Z"}],"total_count":1}
+
+        '
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 79033a880dcb9c22-IAD
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Fri, 27 Jan 2023 17:32:36 GMT
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      - Origin
+      content-length:
+      - '10083'
+      x-amzn-trace-id:
+      - 47abf6e7756e410a8a2cafd4e57dcd91
+    status:
+      code: 200
+      message: OK
+version: 1
