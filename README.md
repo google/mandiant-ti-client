@@ -164,7 +164,7 @@ with open(file_name, 'wb') as f:
 ## Change Log
 
 ### 0.1.18 (2023-08-23)
-* Add support for the new Threat Rating and Category fiedls on an indicator 
+* Add support for the new Threat Rating and Category fields on an indicator 
 
 ### 0.1.17 (2023-05-26)
 * Allow passing of kwargs into `threat_intel_client.IndicatorClient.get_list()`
