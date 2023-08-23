@@ -619,7 +619,13 @@ class IndicatorsClient:
       An Indicator object (FQDNIndicator, URLIndicator, IPIndicator, or
       MD5Indicator)
     """
-    params = {"include_campaigns": True, "include_reports": True}
+    params = {
+      "include_campaigns": True, 
+      "include_reports": True, 
+      "include_threat_rating": True,
+      "include_misp": False,
+      "include_category": True
+    }
     indicator_api_response = self.get_raw(identifier, params=params)
     return create_indicator(indicator_api_response, self._base_client)
 
@@ -642,6 +648,9 @@ class IndicatorsClient:
         "requests": [{"values": [value]}],
         "include_campaigns": True,
         "include_reports": True,
+        "include_threat_rating": True,
+        "include_misp": False,
+        "include_category": True
     }
     indicator_api_response = self._base_client.make_post_request(
         API_INDICATOR_ROOT, json=request_body
@@ -689,6 +698,9 @@ class IndicatorsClient:
         "limit": page_size,
         "include_campaigns": True,
         "include_reports": True,
+        "include_threat_rating": True,
+        "include_misp": False,
+        "include_category": True
     }
 
     if end_epoch:
@@ -2714,6 +2726,8 @@ class MD5Indicator(APIResponse):
       # },
       "id": {},
       "mscore": {},
+      "threat_rating": {},
+      "category": {},
       "type": {},
       "value": {},
       "is_publishable": {},
@@ -2786,6 +2800,8 @@ class FQDNIndicator(APIResponse):
       # },
       "id": {},
       "mscore": {},
+      "threat_rating": {},
+      "category": {},
       "type": {},
       "value": {},
       "is_publishable": {},
@@ -2847,6 +2863,8 @@ class URLIndicator(APIResponse):
       # },
       "id": {},
       "mscore": {},
+      "threat_rating": {},
+      "category": {},
       "type": {},
       "value": {},
       "is_publishable": {},
@@ -2908,6 +2926,8 @@ class IPIndicator(APIResponse):
       # },
       "id": {},
       "mscore": {},
+      "threat_rating": {},
+      "category": {},
       "type": {},
       "value": {},
       "is_publishable": {},
