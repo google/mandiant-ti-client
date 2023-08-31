@@ -163,6 +163,9 @@ with open(file_name, 'wb') as f:
 
 ## Change Log
 
+### 0.1.19 (2023-08-30)
+* Add support to return indicators associated with a Campaign
+
 ### 0.1.18 (2023-08-23)
 * Add support for the new Threat Rating and Category fields on an indicator 
 

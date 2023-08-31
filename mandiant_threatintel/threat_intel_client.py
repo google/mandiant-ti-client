@@ -2984,6 +2984,18 @@ class Campaign(APIResponse):
       "last_activity_time": {
           "postparser": lambda _, client: dateutil_parser.parse(_)
       },
+      "indicators": {
+          "api_path": "/indicators",
+          "paginated": PaginationTypeEnum.NEXT,
+          "preparser": lambda _: {
+              "indicators": [
+                  i for page in _ for i in page.get("indicators", [])
+              ]
+          },
+          "postparser": lambda _, client: (
+              create_indicator(i, client) for i in _
+          ),
+      },
       "campaigns": {},
       "timeline": {},
       "aliases": {},
@@ -3013,6 +3025,9 @@ class Campaign(APIResponse):
       "is_publishable": {},
       "intel_free": {},
   }
+
+  def _get_subclient(self):
+    return self._client.Campaigns
 
 
 class DTMAlert(APIResponse):
