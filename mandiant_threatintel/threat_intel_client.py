@@ -84,6 +84,10 @@ def parse_threatactor_attck_patterns(attack_pattern_response: dict):
   return parse_mitre_attck_patterns("threat-actors", attack_pattern_response)
 
 
+def parse_campaign_attck_patterns(attack_pattern_response: dict):
+  return parse_mitre_attck_patterns("campaigns", attack_pattern_response)
+
+
 def parse_malware_attck_patterns(attack_pattern_response: dict):
   return parse_mitre_attck_patterns("malware", attack_pattern_response)
 
@@ -2995,6 +2999,10 @@ class Campaign(APIResponse):
           "postparser": lambda _, client: (
               create_indicator(i, client) for i in _
           ),
+      },
+      "attack_patterns": {
+          "api_path": "/attack-pattern",
+          "preparser": parse_campaign_attck_patterns,
       },
       "campaigns": {},
       "timeline": {},

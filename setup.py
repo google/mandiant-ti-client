@@ -16,7 +16,7 @@ from setuptools import setup
 
 setup(
     name='mandiant_ti_client',
-    version='0.1.19',
+    version='0.1.20',
     packages=['mandiant_threatintel'],
     url='',
     license='',

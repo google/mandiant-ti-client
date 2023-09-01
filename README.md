@@ -163,6 +163,9 @@ with open(file_name, 'wb') as f:
 
 ## Change Log
 
+### 0.1.20 (2023-09-01)
+* Add support to return attack patterns associated with a Campaign
+
 ### 0.1.19 (2023-08-30)
 * Add support to return indicators associated with a Campaign
 
