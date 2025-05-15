@@ -27,7 +27,6 @@ from __future__ import annotations
 import dataclasses
 import datetime
 import typing
-import typing
 from typing import Generator, Tuple, Union
 import urllib.parse
 
@@ -1696,7 +1695,7 @@ class ThreatIntelClient:
       headers: dict[str, str] = None,
       include_next: bool = False,
       **kwargs,
-  ) -> Union[dict[str, typing.Any], str, bytes] or None:
+  ) -> Union[dict[str, typing.Any], str, bytes, None]:
     """Makes an HTTP POST request against the MATI API.
 
     Makes an HTTP POST request against the specified MATI API endpoint.
@@ -1759,7 +1758,7 @@ class ThreatIntelClient:
       headers: dict[str, str] = None,
       include_next: bool = False,
       **kwargs,
-  ) -> Union[dict[str, typing.Any], str, bytes] or None:
+  ) -> Union[dict[str, typing.Any], str, bytes, None]:
     """Makes an HTTP PUT request against the MATI API.
 
     Makes an HTTP PUT request against the specified MATI API endpoint.
@@ -1823,7 +1822,7 @@ class ThreatIntelClient:
   )
   def make_patch_request(
       self, endpoint: str, headers: dict[str, str] = None, **kwargs
-  ) -> Union[dict[str, typing.Any], str, bytes] or None:
+  ) -> Union[dict[str, typing.Any], str, bytes, None]:
     """Makes an HTTP PATCH request against the MATI API.
 
     Makes an HTTP PATCH request against the specified MATI API endpoint.
@@ -1879,7 +1878,7 @@ class ThreatIntelClient:
   )
   def make_delete_request(
       self, endpoint: str, headers: dict[str, str] = None, **kwargs
-  ) -> Union[dict[str, typing.Any], str, bytes] or None:
+  ) -> Union[dict[str, typing.Any], str, bytes, None]:
     """Makes an HTTP DELETE request against the MATI API.
 
     Makes an HTTP DELETE request against the specified MATI API endpoint.
