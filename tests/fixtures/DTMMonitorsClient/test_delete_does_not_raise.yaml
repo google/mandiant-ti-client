@@ -25,7 +25,7 @@ interactions:
       Cookie:
       - __cf_bm=XA_H7mp_KDbKGhDaD_J0pM_CRyAe4SsggdUnL4kcoB0-1686149508-0-AYiImdRKmRtMbeD4ZLUX39hTA3/z7d09VFh5P3yZceY9nSg2yfCYfayfGasPxgUxjM56mk7NAJjhD+nIgBhnLOg=
       User-Agent:
-      - python-requests/2.28.2
+      - python-requests/2.31.0
       X-App-Name:
       - MA-TI-Python-Lib-v0.1
     method: GET
@@ -82,7 +82,7 @@ interactions:
       Cookie:
       - __cf_bm=XA_H7mp_KDbKGhDaD_J0pM_CRyAe4SsggdUnL4kcoB0-1686149508-0-AYiImdRKmRtMbeD4ZLUX39hTA3/z7d09VFh5P3yZceY9nSg2yfCYfayfGasPxgUxjM56mk7NAJjhD+nIgBhnLOg=
       User-Agent:
-      - python-requests/2.28.2
+      - python-requests/2.31.0
       X-App-Name:
       - MA-TI-Python-Lib-v0.1
     method: DELETE

@@ -29,7 +29,7 @@ interactions:
       Cookie:
       - __cf_bm=MNdHakBV.aJ1G9T3CQlLZk2415j0ymFmXJGVEUyhFbs-1674840626-0-AY6bfg+21x9/p5ZLgmjBKQDOJI06ALqanwomIsKjD7yUZrz85Lx5xUE1nB/alEJ7TY5w0qgYFiK9urlU53YZa44=
       User-Agent:
-      - python-requests/2.28.1
+      - python-requests/2.31.0
     method: POST
     uri: https://api.intelligence.mandiant.com/token
   response:
@@ -74,7 +74,7 @@ interactions:
       Cookie:
       - __cf_bm=MNdHakBV.aJ1G9T3CQlLZk2415j0ymFmXJGVEUyhFbs-1674840626-0-AY6bfg+21x9/p5ZLgmjBKQDOJI06ALqanwomIsKjD7yUZrz85Lx5xUE1nB/alEJ7TY5w0qgYFiK9urlU53YZa44=
       User-Agent:
-      - python-requests/2.28.1
+      - python-requests/2.31.0
       X-App-Name:
       - MA-TI-Python-Lib-v0.1
     method: GET
