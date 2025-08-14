@@ -29,7 +29,7 @@ interactions:
       Cookie:
       - __cf_bm=b08QUUtZEqrHLKqN_szJPeW0ZuAWzUQbdkuHCQL4QKU-1674844559-0-AekXoDCPM9Z8hlyLWWExncCglr9GOYDQfkSNJ5n4GXZm4RT0ax9K9bS/lz883nYgfEmDOssRLlRpi67IMr7VLDo=
       User-Agent:
-      - python-requests/2.28.1
+      - python-requests/2.31.0
     method: POST
     uri: https://api.intelligence.mandiant.com/token
   response:
@@ -75,7 +75,7 @@ interactions:
       Cookie:
       - __cf_bm=b08QUUtZEqrHLKqN_szJPeW0ZuAWzUQbdkuHCQL4QKU-1674844559-0-AekXoDCPM9Z8hlyLWWExncCglr9GOYDQfkSNJ5n4GXZm4RT0ax9K9bS/lz883nYgfEmDOssRLlRpi67IMr7VLDo=
       User-Agent:
-      - python-requests/2.28.1
+      - python-requests/2.31.0
       X-App-Name:
       - MA-TI-Python-Lib-v0.1
     method: GET
@@ -128,7 +128,7 @@ interactions:
       Cookie:
       - __cf_bm=b08QUUtZEqrHLKqN_szJPeW0ZuAWzUQbdkuHCQL4QKU-1674844559-0-AekXoDCPM9Z8hlyLWWExncCglr9GOYDQfkSNJ5n4GXZm4RT0ax9K9bS/lz883nYgfEmDOssRLlRpi67IMr7VLDo=
       User-Agent:
-      - python-requests/2.28.1
+      - python-requests/2.31.0
     method: POST
     uri: https://api.intelligence.mandiant.com/token
   response:
@@ -173,7 +173,7 @@ interactions:
       Cookie:
       - __cf_bm=b08QUUtZEqrHLKqN_szJPeW0ZuAWzUQbdkuHCQL4QKU-1674844559-0-AekXoDCPM9Z8hlyLWWExncCglr9GOYDQfkSNJ5n4GXZm4RT0ax9K9bS/lz883nYgfEmDOssRLlRpi67IMr7VLDo=
       User-Agent:
-      - python-requests/2.28.1
+      - python-requests/2.31.0
       X-App-Name:
       - MA-TI-Python-Lib-v0.1
     method: GET
@@ -226,7 +226,7 @@ interactions:
       Cookie:
       - __cf_bm=b08QUUtZEqrHLKqN_szJPeW0ZuAWzUQbdkuHCQL4QKU-1674844559-0-AekXoDCPM9Z8hlyLWWExncCglr9GOYDQfkSNJ5n4GXZm4RT0ax9K9bS/lz883nYgfEmDOssRLlRpi67IMr7VLDo=
       User-Agent:
-      - python-requests/2.28.1
+      - python-requests/2.31.0
     method: POST
     uri: https://api.intelligence.mandiant.com/token
   response:
@@ -272,7 +272,7 @@ interactions:
       Cookie:
       - __cf_bm=b08QUUtZEqrHLKqN_szJPeW0ZuAWzUQbdkuHCQL4QKU-1674844559-0-AekXoDCPM9Z8hlyLWWExncCglr9GOYDQfkSNJ5n4GXZm4RT0ax9K9bS/lz883nYgfEmDOssRLlRpi67IMr7VLDo=
       User-Agent:
-      - python-requests/2.28.1
+      - python-requests/2.31.0
       X-App-Name:
       - MA-TI-Python-Lib-v0.1
     method: GET

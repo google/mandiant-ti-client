@@ -25,7 +25,7 @@ interactions:
       Cookie:
       - __cf_bm=EYn1wayZeygzwEWO2q8XS.rlMvc0ES09xHky6i_0C8o-1686240262-0-AeiFrLq7fJXUAPRFtxepkDN4+xeO40JN0io5NtpZQspAt2p8JUXY6t5zk1+OZZ3joZ/ulfZhOMLCskbEVUIljr4=
       User-Agent:
-      - python-requests/2.28.2
+      - python-requests/2.31.0
       X-App-Name:
       - MA-TI-Python-Lib-v0.1
     method: GET
